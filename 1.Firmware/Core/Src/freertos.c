@@ -26,7 +26,13 @@
 /* Private includes ----------------------------------------------------------*/
 /* USER CODE BEGIN Includes */
 #include "sht31.h"
+#include "bh1750.h"
+#include "fatfs.h"
+#include "stdio.h"
+#include "stm32f4xx.h"
 #include "i2c.h"
+#include "adc.h"
+#include "tim.h"
 /* USER CODE END Includes */
 
 /* Private typedef -----------------------------------------------------------*/
@@ -41,12 +47,17 @@
 
 /* Private macro -------------------------------------------------------------*/
 /* USER CODE BEGIN PM */
-
 /* USER CODE END PM */
 
 /* Private variables ---------------------------------------------------------*/
 /* USER CODE BEGIN Variables */
-__IO float temperature, humidity;
+
+__IO float temperature, humidity, lux, co2;
+__IO uint32_t NH3[1];
+int wrflag = 0;
+uint8_t count = 50;
+uint8_t count1 = 50;
+uint8_t count2 = 50;
 sht3x_handle_t handle = {
 	              .i2c_handle = &hi2c1,
 	              .device_address = SHT3X_I2C_DEVICE_ADDRESS_ADDR_PIN_LOW
@@ -56,8 +67,6 @@ sht3x_handle_t handle = {
 osThreadId defaultTaskHandle;
 osThreadId GUIHandle;
 osThreadId MeasureHandle;
-osMessageQId Queue01Handle;
-osSemaphoreId sht31Handle;
 
 /* Private function prototypes -----------------------------------------------*/
 /* USER CODE BEGIN FunctionPrototypes */
@@ -96,17 +105,14 @@ void MX_FREERTOS_Init(void) {
 	if (!sht3x_init(&handle)) {
 		          printf("SHT3x access failed.\n\r");
 		      }
-
+	BH1750_Init(&hi2c1);
+	BH1750_SetMode(CONTINUOUS_HIGH_RES_MODE_2);
+	HAL_ADC_Start_DMA(&hadc1, NH3, 1);
   /* USER CODE END Init */
 
   /* USER CODE BEGIN RTOS_MUTEX */
   /* add mutexes, ... */
   /* USER CODE END RTOS_MUTEX */
-
-  /* Create the semaphores(s) */
-  /* definition and creation of sht31 */
-  osSemaphoreDef(sht31);
-  sht31Handle = osSemaphoreCreate(osSemaphore(sht31), 1);
 
   /* USER CODE BEGIN RTOS_SEMAPHORES */
   /* add semaphores, ... */
@@ -116,18 +122,13 @@ void MX_FREERTOS_Init(void) {
   /* start timers, add new ones, ... */
   /* USER CODE END RTOS_TIMERS */
 
-  /* Create the queue(s) */
-  /* definition and creation of Queue01 */
-  osMessageQDef(Queue01, 32, float);
-  Queue01Handle = osMessageCreate(osMessageQ(Queue01), NULL);
-
   /* USER CODE BEGIN RTOS_QUEUES */
   /* add queues, ... */
   /* USER CODE END RTOS_QUEUES */
 
   /* Create the thread(s) */
   /* definition and creation of defaultTask */
-  osThreadDef(defaultTask, StartDefaultTask, osPriorityNormal, 0, 128);
+  osThreadDef(defaultTask, StartDefaultTask, osPriorityNormal, 0, 512);
   defaultTaskHandle = osThreadCreate(osThread(defaultTask), NULL);
 
   /* definition and creation of GUI */
@@ -135,7 +136,7 @@ void MX_FREERTOS_Init(void) {
   GUIHandle = osThreadCreate(osThread(GUI), NULL);
 
   /* definition and creation of Measure */
-  osThreadDef(Measure, Measuretask, osPriorityIdle, 0, 128);
+  osThreadDef(Measure, Measuretask, osPriorityIdle, 0, 512);
   MeasureHandle = osThreadCreate(osThread(Measure), NULL);
 
   /* USER CODE BEGIN RTOS_THREADS */
@@ -154,9 +155,30 @@ void MX_FREERTOS_Init(void) {
 void StartDefaultTask(void const * argument)
 {
   /* USER CODE BEGIN StartDefaultTask */
+	char wrbuf[20];
+	retSD = f_mount(&SDFatFS, SDPath, 1);
+	retSD = f_open(&SDFile,"0:\\out.txt", FA_CREATE_NEW | FA_WRITE |FA_READ);
+	retSD = f_close(&SDFile);
   /* Infinite loop */
+
   for(;;)
   {
+
+	if(wrflag == 1){
+		retSD = f_open(&SDFile,"0:\\out.txt", FA_OPEN_EXISTING | FA_WRITE |FA_READ);
+			retSD=f_lseek(&SDFile,f_size(&SDFile));
+			sprintf(wrbuf,"lux:%.1f\r\n",lux);
+			f_printf(&SDFile,wrbuf);
+			sprintf(wrbuf,"humi:%.1f%\r\n",humidity);
+			f_printf(&SDFile,wrbuf);
+			sprintf(wrbuf,"temp:%.1f\r\n",temperature);
+			f_printf(&SDFile,wrbuf);
+			sprintf(wrbuf,"CO2:%f%\r\n",co2);
+			f_printf(&SDFile,wrbuf);
+			f_printf(&SDFile,"\r\n");
+			retSD = f_close(&SDFile);
+			wrflag = 0;
+	}
     osDelay(1);
   }
   /* USER CODE END StartDefaultTask */
@@ -172,6 +194,7 @@ void StartDefaultTask(void const * argument)
 void GUItask(void const * argument)
 {
   /* USER CODE BEGIN GUItask */
+
   /* Infinite loop */
   for(;;)
   {
@@ -194,8 +217,10 @@ void Measuretask(void const * argument)
   /* Infinite loop */
   for(;;)
   {
-	sht3x_read_temperature_and_humidity(&handle, &temperature, &humidity);
-	osDelay(1);
+	  BH1750_ReadLight(&lux);
+	  sht3x_read_temperature_and_humidity(&handle, &temperature, &humidity);
+	  HAL_ADC_Start_DMA(&hadc1, NH3, 1);
+	  osDelay(1);
   }
   /* USER CODE END Measuretask */
 }

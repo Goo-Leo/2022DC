@@ -1,0 +1,6 @@
+../Core/Src/fmc.c:27:6:SDRAM_delay	16	static
+../Core/Src/fmc.c:34:9:SDRAM_Test	8	static
+../Core/Src/fmc.c:79:6:SDRAM_Initialization_Sequence	32	static
+../Core/Src/fmc.c:129:6:MX_FMC_Init	40	static
+../Core/Src/fmc.c:296:6:HAL_SDRAM_MspInit	48	static
+../Core/Src/fmc.c:384:6:HAL_SDRAM_MspDeInit	8	static

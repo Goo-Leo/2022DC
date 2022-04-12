@@ -1,0 +1,113 @@
+<?xml version="1.0" encoding="utf-8"?>
+<TextDatabase xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="texts.xsd" Version="4.18.1">
+  <Texts>
+    <Text Id="__SingleUse_CWS1" TypographyId="Typography_00" Alignment="Left" Direction="LTR">
+      <Translation Language="GB">&lt;value&gt;%RH</Translation>
+    </Text>
+    <Text Id="__SingleUse_V8EO" TypographyId="Typography_00" Alignment="Left" Direction="LTR">
+      <Translation Language="GB">00.0</Translation>
+    </Text>
+    <Text Id="__SingleUse_S3AT" TypographyId="Typography_00" Alignment="Left" Direction="LTR">
+      <Translation Language="GB">&lt;value&gt;%CO2</Translation>
+    </Text>
+    <Text Id="__SingleUse_OS4B" TypographyId="Typography_00" Alignment="Left" Direction="LTR">
+      <Translation Language="GB">0.0</Translation>
+    </Text>
+    <Text Id="__SingleUse_9KO6" TypographyId="Default" Alignment="Center" Direction="LTR">
+      <Translation Language="GB">Manage</Translation>
+    </Text>
+    <Text Id="__SingleUse_72WW" TypographyId="Default" Alignment="Center" Direction="LTR">
+      <Translation Language="GB">Details</Translation>
+    </Text>
+    <Text Id="__SingleUse_JZBP" TypographyId="Default" Alignment="Center" Direction="LTR">
+      <Translation Language="GB">Set parameter</Translation>
+    </Text>
+    <Text Id="__SingleUse_9B0J" TypographyId="Default" Alignment="Center" Direction="LTR">
+      <Translation Language="GB">Contorl</Translation>
+    </Text>
+    <Text Id="__SingleUse_0B2Y" TypographyId="Default" Alignment="Center" Direction="LTR">
+      <Translation Language="GB">back</Translation>
+    </Text>
+    <Text Id="__SingleUse_SD5P" TypographyId="Large" Alignment="Right" Direction="LTR">
+      <Translation Language="GB">&lt;value&gt;Lux</Translation>
+    </Text>
+    <Text Id="__SingleUse_G7MQ" TypographyId="Default" Alignment="Center" Direction="LTR">
+      <Translation Language="GB">back</Translation>
+    </Text>
+    <Text Id="__SingleUse_TOCP" TypographyId="Typography_00" Alignment="Left" Direction="LTR">
+      <Translation Language="GB">&lt;value&gt;°C</Translation>
+    </Text>
+    <Text Id="__SingleUse_93MQ" TypographyId="Typography_00" Alignment="Left" Direction="LTR">
+      <Translation Language="GB">00.0</Translation>
+    </Text>
+    <Text Id="__SingleUse_OHNS" TypographyId="Large" Alignment="Left" Direction="LTR">
+      <Translation Language="GB">Illumination:</Translation>
+    </Text>
+    <Text Id="__SingleUse_TMW8" TypographyId="Large" Alignment="Left" Direction="LTR">
+      <Translation Language="GB">1000.0</Translation>
+    </Text>
+    <Text Id="__SingleUse_F36Q" TypographyId="Large" Alignment="Left" Direction="LTR">
+      <Translation Language="GB">Humidity:</Translation>
+    </Text>
+    <Text Id="__SingleUse_YWEV" TypographyId="Large" Alignment="Right" Direction="LTR">
+      <Translation Language="GB">&lt;value&gt;%RH</Translation>
+    </Text>
+    <Text Id="__SingleUse_N87E" TypographyId="Large" Alignment="Left" Direction="LTR">
+      <Translation Language="GB">00.0</Translation>
+    </Text>
+    <Text Id="__SingleUse_T2RP" TypographyId="Large" Alignment="Left" Direction="LTR">
+      <Translation Language="GB">Temperature:</Translation>
+    </Text>
+    <Text Id="__SingleUse_K2YG" TypographyId="Large" Alignment="Right" Direction="LTR">
+      <Translation Language="GB">&lt;value&gt;°C</Translation>
+    </Text>
+    <Text Id="__SingleUse_7D2F" TypographyId="Large" Alignment="Left" Direction="LTR">
+      <Translation Language="GB">00.0</Translation>
+    </Text>
+    <Text Id="__SingleUse_B3T5" TypographyId="Large" Alignment="Left" Direction="LTR">
+      <Translation Language="GB">CO2:</Translation>
+    </Text>
+    <Text Id="__SingleUse_FKHH" TypographyId="Large" Alignment="Right" Direction="LTR">
+      <Translation Language="GB">&lt;value&gt;%</Translation>
+    </Text>
+    <Text Id="__SingleUse_H6IP" TypographyId="Large" Alignment="Left" Direction="LTR">
+      <Translation Language="GB">0.0</Translation>
+    </Text>
+    <Text Id="__SingleUse_E8U2" TypographyId="Default" Alignment="Center" Direction="LTR">
+      <Translation Language="GB">Export</Translation>
+    </Text>
+    <Text Id="__SingleUse_U84E" TypographyId="Default" Alignment="Left" Direction="LTR">
+      <Translation Language="GB">Pigs:      &lt;value&gt;</Translation>
+    </Text>
+    <Text Id="__SingleUse_TLXW" TypographyId="Default" Alignment="Left" Direction="LTR">
+      <Translation Language="GB">Sheeps:  &lt;value&gt;</Translation>
+    </Text>
+    <Text Id="__SingleUse_MIOX" TypographyId="Default" Alignment="Left" Direction="LTR">
+      <Translation Language="GB">Cows:     &lt;value&gt;</Translation>
+    </Text>
+    <Text Id="__SingleUse_235Z" TypographyId="Default" Alignment="Left" Direction="LTR">
+      <Translation Language="GB">50</Translation>
+    </Text>
+    <Text Id="__SingleUse_DSPV" TypographyId="Default" Alignment="Left" Direction="LTR">
+      <Translation Language="GB">50</Translation>
+    </Text>
+    <Text Id="__SingleUse_FPEQ" TypographyId="Default" Alignment="Left" Direction="LTR">
+      <Translation Language="GB">50</Translation>
+    </Text>
+    <Text Id="__SingleUse_C03T" TypographyId="Large" Alignment="Left" Direction="LTR">
+      <Translation Language="GB">NH3:</Translation>
+    </Text>
+    <Text Id="__SingleUse_L1JV" TypographyId="Large" Alignment="Right" Direction="LTR">
+      <Translation Language="GB">&lt;value&gt;ppm</Translation>
+    </Text>
+    <Text Id="__SingleUse_DD9S" TypographyId="Large" Alignment="Left" Direction="LTR">
+      <Translation Language="GB">00.0</Translation>
+    </Text>
+  </Texts>
+  <Typographies>
+    <Typography Id="Default" Font="verdanab.ttf" Size="16" Bpp="4" FallbackCharacter="?" WildcardCharacters="." WildcardCharacterRanges="0-9" />
+    <Typography Id="Large" Font="verdanab.ttf" Size="25" Bpp="4" FallbackCharacter="?" WildcardCharacters="." WildcardCharacterRanges="0-9" />
+    <Typography Id="Small" Font="verdana.ttf" Size="10" Bpp="4" FallbackCharacter="?" />
+    <Typography Id="Typography_00" Font="verdanab.ttf" Size="35" Bpp="4" FallbackCharacter="?" />
+  </Typographies>
+</TextDatabase>

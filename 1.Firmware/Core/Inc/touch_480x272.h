@@ -3,38 +3,38 @@
 
 #include "stm32f4xx.h"
 #include "touch_iic.h"  
-#include "usart.h"
+#include "stdio.h"
 
-/*------------------------------------ Ïà¹Ø¶¨Òå -----------------------------------*/  	
+/*------------------------------------ ç›¸å…³å®šä¹‰ -----------------------------------*/
 
-#define TOUCH_MAX   5	//×î´ó´¥ÃşµãÊı
+#define TOUCH_MAX   5	//æœ€å¤§è§¦æ‘¸ç‚¹æ•°
 
 typedef struct 
 {
-	uint8_t  flag;			//	´¥Ãş±êÖ¾Î»£¬Îª1Ê±±íÊ¾ÓĞ´¥Ãş²Ù×÷
-	uint8_t  num;				//	´¥ÃşµãÊı
-	uint16_t x[TOUCH_MAX];	//	x×ø±ê
-	uint16_t y[TOUCH_MAX];	//	y×ø±ê
+	uint8_t  flag;			//	è§¦æ‘¸æ ‡å¿—ä½ï¼Œä¸º1æ—¶è¡¨ç¤ºæœ‰è§¦æ‘¸æ“ä½œ
+	uint8_t  num;				//	è§¦æ‘¸ç‚¹æ•°
+	volatile uint16_t x[TOUCH_MAX];	//	xåæ ‡
+	volatile uint16_t y[TOUCH_MAX];	//	yåæ ‡
 }TouchStructure;
 
-extern TouchStructure touchInfo;	// ´¥ÃşÊı¾İ½á¹¹ÌåÉùÃ÷	
+extern TouchStructure touchInfo;	// è§¦æ‘¸æ•°æ®ç»“æ„ä½“å£°æ˜
 
-/*------------------------------------ ¼Ä´æ¶¨Òå -----------------------------------*/  		
+/*------------------------------------ å¯„å­˜å®šä¹‰ -----------------------------------*/
 
-#define GT9XX_IIC_RADDR 0xBB			// IIC³õÊ¼»¯µØÖ·
+#define GT9XX_IIC_RADDR 0xBB			// IICåˆå§‹åŒ–åœ°å€
 #define GT9XX_IIC_WADDR 0xBA
 
-#define GT9XX_CFG_ADDR 	0x8047		// ¹Ì¼şÅäÖÃĞÅÏ¢¼Ä´æÆ÷ºÍÅäÖÃÆğÊ¼µØÖ·
-#define GT9XX_READ_ADDR 0x814E		// ´¥ÃşĞÅÏ¢¼Ä´æÆ÷
-#define GT9XX_ID_ADDR 	0x8140		// ´¥ÃşÃæ°åID¼Ä´æÆ÷
+#define GT9XX_CFG_ADDR 	0x8047		// å›ºä»¶é…ç½®ä¿¡æ¯å¯„å­˜å™¨å’Œé…ç½®èµ·å§‹åœ°å€
+#define GT9XX_READ_ADDR 0x814E		// è§¦æ‘¸ä¿¡æ¯å¯„å­˜å™¨
+#define GT9XX_ID_ADDR 	0x8140		// è§¦æ‘¸é¢æ¿IDå¯„å­˜å™¨
 
-/*------------------------------------ º¯ÊıÉùÃ÷ -----------------------------------*/  		
+/*------------------------------------ å‡½æ•°å£°æ˜ -----------------------------------*/
 
-uint8_t 	Touch_Init(void);		// ´¥ÃşÆÁ³õÊ¼»¯
-void 		Touch_Scan(void);		// ´¥ÃşÉ¨Ãè
-void  	GT9XX_Reset(void);	// Ö´ĞĞ¸´Î»²Ù×÷
-void 		GT9XX_SendCfg(void);	// ·¢ËÍGT911ÅäÖÃ²ÎÊı
-void 		GT9XX_ReadCfg(void);	// ¶ÁÈ¡GT911ÅäÖÃ²ÎÊı
+uint8_t 	Touch_Init(void);		// è§¦æ‘¸å±åˆå§‹åŒ–
+void 		Touch_Scan(void);		// è§¦æ‘¸æ‰«æ
+void  	GT9XX_Reset(void);	// æ‰§è¡Œå¤ä½æ“ä½œ
+void 		GT9XX_SendCfg(void);	// å‘é€GT911é…ç½®å‚æ•°
+void 		GT9XX_ReadCfg(void);	// è¯»å–GT911é…ç½®å‚æ•°
 
 #endif
 

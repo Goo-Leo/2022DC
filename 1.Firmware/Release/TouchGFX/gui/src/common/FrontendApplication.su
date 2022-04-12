@@ -1,0 +1,7 @@
+../Middlewares/ST/touchgfx/framework/include/touchgfx/Application.hpp:74:18:virtual void touchgfx::Application::appSwitchScreen(uint8_t)	0	static
+../Middlewares/ST/touchgfx/framework/include/touchgfx/Application.hpp:86:18:virtual void touchgfx::Application::requestRedraw(touchgfx::Rect&)	0	static
+../TouchGFX/gui/include/gui/common/FrontendApplication.hpp:14:13:FrontendApplication::~FrontendApplication()	0	static
+../TouchGFX/gui/include/gui/common/FrontendApplication.hpp:14:13:virtual FrontendApplication::~FrontendApplication()	8	static
+../TouchGFX/gui/include/gui/common/FrontendApplication.hpp:16:18:virtual void FrontendApplication::handleTickEvent()	8	static
+../Middlewares/ST/touchgfx/framework/include/mvp/MVPApplication.hpp:59:18:virtual void touchgfx::MVPApplication::handlePendingScreenTransition()	8	static
+../TouchGFX/gui/src/common/FrontendApplication.cpp:3:1:FrontendApplication::FrontendApplication(Model&, FrontendHeap&)	8	static

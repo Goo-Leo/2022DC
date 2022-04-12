@@ -1,58 +1,26 @@
-/***
-	***************************************************************************************
-	*	@file  	touch_iic.c
-	*	@version V1.0
-	*  @date    2020-3-12
-	*	@author  ·´¿Í¿Æ¼¼
-	*	@brief   ´¥ÃþÆÁIIC½Ó¿ÚÏà¹Øº¯Êý
-   ***************************************************************************************
-   *  @description
-	*
-	*	ÊµÑéÆ½Ì¨£º·´¿ÍSTM32F429IGT6(ÐÍºÅFK429M2)ºËÐÄ°å 
-	*	ÌÔ±¦µØÖ·£ºhttps://shop212360197.taobao.com
-	*	QQ½»Á÷Èº£º536665479
-	*		
->>>>>	ÎÄ¼þËµÃ÷£º
-	*
-	*  1.´¥ÃþÆÁÏà¹ØµÄIICº¯Êý
-	* 	2.Ê¹ÓÃÄ£ÄâIIC
-	*	3.Í¨ÐÅËÙ¶ÈÄ¬ÈÏÎª100KHz
-	*
-	***************************************************************************************
-***/
-
 #include "touch_iic.h"  
-
-
-/*****************************************************************************************
-*	º¯ Êý Ãû: Touch_IIC_GPIO_Config
-*	Èë¿Ú²ÎÊý: ÎÞ
-*	·µ »Ø Öµ: ÎÞ
-*	º¯Êý¹¦ÄÜ: ³õÊ¼»¯IICµÄGPIO¿Ú,ÍÆÍìÊä³ö
-*	Ëµ    Ã÷: ÓÉÓÚIICÍ¨ÐÅËÙ¶È²»¸ß£¬ÕâÀïµÄIO¿ÚËÙ¶ÈÅäÖÃÎª2M¼´¿É
-******************************************************************************************/
 
 void Touch_IIC_GPIO_Config (void)
 {
 	GPIO_InitTypeDef GPIO_InitStruct = {0};
 	
-	Touch_IIC_SCL_CLK_ENABLE;	//³õÊ¼»¯IO¿ÚÊ±ÖÓ
+	Touch_IIC_SCL_CLK_ENABLE;	//åˆå§‹åŒ–IOå£æ—¶é’Ÿ
 	Touch_IIC_SDA_CLK_ENABLE;
 	Touch_INT_CLK_ENABLE;	
 	Touch_RST_CLK_ENABLE;	
 	
-	GPIO_InitStruct.Pin 			= Touch_IIC_SCL_PIN;				// SCLÒý½Å
-	GPIO_InitStruct.Mode 		= GPIO_MODE_OUTPUT_OD;			// ¿ªÂ©Êä³ö
-	GPIO_InitStruct.Pull 		= GPIO_NOPULL;						// ²»´øÉÏÏÂÀ­
-	GPIO_InitStruct.Speed 		= GPIO_SPEED_FREQ_LOW;			// ËÙ¶ÈµÈ¼¶ 
+	GPIO_InitStruct.Pin 			= Touch_IIC_SCL_PIN;				// SCLå¼•è„š
+	GPIO_InitStruct.Mode 		= GPIO_MODE_OUTPUT_OD;			// å¼€æ¼è¾“å‡º
+	GPIO_InitStruct.Pull 		= GPIO_NOPULL;						// ä¸å¸¦ä¸Šä¸‹æ‹‰
+	GPIO_InitStruct.Speed 		= GPIO_SPEED_FREQ_LOW;			// é€Ÿåº¦ç­‰çº§
 	HAL_GPIO_Init(Touch_IIC_SCL_PORT, &GPIO_InitStruct);
 
-	GPIO_InitStruct.Pin 			= Touch_IIC_SDA_PIN;				// SDAÒý½Å
+	GPIO_InitStruct.Pin 			= Touch_IIC_SDA_PIN;				// SDAå¼•è„š
 	HAL_GPIO_Init(Touch_IIC_SDA_PORT, &GPIO_InitStruct);		
 
 	
-	GPIO_InitStruct.Mode = GPIO_MODE_OUTPUT_PP;      			// ÍÆÍìÊä³ö
-	GPIO_InitStruct.Pull  = GPIO_PULLUP;		 					// ÉÏÀ­	
+	GPIO_InitStruct.Mode = GPIO_MODE_OUTPUT_PP;      			// æŽ¨æŒ½è¾“å‡º
+	GPIO_InitStruct.Pull  = GPIO_PULLUP;		 					// ä¸Šæ‹‰
 	
 	GPIO_InitStruct.Pin = Touch_INT_PIN; 							//	INT
 	HAL_GPIO_Init(Touch_INT_PORT, &GPIO_InitStruct);				
@@ -60,20 +28,12 @@ void Touch_IIC_GPIO_Config (void)
 	GPIO_InitStruct.Pin = Touch_RST_PIN; 							//	RST
 	HAL_GPIO_Init(Touch_RST_PORT, &GPIO_InitStruct);					   
 
-	HAL_GPIO_WritePin(Touch_IIC_SCL_PORT, Touch_IIC_SCL_PIN, GPIO_PIN_SET);		// SCLÊä³ö¸ßµçÆ½
-	HAL_GPIO_WritePin(Touch_IIC_SDA_PORT, Touch_IIC_SDA_PIN, GPIO_PIN_SET);    // SDAÊä³ö¸ßµçÆ½
-	HAL_GPIO_WritePin(Touch_INT_PORT, 	  Touch_INT_PIN,     GPIO_PIN_RESET);  // INTÊä³öµÍµçÆ½
-	HAL_GPIO_WritePin(Touch_RST_PORT,     Touch_RST_PIN,     GPIO_PIN_SET);    // RSTÊä³ö¸ß	µçÆ½
+	HAL_GPIO_WritePin(Touch_IIC_SCL_PORT, Touch_IIC_SCL_PIN, GPIO_PIN_SET);		// SCLè¾“å‡ºé«˜ç”µå¹³
+	HAL_GPIO_WritePin(Touch_IIC_SDA_PORT, Touch_IIC_SDA_PIN, GPIO_PIN_SET);    // SDAè¾“å‡ºé«˜ç”µå¹³
+	HAL_GPIO_WritePin(Touch_INT_PORT, 	  Touch_INT_PIN,     GPIO_PIN_RESET);  // INTè¾“å‡ºä½Žç”µå¹³
+	HAL_GPIO_WritePin(Touch_RST_PORT,     Touch_RST_PIN,     GPIO_PIN_SET);    // RSTè¾“å‡ºé«˜	ç”µå¹³
 
 }
-
-/*****************************************************************************************
-*	º¯ Êý Ãû: Touch_IIC_Delay
-*	Èë¿Ú²ÎÊý: a - ÑÓÊ±Ê±¼ä
-*	·µ »Ø Öµ: ÎÞ
-*	º¯Êý¹¦ÄÜ: ¼òµ¥ÑÓÊ±º¯Êý
-*	Ëµ    Ã÷: ÎªÁËÒÆÖ²µÄ¼ò±ãÐÔÇÒ¶ÔÑÓÊ±¾«¶ÈÒªÇó²»¸ß£¬ËùÒÔ²»ÐèÒªÊ¹ÓÃ¶¨Ê±Æ÷×öÑÓÊ±
-******************************************************************************************/
 
 void Touch_IIC_Delay(uint32_t a)
 {
@@ -84,54 +44,33 @@ void Touch_IIC_Delay(uint32_t a)
 	}
 }
 
-/*****************************************************************************************
-*	º¯ Êý Ãû: Touch_IIC_INT_Out
-*	Èë¿Ú²ÎÊý: ÎÞ
-*	·µ »Ø Öµ: ÎÞ
-*	º¯Êý¹¦ÄÜ: ÅäÖÃIICµÄINT½ÅÎªÊä³öÄ£Ê½
-*	Ëµ    Ã÷: ÎÞ
-******************************************************************************************/
 
 void Touch_INT_Out(void)
 {
 	GPIO_InitTypeDef GPIO_InitStruct = {0};
 	
-	GPIO_InitStruct.Mode  = GPIO_MODE_OUTPUT_PP;      	// Êä³öÄ£Ê½
-	GPIO_InitStruct.Pull  = GPIO_PULLUP;		 			// ÉÏÀ­	
-	GPIO_InitStruct.Speed = GPIO_SPEED_FREQ_LOW;    	// ËÙ¶ÈµÈ¼¶
-	GPIO_InitStruct.Pin   = Touch_INT_PIN ;  				// ³õÊ¼»¯ INT Òý½Å
+	GPIO_InitStruct.Mode  = GPIO_MODE_OUTPUT_PP;      	// è¾“å‡ºæ¨¡å¼
+	GPIO_InitStruct.Pull  = GPIO_PULLUP;		 			// ä¸Šæ‹‰
+	GPIO_InitStruct.Speed = GPIO_SPEED_FREQ_LOW;    	// é€Ÿåº¦ç­‰çº§
+	GPIO_InitStruct.Pin   = Touch_INT_PIN ;  				// åˆå§‹åŒ– INT å¼•è„š
 	
 	HAL_GPIO_Init(Touch_INT_PORT, &GPIO_InitStruct);		
 }
 
-/*****************************************************************************************
-*	º¯ Êý Ãû: Touch_IIC_INT_In
-*	Èë¿Ú²ÎÊý: ÎÞ
-*	·µ »Ø Öµ: ÎÞ
-*	º¯Êý¹¦ÄÜ: ÅäÖÃIICµÄINT½ÅÎªÊäÈëÄ£Ê½
-*	Ëµ    Ã÷: ÎÞ
-******************************************************************************************/
 
 void Touch_INT_In(void)
 {
 	GPIO_InitTypeDef GPIO_InitStruct = {0};
 	
-	GPIO_InitStruct.Mode  = GPIO_MODE_INPUT;      		// ÊäÈëÄ£Ê½
-	GPIO_InitStruct.Pull  = GPIO_NOPULL;		 			// ¸¡¿Õ	
-	GPIO_InitStruct.Speed = GPIO_SPEED_FREQ_LOW;    	// ËÙ¶ÈµÈ¼¶
-	GPIO_InitStruct.Pin   = Touch_INT_PIN ;  				// ³õÊ¼»¯ INT Òý½Å
+	GPIO_InitStruct.Mode  = GPIO_MODE_INPUT;      		// è¾“å…¥æ¨¡å¼
+	GPIO_InitStruct.Pull  = GPIO_NOPULL;		 			// æµ®ç©º
+	GPIO_InitStruct.Speed = GPIO_SPEED_FREQ_LOW;    	// é€Ÿåº¦ç­‰çº§
+	GPIO_InitStruct.Pin   = Touch_INT_PIN ;  				// åˆå§‹åŒ– INT å¼•è„š
 	
 	HAL_GPIO_Init(Touch_INT_PORT, &GPIO_InitStruct);		
 
 }
 
-/*****************************************************************************************
-*	º¯ Êý Ãû: Touch_IIC_Start
-*	Èë¿Ú²ÎÊý: ÎÞ
-*	·µ »Ø Öµ: ÎÞ
-*	º¯Êý¹¦ÄÜ: IICÆðÊ¼ÐÅºÅ
-*	Ëµ    Ã÷: ÔÚSCL´¦ÓÚ¸ßµçÆ½ÆÚ¼ä£¬SDAÓÉ¸ßµ½µÍÌø±äÎªÆðÊ¼ÐÅºÅ
-******************************************************************************************/
 
 void Touch_IIC_Start(void)
 {
@@ -145,13 +84,6 @@ void Touch_IIC_Start(void)
 	Touch_IIC_Delay(IIC_DelayVaule);
 }
 
-/*****************************************************************************************
-*	º¯ Êý Ãû: Touch_IIC_Stop
-*	Èë¿Ú²ÎÊý: ÎÞ
-*	·µ »Ø Öµ: ÎÞ
-*	º¯Êý¹¦ÄÜ: IICÍ£Ö¹ÐÅºÅ
-*	Ëµ    Ã÷: ÔÚSCL´¦ÓÚ¸ßµçÆ½ÆÚ¼ä£¬SDAÓÉµÍµ½¸ßÌø±äÎªÆðÊ¼ÐÅºÅ
-******************************************************************************************/
 
 void Touch_IIC_Stop(void)
 {
@@ -166,13 +98,6 @@ void Touch_IIC_Stop(void)
 	Touch_IIC_Delay(IIC_DelayVaule);
 }
 
-/*****************************************************************************************
-*	º¯ Êý Ãû: Touch_IIC_ACK
-*	Èë¿Ú²ÎÊý: ÎÞ
-*	·µ »Ø Öµ: ÎÞ
-*	º¯Êý¹¦ÄÜ: IICÓ¦´ðÐÅºÅ
-*	Ëµ    Ã÷: ÔÚSCLÎª¸ßµçÆ½ÆÚ¼ä£¬SDAÒý½ÅÊä³öÎªµÍµçÆ½£¬²úÉúÓ¦´ðÐÅºÅ
-******************************************************************************************/
 
 void Touch_IIC_ACK(void)
 {
@@ -183,20 +108,13 @@ void Touch_IIC_ACK(void)
 	Touch_IIC_SCL(1);
 	Touch_IIC_Delay(IIC_DelayVaule);
 	
-	Touch_IIC_SCL(0);		// SCLÊä³öµÍÊ±£¬SDAÓ¦Á¢¼´À­¸ß£¬ÊÍ·Å×ÜÏß
+	Touch_IIC_SCL(0);		// SCLè¾“å‡ºä½Žæ—¶ï¼ŒSDAåº”ç«‹å³æ‹‰é«˜ï¼Œé‡Šæ”¾æ€»çº¿
 	Touch_IIC_SDA(1);		
 	
 	Touch_IIC_Delay(IIC_DelayVaule);
 
 }
 
-/*****************************************************************************************
-*	º¯ Êý Ãû: Touch_IIC_NoACK
-*	Èë¿Ú²ÎÊý: ÎÞ
-*	·µ »Ø Öµ: ÎÞ
-*	º¯Êý¹¦ÄÜ: IIC·ÇÓ¦´ðÐÅºÅ
-*	Ëµ    Ã÷: ÔÚSCLÎª¸ßµçÆ½ÆÚ¼ä£¬ÈôSDAÒý½ÅÎª¸ßµçÆ½£¬²úÉú·ÇÓ¦´ðÐÅºÅ
-******************************************************************************************/
 
 void Touch_IIC_NoACK(void)
 {
@@ -211,13 +129,7 @@ void Touch_IIC_NoACK(void)
 	Touch_IIC_Delay(IIC_DelayVaule);
 }
 
-/*****************************************************************************************
-*	º¯ Êý Ãû: Touch_IIC_WaitACK
-*	Èë¿Ú²ÎÊý: ÎÞ
-*	·µ »Ø Öµ: ÎÞ
-*	º¯Êý¹¦ÄÜ: µÈ´ý½ÓÊÕÉè±¸·¢³öÓ¦´ðÐÅºÅ
-*	Ëµ    Ã÷: ÔÚSCLÎª¸ßµçÆ½ÆÚ¼ä£¬Èô¼ì²âµ½SDAÒý½ÅÎªµÍµçÆ½£¬Ôò½ÓÊÕÉè±¸ÏìÓ¦Õý³£
-******************************************************************************************/
+
 
 uint8_t Touch_IIC_WaitACK(void)
 {
@@ -226,28 +138,21 @@ uint8_t Touch_IIC_WaitACK(void)
 	Touch_IIC_SCL(1);
 	Touch_IIC_Delay(IIC_DelayVaule);	
 	
-	if( HAL_GPIO_ReadPin(Touch_IIC_SDA_PORT,Touch_IIC_SDA_PIN) != 0) //ÅÐ¶ÏÉè±¸ÊÇ·ñÓÐ×ö³öÏìÓ¦		
+	if( HAL_GPIO_ReadPin(Touch_IIC_SDA_PORT,Touch_IIC_SDA_PIN) != 0) //åˆ¤æ–­è®¾å¤‡æ˜¯å¦æœ‰åšå‡ºå“åº”
 	{
 		Touch_IIC_SCL(0);	
 		Touch_IIC_Delay( IIC_DelayVaule );		
-		return ACK_ERR;	//ÎÞÓ¦´ð
+		return ACK_ERR;	//æ— åº”ç­”
 	}
 	else
 	{
 		Touch_IIC_SCL(0);	
 		Touch_IIC_Delay( IIC_DelayVaule );		
-		return ACK_OK;	//Ó¦´ðÕý³£
+		return ACK_OK;	//åº”ç­”æ­£å¸¸
 	}
 }
 
-/*****************************************************************************************
-*	º¯ Êý Ãû:	Touch_IIC_WriteByte
-*	Èë¿Ú²ÎÊý:	IIC_Data - ÒªÐ´ÈëµÄ8Î»Êý¾Ý
-*	·µ »Ø Öµ:	ACK_OK  - Éè±¸ÏìÓ¦Õý³£
-*          	ACK_ERR - Éè±¸ÏìÓ¦´íÎó
-*	º¯Êý¹¦ÄÜ:	Ð´Ò»×Ö½ÚÊý¾Ý
-*	Ëµ    Ã÷:¸ßÎ»ÔÚÇ°
-******************************************************************************************/
+
 
 uint8_t Touch_IIC_WriteByte(uint8_t IIC_Data)
 {
@@ -268,18 +173,9 @@ uint8_t Touch_IIC_WriteByte(uint8_t IIC_Data)
 		IIC_Data <<= 1;
 	}
 
-	return Touch_IIC_WaitACK(); //µÈ´ýÉè±¸ÏìÓ¦
+	return Touch_IIC_WaitACK(); //ç­‰å¾…è®¾å¤‡å“åº”
 }
 
-/*****************************************************************************************
-*	º¯ Êý Ãû:	Touch_IIC_ReadByte
-*	Èë¿Ú²ÎÊý:	ACK_Mode - ÏìÓ¦Ä£Ê½£¬ÊäÈë1Ôò·¢³öÓ¦´ðÐÅºÅ£¬ÊäÈë0·¢³ö·ÇÓ¦´ðÐÅºÅ
-*	·µ »Ø Öµ:	ACK_OK  - Éè±¸ÏìÓ¦Õý³£
-*          	ACK_ERR - Éè±¸ÏìÓ¦´íÎó
-*	º¯Êý¹¦ÄÜ:¶ÁÒ»×Ö½ÚÊý¾Ý
-*	Ëµ    Ã÷:1.¸ßÎ»ÔÚÇ°
-*				2.Ó¦ÔÚÖ÷»ú½ÓÊÕ×îºóÒ»×Ö½ÚÊý¾ÝÊ±·¢ËÍ·ÇÓ¦´ðÐÅºÅ
-******************************************************************************************/
 
 uint8_t Touch_IIC_ReadByte(uint8_t ACK_Mode)
 {
@@ -297,12 +193,11 @@ uint8_t Touch_IIC_ReadByte(uint8_t ACK_Mode)
 		Touch_IIC_Delay( IIC_DelayVaule );
 	}
 	
-	if ( ACK_Mode == 1 )				//	Ó¦´ðÐÅºÅ
+	if ( ACK_Mode == 1 )				//	åº”ç­”ä¿¡å·
 		Touch_IIC_ACK();
 	else
-		Touch_IIC_NoACK();		 	// ·ÇÓ¦´ðÐÅºÅ
+		Touch_IIC_NoACK();		 	// éžåº”ç­”ä¿¡å·
 	
 	return IIC_Data; 
 }
 
-/********************************************************************************************/

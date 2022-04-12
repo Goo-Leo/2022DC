@@ -7,6 +7,8 @@
 ../TouchGFX/gui/include/gui/model/ModelListener.hpp:11:13:ModelListener::~ModelListener()	16	static
 ../TouchGFX/gui/include/gui/model/ModelListener.hpp:11:13:virtual ModelListener::~ModelListener()	16	static
 ../TouchGFX/gui/include/gui/model/ModelListener.hpp:17:18:virtual void ModelListener::SHT31Update(float, float)	24	static
+../TouchGFX/gui/include/gui/model/ModelListener.hpp:18:18:virtual void ModelListener::BH1750Update(float)	16	static
+../TouchGFX/gui/include/gui/model/ModelListener.hpp:19:18:virtual void ModelListener::NH3Upadate(unsigned int)	16	static
 ../TouchGFX/gui/include/gui/manage_screen/ManagePresenter.hpp:28:13:ManagePresenter::~ManagePresenter()	16	static
 ../TouchGFX/gui/include/gui/manage_screen/ManagePresenter.hpp:28:13:virtual ManagePresenter::~ManagePresenter()	16	static
 ../TouchGFX/gui/src/manage_screen/ManagePresenter.cpp:4:1:ManagePresenter::ManagePresenter(ManageView&)	16	static

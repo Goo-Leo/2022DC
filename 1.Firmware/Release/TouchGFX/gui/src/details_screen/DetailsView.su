@@ -1,0 +1,10 @@
+../Middlewares/ST/touchgfx/framework/include/touchgfx/Screen.hpp:104:18:virtual void touchgfx::Screen::afterTransition()	0	static
+../Middlewares/ST/touchgfx/framework/include/touchgfx/Screen.hpp:144:18:virtual void touchgfx::Screen::handleTickEvent()	0	static
+../Middlewares/ST/touchgfx/framework/include/touchgfx/Screen.hpp:154:18:virtual void touchgfx::Screen::handleKeyEvent(uint8_t)	0	static
+../TouchGFX/gui/include/gui/details_screen/DetailsView.hpp:11:13:DetailsView::~DetailsView()	0	static
+../TouchGFX/gui/src/details_screen/DetailsView.cpp:13:6:virtual void DetailsView::tearDownScreen()	0	static
+../TouchGFX/gui/src/details_screen/DetailsView.cpp:8:6:virtual void DetailsView::setupScreen()	0	static
+../TouchGFX/gui/src/details_screen/DetailsView.cpp:18:6:virtual void DetailsView::BH1750Update(float)	16	static
+../TouchGFX/gui/include/gui/details_screen/DetailsView.hpp:11:13:virtual DetailsView::~DetailsView()	8	static
+../TouchGFX/gui/src/details_screen/DetailsView.cpp:23:6:virtual void DetailsView::SHT31Update(float, float)	24	static
+../TouchGFX/gui/src/details_screen/DetailsView.cpp:3:1:DetailsView::DetailsView()	8	static
