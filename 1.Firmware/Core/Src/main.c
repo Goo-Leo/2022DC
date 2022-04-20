@@ -35,7 +35,8 @@
 
 /* Private includes ----------------------------------------------------------*/
 /* USER CODE BEGIN Includes */
-
+#include "devices.h"
+#include "stdlib.h"
 /* USER CODE END Includes */
 
 /* Private typedef -----------------------------------------------------------*/
@@ -45,6 +46,7 @@
 
 /* Private define ------------------------------------------------------------*/
 /* USER CODE BEGIN PD */
+
 /* USER CODE END PD */
 
 /* Private macro -------------------------------------------------------------*/
@@ -55,7 +57,10 @@
 /* Private variables ---------------------------------------------------------*/
 
 /* USER CODE BEGIN PV */
-
+char httprxbuffer[500]={};
+char org[4];
+uint16_t cmd;
+uint16_t cpr;
 /* USER CODE END PV */
 
 /* Private function prototypes -----------------------------------------------*/
@@ -98,21 +103,31 @@ int main(void)
 
   /* Initialize all configured peripherals */
   MX_GPIO_Init();
-  MX_TIM3_Init();
   MX_USART1_UART_Init();
-  MX_DMA_Init();
   MX_FMC_Init();
   MX_LTDC_Init();
   MX_DMA2D_Init();
   MX_CRC_Init();
   MX_I2C1_Init();
+  MX_DMA_Init();
   MX_SDIO_SD_Init();
   MX_FATFS_Init();
   MX_ADC1_Init();
+  MX_TIM3_Init();
+  MX_TIM12_Init();
   MX_TouchGFX_Init();
   /* USER CODE BEGIN 2 */
-  HAL_GPIO_WritePin(GPIOI, GPIO_PIN_8, 0);
+
+  printf("AT+CWJAP=\"ufi-955586\",\"11111111\"\r\n");
+
+
+  HAL_GPIO_WritePin(GPIOD, GPIO_PIN_4, 0);
+  HAL_GPIO_WritePin(GPIOI, GPIO_PIN_3, 0);
+  HAL_GPIO_WritePin(GPIOB, GPIO_PIN_12, 1);
+  HAL_GPIO_WritePin(GPIOB, GPIO_PIN_13, 1);
   HAL_TIM_Base_Start(&htim3);
+  HAL_TIM_PWM_Start(&htim12, TIM_CHANNEL_1);
+  HAL_TIM_PWM_Start(&htim12, TIM_CHANNEL_1);
   /* USER CODE END 2 */
 
   /* Call init function for freertos objects (in freertos.c) */
@@ -186,7 +201,25 @@ void SystemClock_Config(void)
 }
 
 /* USER CODE BEGIN 4 */
-
+void HAL_UART_RxCpltCallback(UART_HandleTypeDef *huart){
+	if(huart->Instance == USART1){
+		if (httprxbuffer[9]=='2') {
+			HAL_GPIO_TogglePin(GPIOD, GPIO_PIN_4);
+			org[0]=httprxbuffer[351];
+			org[1]=httprxbuffer[359];
+			org[2]=httprxbuffer[371];
+			org[4]=httprxbuffer[383];
+			cmd=atoi(org);
+			if (cmd != 1000*room.heater + 100*(room.fan1||room.fan2)+10*room.curtain + room.window) {
+				room.heater = cmd/1000%10;
+				room.fan1 = room.fan2 = cmd/100%10;
+				room.curtain = cmd/10%10;
+				room.window = cmd%10;
+			}
+		}
+	HAL_UART_Receive_IT(&huart1,(uint8_t*)httprxbuffer,sizeof(httprxbuffer));
+	}
+}
 /* USER CODE END 4 */
 
 /**
