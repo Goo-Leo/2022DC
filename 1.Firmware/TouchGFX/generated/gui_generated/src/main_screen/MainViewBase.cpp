@@ -49,8 +49,8 @@ MainViewBase::MainViewBase() :
     circle1.setAlpha(247);
     swipeContainer1Page1.add(circle1);
 
-    circle3.setPosition(0, 133, 352, 163);
-    circle3.setCenter(100, 200);
+    circle3.setPosition(0, 118, 352, 163);
+    circle3.setCenter(100, 205);
     circle3.setRadius(205);
     circle3.setLineWidth(0);
     circle3.setArc(0, 360);
@@ -58,28 +58,28 @@ MainViewBase::MainViewBase() :
     circle3.setPainter(circle3Painter);
     swipeContainer1Page1.add(circle3);
 
-    textArea2.setXY(319, 133);
+    textArea2.setXY(326, 127);
     textArea2.setColor(touchgfx::Color::getColorFromRGB(0, 0, 0));
     textArea2.setLinespacing(0);
-    Unicode::snprintf(textArea2Buffer, TEXTAREA2_SIZE, "%s", touchgfx::TypedText(T___SINGLEUSE_93MQ).getText());
+    Unicode::snprintf(textArea2Buffer, TEXTAREA2_SIZE, "%s", touchgfx::TypedText(T___SINGLEUSE_74D9).getText());
     textArea2.setWildcard(textArea2Buffer);
     textArea2.resizeToCurrentText();
     textArea2.setTypedText(touchgfx::TypedText(T___SINGLEUSE_TOCP));
     swipeContainer1Page1.add(textArea2);
 
-    textArea1.setXY(36, 52);
+    textArea1.setXY(51, 37);
     textArea1.setColor(touchgfx::Color::getColorFromRGB(0, 0, 0));
     textArea1.setLinespacing(0);
-    Unicode::snprintf(textArea1Buffer, TEXTAREA1_SIZE, "%s", touchgfx::TypedText(T___SINGLEUSE_V8EO).getText());
+    Unicode::snprintf(textArea1Buffer, TEXTAREA1_SIZE, "%s", touchgfx::TypedText(T___SINGLEUSE_LCSD).getText());
     textArea1.setWildcard(textArea1Buffer);
     textArea1.resizeToCurrentText();
-    textArea1.setTypedText(touchgfx::TypedText(T___SINGLEUSE_CWS1));
+    textArea1.setTypedText(touchgfx::TypedText(T___SINGLEUSE_ONXJ));
     swipeContainer1Page1.add(textArea1);
 
-    textArea3.setXY(36, 189);
+    textArea3.setXY(17, 198);
     textArea3.setColor(touchgfx::Color::getColorFromRGB(0, 0, 0));
     textArea3.setLinespacing(0);
-    Unicode::snprintf(textArea3Buffer, TEXTAREA3_SIZE, "%s", touchgfx::TypedText(T___SINGLEUSE_OS4B).getText());
+    Unicode::snprintf(textArea3Buffer, TEXTAREA3_SIZE, "%s", touchgfx::TypedText(T___SINGLEUSE_4WVS).getText());
     textArea3.setWildcard(textArea3Buffer);
     textArea3.resizeToCurrentText();
     textArea3.setTypedText(touchgfx::TypedText(T___SINGLEUSE_S3AT));
@@ -93,7 +93,7 @@ MainViewBase::MainViewBase() :
     box2_1.setColor(touchgfx::Color::getColorFromRGB(25, 93, 181));
     swipeContainer1Page2.add(box2_1);
 
-    buttonWithLabel1_1.setXY(36, 76);
+    buttonWithLabel1_1.setXY(30, 58);
     buttonWithLabel1_1.setBitmaps(touchgfx::Bitmap(BITMAP_BLUE_BUTTONS_ROUND_EDGE_SMALL_ID), touchgfx::Bitmap(BITMAP_BLUE_BUTTONS_ROUND_EDGE_SMALL_PRESSED_ID));
     buttonWithLabel1_1.setLabelText(touchgfx::TypedText(T___SINGLEUSE_9KO6));
     buttonWithLabel1_1.setLabelColor(touchgfx::Color::getColorFromRGB(255, 255, 255));
@@ -101,7 +101,7 @@ MainViewBase::MainViewBase() :
     buttonWithLabel1_1.setAction(buttonCallback);
     swipeContainer1Page2.add(buttonWithLabel1_1);
 
-    buttonWithLabel3_1.setXY(277, 76);
+    buttonWithLabel3_1.setXY(30, 159);
     buttonWithLabel3_1.setBitmaps(touchgfx::Bitmap(BITMAP_BLUE_BUTTONS_ROUND_EDGE_SMALL_ID), touchgfx::Bitmap(BITMAP_BLUE_BUTTONS_ROUND_EDGE_SMALL_PRESSED_ID));
     buttonWithLabel3_1.setLabelText(touchgfx::TypedText(T___SINGLEUSE_72WW));
     buttonWithLabel3_1.setLabelColor(touchgfx::Color::getColorFromRGB(255, 255, 255));
@@ -114,13 +114,15 @@ MainViewBase::MainViewBase() :
     buttonWithLabel4_1.setLabelText(touchgfx::TypedText(T___SINGLEUSE_JZBP));
     buttonWithLabel4_1.setLabelColor(touchgfx::Color::getColorFromRGB(255, 255, 255));
     buttonWithLabel4_1.setLabelColorPressed(touchgfx::Color::getColorFromRGB(255, 255, 255));
+    buttonWithLabel4_1.setAction(buttonCallback);
     swipeContainer1Page2.add(buttonWithLabel4_1);
 
-    buttonWithLabel2_1.setXY(36, 159);
+    buttonWithLabel2_1.setXY(277, 58);
     buttonWithLabel2_1.setBitmaps(touchgfx::Bitmap(BITMAP_BLUE_BUTTONS_ROUND_EDGE_SMALL_ID), touchgfx::Bitmap(BITMAP_BLUE_BUTTONS_ROUND_EDGE_SMALL_PRESSED_ID));
     buttonWithLabel2_1.setLabelText(touchgfx::TypedText(T___SINGLEUSE_9B0J));
     buttonWithLabel2_1.setLabelColor(touchgfx::Color::getColorFromRGB(255, 255, 255));
     buttonWithLabel2_1.setLabelColorPressed(touchgfx::Color::getColorFromRGB(255, 255, 255));
+    buttonWithLabel2_1.setAction(buttonCallback);
     swipeContainer1Page2.add(buttonWithLabel2_1);
     swipeContainer1.add(swipeContainer1Page2);
     swipeContainer1.setSelectedPage(0);
@@ -140,14 +142,28 @@ void MainViewBase::buttonCallbackHandler(const touchgfx::AbstractButton& src)
     {
         //Interaction1
         //When buttonWithLabel1_1 clicked change screen to Manage
-        //Go to Manage with screen transition towards East
-        application().gotoManageScreenWipeTransitionEast();
+        //Go to Manage with block transition
+        application().gotoManageScreenBlockTransition();
     }
     else if (&src == &buttonWithLabel3_1)
     {
         //Interaction2
         //When buttonWithLabel3_1 clicked change screen to Details
-        //Go to Details with screen transition towards East
-        application().gotoDetailsScreenWipeTransitionEast();
+        //Go to Details with block transition
+        application().gotoDetailsScreenBlockTransition();
+    }
+    else if (&src == &buttonWithLabel4_1)
+    {
+        //Interaction4
+        //When buttonWithLabel4_1 clicked change screen to Set
+        //Go to Set with block transition
+        application().gotoSetScreenBlockTransition();
+    }
+    else if (&src == &buttonWithLabel2_1)
+    {
+        //Interaction3
+        //When buttonWithLabel2_1 clicked change screen to Control
+        //Go to Control with block transition
+        application().gotoControlScreenBlockTransition();
     }
 }

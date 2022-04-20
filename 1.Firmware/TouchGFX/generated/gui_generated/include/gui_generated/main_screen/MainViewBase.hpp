@@ -13,12 +13,12 @@
 #include <touchgfx/widgets/canvas/Circle.hpp>
 #include <touchgfx/widgets/canvas/PainterRGB565.hpp>
 #include <touchgfx/widgets/TextAreaWithWildcard.hpp>
-#include <touchgfx/containers/Container.hpp>
 #include <touchgfx/widgets/ButtonWithLabel.hpp>
 #include <touchgfx/mixins/ClickListener.hpp>
 #include <touchgfx/EasingEquations.hpp>
 #include <touchgfx/mixins/FadeAnimator.hpp>
 #include <touchgfx/mixins/MoveAnimator.hpp>
+#include <touchgfx/canvas_widget_renderer/CanvasWidgetRenderer.hpp>
 
 class MainViewBase : public touchgfx::View<MainPresenter>
 {
@@ -48,7 +48,7 @@ protected:
     touchgfx::TextAreaWithOneWildcard textArea2;
     touchgfx::TextAreaWithOneWildcard textArea1;
     touchgfx::TextAreaWithOneWildcard textArea3;
-    touchgfx::MoveAnimator< touchgfx::Container > swipeContainer1Page2;
+    touchgfx::MoveAnimator< touchgfx::CacheableContainer > swipeContainer1Page2;
     touchgfx::Box box2_1;
     touchgfx::ButtonWithLabel buttonWithLabel1_1;
     touchgfx::ButtonWithLabel buttonWithLabel3_1;
@@ -58,11 +58,11 @@ protected:
     /*
      * Wildcard Buffers
      */
-    static const uint16_t TEXTAREA2_SIZE = 6;
+    static const uint16_t TEXTAREA2_SIZE = 10;
     touchgfx::Unicode::UnicodeChar textArea2Buffer[TEXTAREA2_SIZE];
-    static const uint16_t TEXTAREA1_SIZE = 7;
+    static const uint16_t TEXTAREA1_SIZE = 10;
     touchgfx::Unicode::UnicodeChar textArea1Buffer[TEXTAREA1_SIZE];
-    static const uint16_t TEXTAREA3_SIZE = 7;
+    static const uint16_t TEXTAREA3_SIZE = 10;
     touchgfx::Unicode::UnicodeChar textArea3Buffer[TEXTAREA3_SIZE];
 
 private:

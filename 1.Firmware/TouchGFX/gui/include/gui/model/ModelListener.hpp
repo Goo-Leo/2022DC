@@ -3,6 +3,7 @@
 
 #include <gui/model/Model.hpp>
 #include <touchgfx/hal/Types.hpp>
+#include "devices.h"
 class ModelListener
 {
 public:
@@ -16,7 +17,9 @@ public:
     }
     virtual void SHT31Update(float value1,float value2){};
     virtual void BH1750Update(float value){};
-    virtual void NH3Upadate(unsigned int adc){};
+    virtual void NH3Update(float adc){};
+    virtual void CO2Update(uint32_t co2){};
+    virtual void devicestate(Device room){};
 protected:
     Model* model;
 };

@@ -22,11 +22,19 @@ public:
 
     void gotoMainScreenWipeTransitionNorth();
 
+    void gotoMainScreenWipeTransitionWest();
+
     // Manage
-    void gotoManageScreenWipeTransitionEast();
+    void gotoManageScreenBlockTransition();
 
     // Details
-    void gotoDetailsScreenWipeTransitionEast();
+    void gotoDetailsScreenBlockTransition();
+
+    // Control
+    void gotoControlScreenBlockTransition();
+
+    // Set
+    void gotoSetScreenBlockTransition();
 
 protected:
     touchgfx::Callback<FrontendApplicationBase> transitionCallback;
@@ -40,11 +48,19 @@ protected:
 
     void gotoMainScreenWipeTransitionNorthImpl();
 
+    void gotoMainScreenWipeTransitionWestImpl();
+
     // Manage
-    void gotoManageScreenWipeTransitionEastImpl();
+    void gotoManageScreenBlockTransitionImpl();
 
     // Details
-    void gotoDetailsScreenWipeTransitionEastImpl();
+    void gotoDetailsScreenBlockTransitionImpl();
+
+    // Control
+    void gotoControlScreenBlockTransitionImpl();
+
+    // Set
+    void gotoSetScreenBlockTransitionImpl();
 };
 
 #endif // FRONTENDAPPLICATIONBASE_HPP

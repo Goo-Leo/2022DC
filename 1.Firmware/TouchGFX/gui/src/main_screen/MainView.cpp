@@ -1,6 +1,6 @@
 #include <gui/main_screen/MainView.hpp>
 
-#include "stm32f4xx.h"
+extern uint8_t homestate;
 
 MainView::MainView()
 {

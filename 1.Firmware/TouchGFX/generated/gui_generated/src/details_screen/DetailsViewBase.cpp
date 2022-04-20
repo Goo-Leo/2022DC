@@ -16,7 +16,7 @@ DetailsViewBase::DetailsViewBase() :
     __background.setColor(touchgfx::Color::getColorFromRGB(0, 0, 0));
 
     box1.setPosition(0, 0, 480, 272);
-    box1.setColor(touchgfx::Color::getColorFromRGB(250, 245, 245));
+    box1.setColor(touchgfx::Color::getColorFromRGB(129, 240, 192));
 
     buttonWithLabel1.setXY(0, 212);
     buttonWithLabel1.setBitmaps(touchgfx::Bitmap(BITMAP_BLUE_BUTTONS_ROUND_EDGE_SMALL_ID), touchgfx::Bitmap(BITMAP_BLUE_BUTTONS_ROUND_EDGE_SMALL_PRESSED_ID));
@@ -25,58 +25,6 @@ DetailsViewBase::DetailsViewBase() :
     buttonWithLabel1.setLabelColorPressed(touchgfx::Color::getColorFromRGB(255, 255, 255));
     buttonWithLabel1.setAction(buttonCallback);
 
-    textArea1.setXY(24, 13);
-    textArea1.setColor(touchgfx::Color::getColorFromRGB(0, 0, 0));
-    textArea1.setLinespacing(0);
-    textArea1.setTypedText(touchgfx::TypedText(T___SINGLEUSE_OHNS));
-
-    textArea2.setXY(272, 13);
-    textArea2.setColor(touchgfx::Color::getColorFromRGB(0, 0, 0));
-    textArea2.setLinespacing(0);
-    Unicode::snprintf(textArea2Buffer, TEXTAREA2_SIZE, "%s", touchgfx::TypedText(T___SINGLEUSE_TMW8).getText());
-    textArea2.setWildcard(textArea2Buffer);
-    textArea2.resizeToCurrentText();
-    textArea2.setTypedText(touchgfx::TypedText(T___SINGLEUSE_SD5P));
-
-    textArea3.setXY(24, 53);
-    textArea3.setColor(touchgfx::Color::getColorFromRGB(0, 0, 0));
-    textArea3.setLinespacing(0);
-    textArea3.setTypedText(touchgfx::TypedText(T___SINGLEUSE_F36Q));
-
-    textArea4.setXY(286, 53);
-    textArea4.setColor(touchgfx::Color::getColorFromRGB(0, 0, 0));
-    textArea4.setLinespacing(0);
-    Unicode::snprintf(textArea4Buffer, TEXTAREA4_SIZE, "%s", touchgfx::TypedText(T___SINGLEUSE_N87E).getText());
-    textArea4.setWildcard(textArea4Buffer);
-    textArea4.resizeToCurrentText();
-    textArea4.setTypedText(touchgfx::TypedText(T___SINGLEUSE_YWEV));
-
-    textArea5.setXY(24, 94);
-    textArea5.setColor(touchgfx::Color::getColorFromRGB(0, 0, 0));
-    textArea5.setLinespacing(0);
-    textArea5.setTypedText(touchgfx::TypedText(T___SINGLEUSE_T2RP));
-
-    textArea6.setXY(325, 94);
-    textArea6.setColor(touchgfx::Color::getColorFromRGB(0, 0, 0));
-    textArea6.setLinespacing(0);
-    Unicode::snprintf(textArea6Buffer, TEXTAREA6_SIZE, "%s", touchgfx::TypedText(T___SINGLEUSE_7D2F).getText());
-    textArea6.setWildcard(textArea6Buffer);
-    textArea6.resizeToCurrentText();
-    textArea6.setTypedText(touchgfx::TypedText(T___SINGLEUSE_K2YG));
-
-    textArea7.setXY(24, 136);
-    textArea7.setColor(touchgfx::Color::getColorFromRGB(0, 0, 0));
-    textArea7.setLinespacing(0);
-    textArea7.setTypedText(touchgfx::TypedText(T___SINGLEUSE_B3T5));
-
-    textArea8.setXY(344, 136);
-    textArea8.setColor(touchgfx::Color::getColorFromRGB(0, 0, 0));
-    textArea8.setLinespacing(0);
-    Unicode::snprintf(textArea8Buffer, TEXTAREA8_SIZE, "%s", touchgfx::TypedText(T___SINGLEUSE_H6IP).getText());
-    textArea8.setWildcard(textArea8Buffer);
-    textArea8.resizeToCurrentText();
-    textArea8.setTypedText(touchgfx::TypedText(T___SINGLEUSE_FKHH));
-
     buttonWithLabel2.setXY(310, 212);
     buttonWithLabel2.setBitmaps(touchgfx::Bitmap(BITMAP_BLUE_BUTTONS_ROUND_EDGE_SMALL_ID), touchgfx::Bitmap(BITMAP_BLUE_BUTTONS_ROUND_EDGE_SMALL_PRESSED_ID));
     buttonWithLabel2.setLabelText(touchgfx::TypedText(T___SINGLEUSE_E8U2));
@@ -84,12 +32,59 @@ DetailsViewBase::DetailsViewBase() :
     buttonWithLabel2.setLabelColorPressed(touchgfx::Color::getColorFromRGB(255, 255, 255));
     buttonWithLabel2.setAction(buttonCallback);
 
-    textArea9.setXY(24, 175);
-    textArea9.setColor(touchgfx::Color::getColorFromRGB(0, 0, 0));
-    textArea9.setLinespacing(0);
-    textArea9.setTypedText(touchgfx::TypedText(T___SINGLEUSE_C03T));
+    textArea1.setXY(42, 9);
+    textArea1.setColor(touchgfx::Color::getColorFromRGB(0, 0, 0));
+    textArea1.setLinespacing(0);
+    textArea1.setTypedText(touchgfx::TypedText(T___SINGLEUSE_OHNS));
 
-    textArea10.setXY(296, 175);
+    textArea2.setXY(290, 9);
+    textArea2.setColor(touchgfx::Color::getColorFromRGB(0, 0, 0));
+    textArea2.setLinespacing(0);
+    Unicode::snprintf(textArea2Buffer, TEXTAREA2_SIZE, "%s", touchgfx::TypedText(T___SINGLEUSE_TMW8).getText());
+    textArea2.setWildcard(textArea2Buffer);
+    textArea2.resizeToCurrentText();
+    textArea2.setTypedText(touchgfx::TypedText(T___SINGLEUSE_SD5P));
+
+    textArea3.setXY(42, 49);
+    textArea3.setColor(touchgfx::Color::getColorFromRGB(0, 0, 0));
+    textArea3.setLinespacing(0);
+    textArea3.setTypedText(touchgfx::TypedText(T___SINGLEUSE_F36Q));
+
+    textArea4.setXY(304, 49);
+    textArea4.setColor(touchgfx::Color::getColorFromRGB(0, 0, 0));
+    textArea4.setLinespacing(0);
+    Unicode::snprintf(textArea4Buffer, TEXTAREA4_SIZE, "%s", touchgfx::TypedText(T___SINGLEUSE_N87E).getText());
+    textArea4.setWildcard(textArea4Buffer);
+    textArea4.resizeToCurrentText();
+    textArea4.setTypedText(touchgfx::TypedText(T___SINGLEUSE_YWEV));
+
+    textArea5.setXY(42, 90);
+    textArea5.setColor(touchgfx::Color::getColorFromRGB(0, 0, 0));
+    textArea5.setLinespacing(0);
+    textArea5.setTypedText(touchgfx::TypedText(T___SINGLEUSE_T2RP));
+
+    textArea6.setXY(343, 90);
+    textArea6.setColor(touchgfx::Color::getColorFromRGB(0, 0, 0));
+    textArea6.setLinespacing(0);
+    Unicode::snprintf(textArea6Buffer, TEXTAREA6_SIZE, "%s", touchgfx::TypedText(T___SINGLEUSE_7D2F).getText());
+    textArea6.setWildcard(textArea6Buffer);
+    textArea6.resizeToCurrentText();
+    textArea6.setTypedText(touchgfx::TypedText(T___SINGLEUSE_K2YG));
+
+    textArea7.setXY(42, 132);
+    textArea7.setColor(touchgfx::Color::getColorFromRGB(0, 0, 0));
+    textArea7.setLinespacing(0);
+    textArea7.setTypedText(touchgfx::TypedText(T___SINGLEUSE_B3T5));
+
+    textArea8.setXY(342, 132);
+    textArea8.setColor(touchgfx::Color::getColorFromRGB(0, 0, 0));
+    textArea8.setLinespacing(0);
+    Unicode::snprintf(textArea8Buffer, TEXTAREA8_SIZE, "%s", touchgfx::TypedText(T___SINGLEUSE_H6IP).getText());
+    textArea8.setWildcard(textArea8Buffer);
+    textArea8.resizeToCurrentText();
+    textArea8.setTypedText(touchgfx::TypedText(T___SINGLEUSE_FKHH));
+
+    textArea10.setXY(359, 171);
     textArea10.setColor(touchgfx::Color::getColorFromRGB(0, 0, 0));
     textArea10.setLinespacing(0);
     Unicode::snprintf(textArea10Buffer, TEXTAREA10_SIZE, "%s", touchgfx::TypedText(T___SINGLEUSE_DD9S).getText());
@@ -97,9 +92,15 @@ DetailsViewBase::DetailsViewBase() :
     textArea10.resizeToCurrentText();
     textArea10.setTypedText(touchgfx::TypedText(T___SINGLEUSE_L1JV));
 
+    textArea9.setXY(42, 171);
+    textArea9.setColor(touchgfx::Color::getColorFromRGB(0, 0, 0));
+    textArea9.setLinespacing(0);
+    textArea9.setTypedText(touchgfx::TypedText(T___SINGLEUSE_C03T));
+
     add(__background);
     add(box1);
     add(buttonWithLabel1);
+    add(buttonWithLabel2);
     add(textArea1);
     add(textArea2);
     add(textArea3);
@@ -108,9 +109,8 @@ DetailsViewBase::DetailsViewBase() :
     add(textArea6);
     add(textArea7);
     add(textArea8);
-    add(buttonWithLabel2);
-    add(textArea9);
     add(textArea10);
+    add(textArea9);
 }
 
 void DetailsViewBase::setupScreen()

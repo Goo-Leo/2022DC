@@ -9,8 +9,9 @@
 #include <mvp/MVPHeap.hpp>
 
 #include <touchgfx/transitions/NoTransition.hpp>
-#include <touchgfx/transitions/WipeTransition.hpp>
+#include <touchgfx/transitions/BlockTransition.hpp>
 #include <touchgfx/transitions/CoverTransition.hpp>
+#include <touchgfx/transitions/WipeTransition.hpp>
 
 #include <gui/common/FrontendApplication.hpp>
 #include <gui/model/Model.hpp>
@@ -21,6 +22,10 @@
 #include <gui/manage_screen/ManagePresenter.hpp>
 #include <gui/details_screen/DetailsView.hpp>
 #include <gui/details_screen/DetailsPresenter.hpp>
+#include <gui/control_screen/ControlView.hpp>
+#include <gui/control_screen/ControlPresenter.hpp>
+#include <gui/set_screen/SetView.hpp>
+#include <gui/set_screen/SetPresenter.hpp>
 
 
 /**
@@ -46,7 +51,9 @@ public:
     typedef touchgfx::meta::TypeList< MainView,
             touchgfx::meta::TypeList< ManageView,
             touchgfx::meta::TypeList< DetailsView,
-            touchgfx::meta::Nil > >
+            touchgfx::meta::TypeList< ControlView,
+            touchgfx::meta::TypeList< SetView,
+            touchgfx::meta::Nil > > > >
             > GeneratedViewTypes;
 
     /**
@@ -61,7 +68,9 @@ public:
     typedef touchgfx::meta::TypeList< MainPresenter,
             touchgfx::meta::TypeList< ManagePresenter,
             touchgfx::meta::TypeList< DetailsPresenter,
-            touchgfx::meta::Nil > >
+            touchgfx::meta::TypeList< ControlPresenter,
+            touchgfx::meta::TypeList< SetPresenter,
+            touchgfx::meta::Nil > > > >
             > GeneratedPresenterTypes;
 
     /**
@@ -74,10 +83,11 @@ public:
      * @note All transition types used in the application MUST be added to this list!
      */
     typedef touchgfx::meta::TypeList< touchgfx::NoTransition,
-            touchgfx::meta::TypeList< WipeTransition<EAST>,
+            touchgfx::meta::TypeList< BlockTransition,
             touchgfx::meta::TypeList< CoverTransition<NORTH>,
             touchgfx::meta::TypeList< WipeTransition<NORTH>,
-            touchgfx::meta::Nil > > >
+            touchgfx::meta::TypeList< WipeTransition<WEST>,
+            touchgfx::meta::Nil > > > >
             > GeneratedTransitionTypes;
 
     /**

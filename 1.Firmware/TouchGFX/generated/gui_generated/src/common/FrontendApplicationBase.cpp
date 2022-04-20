@@ -15,6 +15,10 @@
 #include <gui/manage_screen/ManagePresenter.hpp>
 #include <gui/details_screen/DetailsView.hpp>
 #include <gui/details_screen/DetailsPresenter.hpp>
+#include <gui/control_screen/ControlView.hpp>
+#include <gui/control_screen/ControlPresenter.hpp>
+#include <gui/set_screen/SetView.hpp>
+#include <gui/set_screen/SetPresenter.hpp>
 
 using namespace touchgfx;
 
@@ -68,28 +72,65 @@ void FrontendApplicationBase::gotoMainScreenWipeTransitionNorthImpl()
     touchgfx::makeTransition<MainView, MainPresenter, touchgfx::WipeTransition<NORTH>, Model >(&currentScreen, &currentPresenter, frontendHeap, &currentTransition, &model);
 }
 
-// Manage
-
-void FrontendApplicationBase::gotoManageScreenWipeTransitionEast()
+void FrontendApplicationBase::gotoMainScreenWipeTransitionWest()
 {
-    transitionCallback = touchgfx::Callback<FrontendApplicationBase>(this, &FrontendApplication::gotoManageScreenWipeTransitionEastImpl);
+    transitionCallback = touchgfx::Callback<FrontendApplicationBase>(this, &FrontendApplication::gotoMainScreenWipeTransitionWestImpl);
     pendingScreenTransitionCallback = &transitionCallback;
 }
 
-void FrontendApplicationBase::gotoManageScreenWipeTransitionEastImpl()
+void FrontendApplicationBase::gotoMainScreenWipeTransitionWestImpl()
 {
-    touchgfx::makeTransition<ManageView, ManagePresenter, touchgfx::WipeTransition<EAST>, Model >(&currentScreen, &currentPresenter, frontendHeap, &currentTransition, &model);
+    touchgfx::makeTransition<MainView, MainPresenter, touchgfx::WipeTransition<WEST>, Model >(&currentScreen, &currentPresenter, frontendHeap, &currentTransition, &model);
+}
+
+// Manage
+
+void FrontendApplicationBase::gotoManageScreenBlockTransition()
+{
+    transitionCallback = touchgfx::Callback<FrontendApplicationBase>(this, &FrontendApplication::gotoManageScreenBlockTransitionImpl);
+    pendingScreenTransitionCallback = &transitionCallback;
+}
+
+void FrontendApplicationBase::gotoManageScreenBlockTransitionImpl()
+{
+    touchgfx::makeTransition<ManageView, ManagePresenter, touchgfx::BlockTransition, Model >(&currentScreen, &currentPresenter, frontendHeap, &currentTransition, &model);
 }
 
 // Details
 
-void FrontendApplicationBase::gotoDetailsScreenWipeTransitionEast()
+void FrontendApplicationBase::gotoDetailsScreenBlockTransition()
 {
-    transitionCallback = touchgfx::Callback<FrontendApplicationBase>(this, &FrontendApplication::gotoDetailsScreenWipeTransitionEastImpl);
+    transitionCallback = touchgfx::Callback<FrontendApplicationBase>(this, &FrontendApplication::gotoDetailsScreenBlockTransitionImpl);
     pendingScreenTransitionCallback = &transitionCallback;
 }
 
-void FrontendApplicationBase::gotoDetailsScreenWipeTransitionEastImpl()
+void FrontendApplicationBase::gotoDetailsScreenBlockTransitionImpl()
 {
-    touchgfx::makeTransition<DetailsView, DetailsPresenter, touchgfx::WipeTransition<EAST>, Model >(&currentScreen, &currentPresenter, frontendHeap, &currentTransition, &model);
+    touchgfx::makeTransition<DetailsView, DetailsPresenter, touchgfx::BlockTransition, Model >(&currentScreen, &currentPresenter, frontendHeap, &currentTransition, &model);
+}
+
+// Control
+
+void FrontendApplicationBase::gotoControlScreenBlockTransition()
+{
+    transitionCallback = touchgfx::Callback<FrontendApplicationBase>(this, &FrontendApplication::gotoControlScreenBlockTransitionImpl);
+    pendingScreenTransitionCallback = &transitionCallback;
+}
+
+void FrontendApplicationBase::gotoControlScreenBlockTransitionImpl()
+{
+    touchgfx::makeTransition<ControlView, ControlPresenter, touchgfx::BlockTransition, Model >(&currentScreen, &currentPresenter, frontendHeap, &currentTransition, &model);
+}
+
+// Set
+
+void FrontendApplicationBase::gotoSetScreenBlockTransition()
+{
+    transitionCallback = touchgfx::Callback<FrontendApplicationBase>(this, &FrontendApplication::gotoSetScreenBlockTransitionImpl);
+    pendingScreenTransitionCallback = &transitionCallback;
+}
+
+void FrontendApplicationBase::gotoSetScreenBlockTransitionImpl()
+{
+    touchgfx::makeTransition<SetView, SetPresenter, touchgfx::BlockTransition, Model >(&currentScreen, &currentPresenter, frontendHeap, &currentTransition, &model);
 }

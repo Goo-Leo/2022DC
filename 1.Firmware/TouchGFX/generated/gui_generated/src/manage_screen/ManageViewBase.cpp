@@ -15,7 +15,7 @@ ManageViewBase::ManageViewBase() :
     __background.setColor(touchgfx::Color::getColorFromRGB(0, 0, 0));
 
     box1.setPosition(0, 0, 480, 272);
-    box1.setColor(touchgfx::Color::getColorFromRGB(250, 245, 245));
+    box1.setColor(touchgfx::Color::getColorFromRGB(245, 137, 137));
 
     buttonWithLabel1.setXY(310, 212);
     buttonWithLabel1.setBitmaps(touchgfx::Bitmap(BITMAP_BLUE_BUTTONS_ROUND_EDGE_SMALL_ID), touchgfx::Bitmap(BITMAP_BLUE_BUTTONS_ROUND_EDGE_SMALL_PRESSED_ID));

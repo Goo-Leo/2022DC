@@ -1,5 +1,5 @@
 #include <gui/details_screen/DetailsView.hpp>
-#include "math.h"
+
 DetailsView::DetailsView()
 {
 
@@ -27,10 +27,15 @@ void DetailsView::SHT31Update(float value1,float value2){
 	textArea6.invalidate();
 }
 
-void DetailsView::NH3Upadate(unsigned int adc){
-	adc = adc* 3.3 / 4096.0;
-	Unicode::snprintfFloat(textArea10Buffer, adc , "%.1f", 410.74*pow(adc,5) - 2718.5*(adc,4) + 7015.6*(adc,3) - 8747.9*(adc,2) + 5271.7*adc - 1128.7);
+void DetailsView::CO2Upadate(uint32_t co2){
+	Unicode::snprintfFloat(textArea8Buffer, co2,"%.1f",co2);
+	textArea8.invalidate();
+}
+
+void DetailsView::NH3Update(float adc){
+	Unicode::snprintfFloat(textArea10Buffer, adc , "%f", adc);
 	textArea10.invalidate();
 }
+
 
 

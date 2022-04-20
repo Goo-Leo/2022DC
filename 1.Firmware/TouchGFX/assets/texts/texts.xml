@@ -1,17 +1,8 @@
 <?xml version="1.0" encoding="utf-8"?>
 <TextDatabase xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="texts.xsd" Version="4.18.1">
   <Texts>
-    <Text Id="__SingleUse_CWS1" TypographyId="Typography_00" Alignment="Left" Direction="LTR">
-      <Translation Language="GB">&lt;value&gt;%RH</Translation>
-    </Text>
-    <Text Id="__SingleUse_V8EO" TypographyId="Typography_00" Alignment="Left" Direction="LTR">
-      <Translation Language="GB">00.0</Translation>
-    </Text>
     <Text Id="__SingleUse_S3AT" TypographyId="Typography_00" Alignment="Left" Direction="LTR">
-      <Translation Language="GB">&lt;value&gt;%CO2</Translation>
-    </Text>
-    <Text Id="__SingleUse_OS4B" TypographyId="Typography_00" Alignment="Left" Direction="LTR">
-      <Translation Language="GB">0.0</Translation>
+      <Translation Language="GB">&lt;value&gt;ppmCO2</Translation>
     </Text>
     <Text Id="__SingleUse_9KO6" TypographyId="Default" Alignment="Center" Direction="LTR">
       <Translation Language="GB">Manage</Translation>
@@ -26,19 +17,16 @@
       <Translation Language="GB">Contorl</Translation>
     </Text>
     <Text Id="__SingleUse_0B2Y" TypographyId="Default" Alignment="Center" Direction="LTR">
-      <Translation Language="GB">back</Translation>
+      <Translation Language="GB">Back</Translation>
     </Text>
     <Text Id="__SingleUse_SD5P" TypographyId="Large" Alignment="Right" Direction="LTR">
       <Translation Language="GB">&lt;value&gt;Lux</Translation>
     </Text>
     <Text Id="__SingleUse_G7MQ" TypographyId="Default" Alignment="Center" Direction="LTR">
-      <Translation Language="GB">back</Translation>
+      <Translation Language="GB">Back</Translation>
     </Text>
     <Text Id="__SingleUse_TOCP" TypographyId="Typography_00" Alignment="Left" Direction="LTR">
       <Translation Language="GB">&lt;value&gt;°C</Translation>
-    </Text>
-    <Text Id="__SingleUse_93MQ" TypographyId="Typography_00" Alignment="Left" Direction="LTR">
-      <Translation Language="GB">00.0</Translation>
     </Text>
     <Text Id="__SingleUse_OHNS" TypographyId="Large" Alignment="Left" Direction="LTR">
       <Translation Language="GB">Illumination:</Translation>
@@ -68,10 +56,10 @@
       <Translation Language="GB">CO2:</Translation>
     </Text>
     <Text Id="__SingleUse_FKHH" TypographyId="Large" Alignment="Right" Direction="LTR">
-      <Translation Language="GB">&lt;value&gt;%</Translation>
+      <Translation Language="GB">&lt;value&gt;ppm</Translation>
     </Text>
     <Text Id="__SingleUse_H6IP" TypographyId="Large" Alignment="Left" Direction="LTR">
-      <Translation Language="GB">0.0</Translation>
+      <Translation Language="GB">00</Translation>
     </Text>
     <Text Id="__SingleUse_E8U2" TypographyId="Default" Alignment="Center" Direction="LTR">
       <Translation Language="GB">Export</Translation>
@@ -101,13 +89,91 @@
       <Translation Language="GB">&lt;value&gt;ppm</Translation>
     </Text>
     <Text Id="__SingleUse_DD9S" TypographyId="Large" Alignment="Left" Direction="LTR">
+      <Translation Language="GB">0</Translation>
+    </Text>
+    <Text Id="__SingleUse_5GPJ" TypographyId="Large" Alignment="Left" Direction="LTR">
+      <Translation Language="GB">Fan1</Translation>
+    </Text>
+    <Text Id="__SingleUse_XBL0" TypographyId="Large" Alignment="Left" Direction="LTR">
+      <Translation Language="GB">Fan2</Translation>
+    </Text>
+    <Text Id="__SingleUse_ZKBN" TypographyId="Large" Alignment="Left" Direction="LTR">
+      <Translation Language="GB">Window</Translation>
+    </Text>
+    <Text Id="__SingleUse_VL65" TypographyId="Large" Alignment="Left" Direction="LTR">
+      <Translation Language="GB">Curtain</Translation>
+    </Text>
+    <Text Id="__SingleUse_ENSK" TypographyId="Large" Alignment="Left" Direction="LTR">
+      <Translation Language="GB">Heater</Translation>
+    </Text>
+    <Text Id="__SingleUse_YKXE" TypographyId="Default" Alignment="Center" Direction="LTR">
+      <Translation Language="GB">Back</Translation>
+    </Text>
+    <Text Id="__SingleUse_HWD7" TypographyId="Large" Alignment="Left" Direction="LTR">
+      <Translation Language="GB">Illumination &lt;=</Translation>
+    </Text>
+    <Text Id="__SingleUse_EIHH" TypographyId="Large" Alignment="Right" Direction="LTR">
+      <Translation Language="GB">&lt;value&gt;Lux</Translation>
+    </Text>
+    <Text Id="__SingleUse_W6GS" TypographyId="Large" Alignment="Left" Direction="LTR">
+      <Translation Language="GB">1000.0</Translation>
+    </Text>
+    <Text Id="__SingleUse_WT26" TypographyId="Large" Alignment="Left" Direction="LTR">
+      <Translation Language="GB">Humidity      &lt;=</Translation>
+    </Text>
+    <Text Id="__SingleUse_R1XZ" TypographyId="Large" Alignment="Right" Direction="LTR">
+      <Translation Language="GB">&lt;value&gt;%RH</Translation>
+    </Text>
+    <Text Id="__SingleUse_TOQX" TypographyId="Large" Alignment="Left" Direction="LTR">
+      <Translation Language="GB">00.0</Translation>
+    </Text>
+    <Text Id="__SingleUse_86FF" TypographyId="Large" Alignment="Left" Direction="LTR">
+      <Translation Language="GB">Temperature &lt;=</Translation>
+    </Text>
+    <Text Id="__SingleUse_N5I8" TypographyId="Large" Alignment="Right" Direction="LTR">
+      <Translation Language="GB">&lt;value&gt;°C</Translation>
+    </Text>
+    <Text Id="__SingleUse_MZIT" TypographyId="Large" Alignment="Left" Direction="LTR">
+      <Translation Language="GB">00.0</Translation>
+    </Text>
+    <Text Id="__SingleUse_S6ZK" TypographyId="Large" Alignment="Left" Direction="LTR">
+      <Translation Language="GB">CO2              &lt;=</Translation>
+    </Text>
+    <Text Id="__SingleUse_AA2G" TypographyId="Large" Alignment="Right" Direction="LTR">
+      <Translation Language="GB">&lt;value&gt;ppm</Translation>
+    </Text>
+    <Text Id="__SingleUse_9CCQ" TypographyId="Large" Alignment="Left" Direction="LTR">
+      <Translation Language="GB">00</Translation>
+    </Text>
+    <Text Id="__SingleUse_G1JT" TypographyId="Large" Alignment="Left" Direction="LTR">
+      <Translation Language="GB">NH3              &lt;=</Translation>
+    </Text>
+    <Text Id="__SingleUse_TUT2" TypographyId="Large" Alignment="Right" Direction="LTR">
+      <Translation Language="GB">&lt;value&gt;ppm</Translation>
+    </Text>
+    <Text Id="__SingleUse_GP9H" TypographyId="Large" Alignment="Left" Direction="LTR">
+      <Translation Language="GB">00.0</Translation>
+    </Text>
+    <Text Id="__SingleUse_DAJ9" TypographyId="Default" Alignment="Center" Direction="LTR">
+      <Translation Language="GB">Back</Translation>
+    </Text>
+    <Text Id="__SingleUse_74D9" TypographyId="Typography_00" Alignment="Left" Direction="LTR">
+      <Translation Language="GB">00.0</Translation>
+    </Text>
+    <Text Id="__SingleUse_4WVS" TypographyId="Typography_00" Alignment="Left" Direction="LTR">
+      <Translation Language="GB">000</Translation>
+    </Text>
+    <Text Id="__SingleUse_ONXJ" TypographyId="Typography_00" Alignment="Center" Direction="LTR">
+      <Translation Language="GB">&lt;value&gt;%RH</Translation>
+    </Text>
+    <Text Id="__SingleUse_LCSD" TypographyId="Typography_00" Alignment="Left" Direction="LTR">
       <Translation Language="GB">00.0</Translation>
     </Text>
   </Texts>
   <Typographies>
     <Typography Id="Default" Font="verdanab.ttf" Size="16" Bpp="4" FallbackCharacter="?" WildcardCharacters="." WildcardCharacterRanges="0-9" />
     <Typography Id="Large" Font="verdanab.ttf" Size="25" Bpp="4" FallbackCharacter="?" WildcardCharacters="." WildcardCharacterRanges="0-9" />
-    <Typography Id="Small" Font="verdana.ttf" Size="10" Bpp="4" FallbackCharacter="?" />
-    <Typography Id="Typography_00" Font="verdanab.ttf" Size="35" Bpp="4" FallbackCharacter="?" />
+    <Typography Id="Small" Font="verdana.ttf" Size="10" Bpp="4" FallbackCharacter="?" WildcardCharacters="." WildcardCharacterRanges="0-9" />
+    <Typography Id="Typography_00" Font="verdanab.ttf" Size="35" Bpp="4" FallbackCharacter="?" WildcardCharacters="." WildcardCharacterRanges="0-9" />
   </Typographies>
 </TextDatabase>

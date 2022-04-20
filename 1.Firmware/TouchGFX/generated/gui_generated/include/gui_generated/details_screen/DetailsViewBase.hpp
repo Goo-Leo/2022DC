@@ -31,6 +31,7 @@ protected:
     touchgfx::Box __background;
     touchgfx::Box box1;
     touchgfx::ButtonWithLabel buttonWithLabel1;
+    touchgfx::ButtonWithLabel buttonWithLabel2;
     touchgfx::TextArea textArea1;
     touchgfx::TextAreaWithOneWildcard textArea2;
     touchgfx::TextArea textArea3;
@@ -39,9 +40,8 @@ protected:
     touchgfx::TextAreaWithOneWildcard textArea6;
     touchgfx::TextArea textArea7;
     touchgfx::TextAreaWithOneWildcard textArea8;
-    touchgfx::ButtonWithLabel buttonWithLabel2;
-    touchgfx::TextArea textArea9;
     touchgfx::TextAreaWithOneWildcard textArea10;
+    touchgfx::TextArea textArea9;
 
     /*
      * Wildcard Buffers

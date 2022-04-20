@@ -8,9 +8,10 @@ class DetailsView : public DetailsViewBase
 {
 public:
     DetailsView();
-    virtual void NH3Upadate(unsigned int adc);
+    virtual void NH3Update(float adc);
     virtual void SHT31Update(float value1,float value2);
     virtual void BH1750Update(float value);
+    virtual void CO2Upadate(uint32_t co2);
     virtual ~DetailsView() {}
     virtual void setupScreen();
     virtual void tearDownScreen();

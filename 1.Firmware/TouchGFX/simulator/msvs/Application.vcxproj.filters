@@ -208,6 +208,30 @@
     <Filter Include="Header Files\generated\gui_generated\details_screen">
       <UniqueIdentifier>57D4D619-6AB1-620C-51A4-2714808DD869</UniqueIdentifier>
     </Filter>
+    <Filter Include="Header Files\gui\control_screen">
+      <UniqueIdentifier>497DF511-D3EE-CE75-8642-C843362CD071</UniqueIdentifier>
+    </Filter>
+    <Filter Include="Source Files\gui\control_screen">
+      <UniqueIdentifier>34B66AEF-08D8-889C-671C-14839707568D</UniqueIdentifier>
+    </Filter>
+    <Filter Include="Source Files\generated\gui_generated\control_screen">
+      <UniqueIdentifier>8E1F9AB2-C3E8-F4FB-4490-ADD898E37EBA</UniqueIdentifier>
+    </Filter>
+    <Filter Include="Header Files\generated\gui_generated\control_screen">
+      <UniqueIdentifier>A7121122-AB22-F98A-AE94-0E07EA13434C</UniqueIdentifier>
+    </Filter>
+    <Filter Include="Source Files\gui\set_screen">
+      <UniqueIdentifier>CBE86F47-AD2A-1A5B-3D05-A623B4D5C535</UniqueIdentifier>
+    </Filter>
+    <Filter Include="Header Files\gui\set_screen">
+      <UniqueIdentifier>16B17E2E-4E7B-DA90-2A09-1FEA34D70699</UniqueIdentifier>
+    </Filter>
+    <Filter Include="Header Files\generated\gui_generated\set_screen">
+      <UniqueIdentifier>DCD72E44-EF3D-3893-C497-15848F44A32D</UniqueIdentifier>
+    </Filter>
+    <Filter Include="Source Files\generated\gui_generated\set_screen">
+      <UniqueIdentifier>BD358172-7076-7354-811B-9938B26F5728</UniqueIdentifier>
+    </Filter>
   </ItemGroup>
   <ItemGroup>
     <ClCompile Include="$(TouchGFXReleasePath)\framework\source\platform\driver\touch\SDL2TouchController.cpp">
@@ -266,6 +290,24 @@
     </ClCompile>
     <ClCompile Include="..\..\generated\gui_generated\src\details_screen\DetailsViewBase.cpp">
       <Filter>Source Files\generated\gui_generated\details_screen</Filter>
+    </ClCompile>
+    <ClCompile Include="..\..\gui\src\control_screen\ControlPresenter.cpp">
+      <Filter>Source Files\gui\control_screen</Filter>
+    </ClCompile>
+    <ClCompile Include="..\..\gui\src\control_screen\ControlView.cpp">
+      <Filter>Source Files\gui\control_screen</Filter>
+    </ClCompile>
+    <ClCompile Include="..\..\generated\gui_generated\src\control_screen\ControlViewBase.cpp">
+      <Filter>Source Files\generated\gui_generated\control_screen</Filter>
+    </ClCompile>
+    <ClCompile Include="..\..\gui\src\set_screen\SetPresenter.cpp">
+      <Filter>Source Files\gui\set_screen</Filter>
+    </ClCompile>
+    <ClCompile Include="..\..\gui\src\set_screen\SetView.cpp">
+      <Filter>Source Files\gui\set_screen</Filter>
+    </ClCompile>
+    <ClCompile Include="..\..\generated\gui_generated\src\set_screen\SetViewBase.cpp">
+      <Filter>Source Files\generated\gui_generated\set_screen</Filter>
     </ClCompile>
   </ItemGroup>
   <ItemGroup>
@@ -735,6 +777,24 @@
     </ClInclude>
     <ClInclude Include="..\..\generated\gui_generated\include\gui_generated\details_screen\DetailsViewBase.hpp">
       <Filter>Header Files\generated\gui_generated\details_screen</Filter>
+    </ClInclude>
+    <ClInclude Include="..\..\gui\include\gui\control_screen\ControlPresenter.hpp">
+      <Filter>Header Files\gui\control_screen</Filter>
+    </ClInclude>
+    <ClInclude Include="..\..\gui\include\gui\control_screen\ControlView.hpp">
+      <Filter>Header Files\gui\control_screen</Filter>
+    </ClInclude>
+    <ClInclude Include="..\..\generated\gui_generated\include\gui_generated\control_screen\ControlViewBase.hpp">
+      <Filter>Header Files\generated\gui_generated\control_screen</Filter>
+    </ClInclude>
+    <ClInclude Include="..\..\gui\include\gui\set_screen\SetPresenter.hpp">
+      <Filter>Header Files\gui\set_screen</Filter>
+    </ClInclude>
+    <ClInclude Include="..\..\gui\include\gui\set_screen\SetView.hpp">
+      <Filter>Header Files\gui\set_screen</Filter>
+    </ClInclude>
+    <ClInclude Include="..\..\generated\gui_generated\include\gui_generated\set_screen\SetViewBase.hpp">
+      <Filter>Header Files\generated\gui_generated\set_screen</Filter>
     </ClInclude>
   </ItemGroup>
   <ItemGroup>

@@ -25,3 +25,7 @@ void DetailsPresenter::BH1750Update(float value)
 {
 	view.BH1750Update(value);
 }
+
+void DetailsPresenter::NH3Update(float adc){
+	view.NH3Update(adc);
+}

@@ -24,6 +24,7 @@ public:
      * (ie. made inactive). Teardown functionality can be placed here.
      */
     virtual void deactivate();
+    virtual void NH3Update(float adc);
     virtual void SHT31Update(float value1,float value2);
     virtual void BH1750Update(float value);
     virtual ~DetailsPresenter() {};
