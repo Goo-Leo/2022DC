@@ -19,6 +19,7 @@ c:\st\stm32cubeide_1.9.0\stm32cubeide\plugins\com.st.stm32cube.ide.mcu.externalt
 ../Middlewares/ST/touchgfx/framework/include/touchgfx/Drawable.hpp:132:23:virtual touchgfx::Drawable* touchgfx::Drawable::getFirstChild()	16	static
 ../Middlewares/ST/touchgfx/framework/include/touchgfx/Drawable.hpp:183:17:const touchgfx::Rect& touchgfx::Drawable::getRect() const	16	static
 ../Middlewares/ST/touchgfx/framework/include/touchgfx/Drawable.hpp:216:10:void touchgfx::Drawable::setPosition(int16_t, int16_t, int16_t, int16_t)	24	static
+../Middlewares/ST/touchgfx/framework/include/touchgfx/Drawable.hpp:256:13:int16_t touchgfx::Drawable::getX() const	16	static
 ../Middlewares/ST/touchgfx/framework/include/touchgfx/Drawable.hpp:266:13:int16_t touchgfx::Drawable::getY() const	16	static
 ../Middlewares/ST/touchgfx/framework/include/touchgfx/Drawable.hpp:276:13:int16_t touchgfx::Drawable::getWidth() const	16	static
 ../Middlewares/ST/touchgfx/framework/include/touchgfx/Drawable.hpp:286:13:int16_t touchgfx::Drawable::getHeight() const	16	static
@@ -59,24 +60,35 @@ c:\st\stm32cubeide_1.9.0\stm32cubeide\plugins\com.st.stm32cube.ide.mcu.externalt
 ../TouchGFX/generated/gui_generated/include/gui_generated/common/FrontendApplicationBase.hpp:16:13:FrontendApplicationBase::~FrontendApplicationBase()	16	static
 ../TouchGFX/generated/gui_generated/include/gui_generated/common/FrontendApplicationBase.hpp:16:13:virtual FrontendApplicationBase::~FrontendApplicationBase()	16	static
 ../Middlewares/ST/touchgfx/framework/include/touchgfx/transitions/NoTransition.hpp:35:18:virtual void touchgfx::NoTransition::handleTickEvent()	16	static
+../Middlewares/ST/touchgfx/framework/include/touchgfx/transitions/BlockTransition.hpp:40:5:touchgfx::BlockTransition::BlockTransition()	16	static
+../Middlewares/ST/touchgfx/framework/include/touchgfx/transitions/BlockTransition.hpp:64:18:virtual void touchgfx::BlockTransition::handleTickEvent()	248	static
+../Middlewares/ST/touchgfx/framework/include/touchgfx/transitions/BlockTransition.hpp:102:18:virtual void touchgfx::BlockTransition::tearDown()	16	static
+../Middlewares/ST/touchgfx/framework/include/touchgfx/transitions/BlockTransition.hpp:106:18:virtual void touchgfx::BlockTransition::init()	16	static
+../Middlewares/ST/touchgfx/framework/include/touchgfx/transitions/BlockTransition.hpp:115:18:virtual void touchgfx::BlockTransition::invalidate()	16	static
 ../Middlewares/ST/touchgfx/framework/include/touchgfx/widgets/Widget.hpp:47:18:virtual void touchgfx::Widget::getLastChild(int16_t, int16_t, touchgfx::Drawable**)	24	static
-../TouchGFX/gui/include/gui/model/ModelListener.hpp:13:10:void ModelListener::bind(Model*)	16	static
+../TouchGFX/gui/include/gui/model/ModelListener.hpp:14:10:void ModelListener::bind(Model*)	16	static
 ../Middlewares/ST/touchgfx/framework/include/touchgfx/widgets/Widget.hpp:36:7:touchgfx::Widget::Widget()	16	static
 ../Middlewares/ST/touchgfx/framework/include/touchgfx/widgets/Widget.hpp:36:7:touchgfx::Widget::~Widget()	16	static
 ../Middlewares/ST/touchgfx/framework/include/touchgfx/widgets/Widget.hpp:36:7:virtual touchgfx::Widget::~Widget()	16	static
-../TouchGFX/generated/gui_generated/src/common/FrontendApplicationBase.cpp:21:1:FrontendApplicationBase::FrontendApplicationBase(Model&, FrontendHeap&)	24	static
+../TouchGFX/generated/gui_generated/src/common/FrontendApplicationBase.cpp:25:1:FrontendApplicationBase::FrontendApplicationBase(Model&, FrontendHeap&)	24	static
 ../Middlewares/ST/touchgfx/framework/include/touchgfx/Callback.hpp:175:7:constexpr touchgfx::GenericCallback<void>& touchgfx::GenericCallback<void>::operator=(const touchgfx::GenericCallback<void>&)	16	static
 ../Middlewares/ST/touchgfx/framework/include/touchgfx/Callback.hpp:424:8:constexpr touchgfx::Callback<FrontendApplicationBase>& touchgfx::Callback<FrontendApplicationBase>::operator=(touchgfx::Callback<FrontendApplicationBase>&&)	16	static
-../TouchGFX/generated/gui_generated/src/common/FrontendApplicationBase.cpp:38:6:void FrontendApplicationBase::gotoMainScreenNoTransition()	48	static
-../TouchGFX/generated/gui_generated/src/common/FrontendApplicationBase.cpp:44:6:void FrontendApplicationBase::gotoMainScreenNoTransitionImpl()	24	static
-../TouchGFX/generated/gui_generated/src/common/FrontendApplicationBase.cpp:49:6:void FrontendApplicationBase::gotoMainScreenCoverTransitionNorth()	48	static
-../TouchGFX/generated/gui_generated/src/common/FrontendApplicationBase.cpp:55:6:void FrontendApplicationBase::gotoMainScreenCoverTransitionNorthImpl()	24	static
-../TouchGFX/generated/gui_generated/src/common/FrontendApplicationBase.cpp:60:6:void FrontendApplicationBase::gotoMainScreenWipeTransitionNorth()	48	static
-../TouchGFX/generated/gui_generated/src/common/FrontendApplicationBase.cpp:66:6:void FrontendApplicationBase::gotoMainScreenWipeTransitionNorthImpl()	24	static
-../TouchGFX/generated/gui_generated/src/common/FrontendApplicationBase.cpp:73:6:void FrontendApplicationBase::gotoManageScreenWipeTransitionEast()	48	static
-../TouchGFX/generated/gui_generated/src/common/FrontendApplicationBase.cpp:79:6:void FrontendApplicationBase::gotoManageScreenWipeTransitionEastImpl()	24	static
-../TouchGFX/generated/gui_generated/src/common/FrontendApplicationBase.cpp:86:6:void FrontendApplicationBase::gotoDetailsScreenWipeTransitionEast()	48	static
-../TouchGFX/generated/gui_generated/src/common/FrontendApplicationBase.cpp:92:6:void FrontendApplicationBase::gotoDetailsScreenWipeTransitionEastImpl()	24	static
+../TouchGFX/generated/gui_generated/src/common/FrontendApplicationBase.cpp:42:6:void FrontendApplicationBase::gotoMainScreenNoTransition()	48	static
+../TouchGFX/generated/gui_generated/src/common/FrontendApplicationBase.cpp:48:6:void FrontendApplicationBase::gotoMainScreenNoTransitionImpl()	24	static
+../TouchGFX/generated/gui_generated/src/common/FrontendApplicationBase.cpp:53:6:void FrontendApplicationBase::gotoMainScreenCoverTransitionNorth()	48	static
+../TouchGFX/generated/gui_generated/src/common/FrontendApplicationBase.cpp:59:6:void FrontendApplicationBase::gotoMainScreenCoverTransitionNorthImpl()	24	static
+../TouchGFX/generated/gui_generated/src/common/FrontendApplicationBase.cpp:64:6:void FrontendApplicationBase::gotoMainScreenWipeTransitionNorth()	48	static
+../TouchGFX/generated/gui_generated/src/common/FrontendApplicationBase.cpp:70:6:void FrontendApplicationBase::gotoMainScreenWipeTransitionNorthImpl()	24	static
+../TouchGFX/generated/gui_generated/src/common/FrontendApplicationBase.cpp:75:6:void FrontendApplicationBase::gotoMainScreenWipeTransitionWest()	48	static
+../TouchGFX/generated/gui_generated/src/common/FrontendApplicationBase.cpp:81:6:void FrontendApplicationBase::gotoMainScreenWipeTransitionWestImpl()	24	static
+../TouchGFX/generated/gui_generated/src/common/FrontendApplicationBase.cpp:88:6:void FrontendApplicationBase::gotoManageScreenBlockTransition()	48	static
+../TouchGFX/generated/gui_generated/src/common/FrontendApplicationBase.cpp:94:6:void FrontendApplicationBase::gotoManageScreenBlockTransitionImpl()	24	static
+../TouchGFX/generated/gui_generated/src/common/FrontendApplicationBase.cpp:101:6:void FrontendApplicationBase::gotoDetailsScreenBlockTransition()	48	static
+../TouchGFX/generated/gui_generated/src/common/FrontendApplicationBase.cpp:107:6:void FrontendApplicationBase::gotoDetailsScreenBlockTransitionImpl()	24	static
+../TouchGFX/generated/gui_generated/src/common/FrontendApplicationBase.cpp:114:6:void FrontendApplicationBase::gotoControlScreenBlockTransition()	48	static
+../TouchGFX/generated/gui_generated/src/common/FrontendApplicationBase.cpp:120:6:void FrontendApplicationBase::gotoControlScreenBlockTransitionImpl()	24	static
+../TouchGFX/generated/gui_generated/src/common/FrontendApplicationBase.cpp:127:6:void FrontendApplicationBase::gotoSetScreenBlockTransition()	48	static
+../TouchGFX/generated/gui_generated/src/common/FrontendApplicationBase.cpp:133:6:void FrontendApplicationBase::gotoSetScreenBlockTransitionImpl()	24	static
 ../Middlewares/ST/touchgfx/framework/include/touchgfx/Callback.hpp:175:7:constexpr touchgfx::GenericCallback<void>::GenericCallback()	16	static
 ../Middlewares/ST/touchgfx/framework/include/touchgfx/Callback.hpp:427:5:touchgfx::Callback<dest_type, void, void, void>::Callback() [with dest_type = FrontendApplicationBase]	16	static
 ../Middlewares/ST/touchgfx/framework/include/touchgfx/Callback.hpp:440:5:touchgfx::Callback<dest_type, void, void, void>::Callback(dest_type*, void (dest_type::*)()) [with dest_type = FrontendApplicationBase]	24	static
@@ -84,8 +96,11 @@ c:\st\stm32cubeide_1.9.0\stm32cubeide\plugins\com.st.stm32cube.ide.mcu.externalt
 ../Middlewares/ST/touchgfx/framework/include/mvp/MVPApplication.hpp:161:16:PresenterType* touchgfx::makeTransition(touchgfx::Screen**, touchgfx::Presenter**, touchgfx::MVPHeap&, touchgfx::Transition**, ModelType*) [with ScreenType = MainView; PresenterType = MainPresenter; TransType = touchgfx::NoTransition; ModelType = Model]	72	static
 ../Middlewares/ST/touchgfx/framework/include/mvp/MVPApplication.hpp:161:16:PresenterType* touchgfx::makeTransition(touchgfx::Screen**, touchgfx::Presenter**, touchgfx::MVPHeap&, touchgfx::Transition**, ModelType*) [with ScreenType = MainView; PresenterType = MainPresenter; TransType = touchgfx::CoverTransition<touchgfx::NORTH>; ModelType = Model]	72	static
 ../Middlewares/ST/touchgfx/framework/include/mvp/MVPApplication.hpp:161:16:PresenterType* touchgfx::makeTransition(touchgfx::Screen**, touchgfx::Presenter**, touchgfx::MVPHeap&, touchgfx::Transition**, ModelType*) [with ScreenType = MainView; PresenterType = MainPresenter; TransType = touchgfx::WipeTransition<touchgfx::NORTH>; ModelType = Model]	72	static
-../Middlewares/ST/touchgfx/framework/include/mvp/MVPApplication.hpp:161:16:PresenterType* touchgfx::makeTransition(touchgfx::Screen**, touchgfx::Presenter**, touchgfx::MVPHeap&, touchgfx::Transition**, ModelType*) [with ScreenType = ManageView; PresenterType = ManagePresenter; TransType = touchgfx::WipeTransition<touchgfx::EAST>; ModelType = Model]	72	static
-../Middlewares/ST/touchgfx/framework/include/mvp/MVPApplication.hpp:161:16:PresenterType* touchgfx::makeTransition(touchgfx::Screen**, touchgfx::Presenter**, touchgfx::MVPHeap&, touchgfx::Transition**, ModelType*) [with ScreenType = DetailsView; PresenterType = DetailsPresenter; TransType = touchgfx::WipeTransition<touchgfx::EAST>; ModelType = Model]	72	static
+../Middlewares/ST/touchgfx/framework/include/mvp/MVPApplication.hpp:161:16:PresenterType* touchgfx::makeTransition(touchgfx::Screen**, touchgfx::Presenter**, touchgfx::MVPHeap&, touchgfx::Transition**, ModelType*) [with ScreenType = MainView; PresenterType = MainPresenter; TransType = touchgfx::WipeTransition<touchgfx::WEST>; ModelType = Model]	72	static
+../Middlewares/ST/touchgfx/framework/include/mvp/MVPApplication.hpp:161:16:PresenterType* touchgfx::makeTransition(touchgfx::Screen**, touchgfx::Presenter**, touchgfx::MVPHeap&, touchgfx::Transition**, ModelType*) [with ScreenType = ManageView; PresenterType = ManagePresenter; TransType = touchgfx::BlockTransition; ModelType = Model]	72	static
+../Middlewares/ST/touchgfx/framework/include/mvp/MVPApplication.hpp:161:16:PresenterType* touchgfx::makeTransition(touchgfx::Screen**, touchgfx::Presenter**, touchgfx::MVPHeap&, touchgfx::Transition**, ModelType*) [with ScreenType = DetailsView; PresenterType = DetailsPresenter; TransType = touchgfx::BlockTransition; ModelType = Model]	72	static
+../Middlewares/ST/touchgfx/framework/include/mvp/MVPApplication.hpp:161:16:PresenterType* touchgfx::makeTransition(touchgfx::Screen**, touchgfx::Presenter**, touchgfx::MVPHeap&, touchgfx::Transition**, ModelType*) [with ScreenType = ControlView; PresenterType = ControlPresenter; TransType = touchgfx::BlockTransition; ModelType = Model]	72	static
+../Middlewares/ST/touchgfx/framework/include/mvp/MVPApplication.hpp:161:16:PresenterType* touchgfx::makeTransition(touchgfx::Screen**, touchgfx::Presenter**, touchgfx::MVPHeap&, touchgfx::Transition**, ModelType*) [with ScreenType = SetView; PresenterType = SetPresenter; TransType = touchgfx::BlockTransition; ModelType = Model]	72	static
 ../Middlewares/ST/touchgfx/framework/include/common/AbstractPartition.hpp:135:8:T& touchgfx::AbstractPartition::at(uint16_t) [with T = touchgfx::NoTransition]	16	static
 ../Middlewares/ST/touchgfx/framework/include/common/AbstractPartition.hpp:135:8:T& touchgfx::AbstractPartition::at(uint16_t) [with T = MainView]	16	static
 ../Middlewares/ST/touchgfx/framework/include/common/AbstractPartition.hpp:135:8:T& touchgfx::AbstractPartition::at(uint16_t) [with T = MainPresenter]	16	static
@@ -102,44 +117,41 @@ c:\st\stm32cubeide_1.9.0\stm32cubeide\plugins\com.st.stm32cube.ide.mcu.externalt
 ../Middlewares/ST/touchgfx/framework/include/touchgfx/transitions/WipeTransition.hpp:44:11:touchgfx::WipeTransition<touchgfx::NORTH>::FullSolidRect::~FullSolidRect()	16	static
 ../Middlewares/ST/touchgfx/framework/include/touchgfx/transitions/WipeTransition.hpp:44:11:virtual touchgfx::WipeTransition<touchgfx::NORTH>::FullSolidRect::~FullSolidRect()	16	static
 ../Middlewares/ST/touchgfx/framework/include/touchgfx/transitions/WipeTransition.hpp:62:5:touchgfx::WipeTransition<templateDirection>::WipeTransition(uint8_t) [with touchgfx::Direction templateDirection = touchgfx::NORTH]	24	static
-../Middlewares/ST/touchgfx/framework/include/common/AbstractPartition.hpp:135:8:T& touchgfx::AbstractPartition::at(uint16_t) [with T = touchgfx::WipeTransition<touchgfx::EAST>]	16	static
-../Middlewares/ST/touchgfx/framework/include/touchgfx/transitions/WipeTransition.hpp:44:11:touchgfx::WipeTransition<touchgfx::EAST>::FullSolidRect::FullSolidRect()	16	static
-../Middlewares/ST/touchgfx/framework/include/touchgfx/transitions/WipeTransition.hpp:44:11:touchgfx::WipeTransition<touchgfx::EAST>::FullSolidRect::~FullSolidRect()	16	static
-../Middlewares/ST/touchgfx/framework/include/touchgfx/transitions/WipeTransition.hpp:44:11:virtual touchgfx::WipeTransition<touchgfx::EAST>::FullSolidRect::~FullSolidRect()	16	static
-../Middlewares/ST/touchgfx/framework/include/touchgfx/transitions/WipeTransition.hpp:62:5:touchgfx::WipeTransition<templateDirection>::WipeTransition(uint8_t) [with touchgfx::Direction templateDirection = touchgfx::EAST]	24	static
+../Middlewares/ST/touchgfx/framework/include/common/AbstractPartition.hpp:135:8:T& touchgfx::AbstractPartition::at(uint16_t) [with T = touchgfx::WipeTransition<touchgfx::WEST>]	16	static
+../Middlewares/ST/touchgfx/framework/include/touchgfx/transitions/WipeTransition.hpp:44:11:touchgfx::WipeTransition<touchgfx::WEST>::FullSolidRect::FullSolidRect()	16	static
+../Middlewares/ST/touchgfx/framework/include/touchgfx/transitions/WipeTransition.hpp:44:11:touchgfx::WipeTransition<touchgfx::WEST>::FullSolidRect::~FullSolidRect()	16	static
+../Middlewares/ST/touchgfx/framework/include/touchgfx/transitions/WipeTransition.hpp:44:11:virtual touchgfx::WipeTransition<touchgfx::WEST>::FullSolidRect::~FullSolidRect()	16	static
+../Middlewares/ST/touchgfx/framework/include/touchgfx/transitions/WipeTransition.hpp:62:5:touchgfx::WipeTransition<templateDirection>::WipeTransition(uint8_t) [with touchgfx::Direction templateDirection = touchgfx::WEST]	24	static
+../Middlewares/ST/touchgfx/framework/include/common/AbstractPartition.hpp:135:8:T& touchgfx::AbstractPartition::at(uint16_t) [with T = touchgfx::BlockTransition]	16	static
 ../Middlewares/ST/touchgfx/framework/include/common/AbstractPartition.hpp:135:8:T& touchgfx::AbstractPartition::at(uint16_t) [with T = ManageView]	16	static
 ../Middlewares/ST/touchgfx/framework/include/common/AbstractPartition.hpp:135:8:T& touchgfx::AbstractPartition::at(uint16_t) [with T = ManagePresenter]	16	static
 ../Middlewares/ST/touchgfx/framework/include/mvp/View.hpp:50:10:void touchgfx::View<T>::bind(T&) [with T = ManagePresenter]	16	static
 ../Middlewares/ST/touchgfx/framework/include/common/AbstractPartition.hpp:135:8:T& touchgfx::AbstractPartition::at(uint16_t) [with T = DetailsView]	16	static
 ../Middlewares/ST/touchgfx/framework/include/common/AbstractPartition.hpp:135:8:T& touchgfx::AbstractPartition::at(uint16_t) [with T = DetailsPresenter]	16	static
 ../Middlewares/ST/touchgfx/framework/include/mvp/View.hpp:50:10:void touchgfx::View<T>::bind(T&) [with T = DetailsPresenter]	16	static
+../Middlewares/ST/touchgfx/framework/include/common/AbstractPartition.hpp:135:8:T& touchgfx::AbstractPartition::at(uint16_t) [with T = ControlView]	16	static
+../Middlewares/ST/touchgfx/framework/include/common/AbstractPartition.hpp:135:8:T& touchgfx::AbstractPartition::at(uint16_t) [with T = ControlPresenter]	16	static
+../Middlewares/ST/touchgfx/framework/include/mvp/View.hpp:50:10:void touchgfx::View<T>::bind(T&) [with T = ControlPresenter]	16	static
+../Middlewares/ST/touchgfx/framework/include/common/AbstractPartition.hpp:135:8:T& touchgfx::AbstractPartition::at(uint16_t) [with T = SetView]	16	static
+../Middlewares/ST/touchgfx/framework/include/common/AbstractPartition.hpp:135:8:T& touchgfx::AbstractPartition::at(uint16_t) [with T = SetPresenter]	16	static
+../Middlewares/ST/touchgfx/framework/include/mvp/View.hpp:50:10:void touchgfx::View<T>::bind(T&) [with T = SetPresenter]	16	static
 ../Middlewares/ST/touchgfx/framework/include/touchgfx/transitions/CoverTransition.hpp:216:18:void touchgfx::CoverTransition<templateDirection>::tickMoveDrawable(touchgfx::Drawable&) [with touchgfx::Direction templateDirection = touchgfx::NORTH]	16	static
 ../Middlewares/ST/touchgfx/framework/include/touchgfx/Callback.hpp:134:7:constexpr touchgfx::GenericCallback<touchgfx::Drawable&>::GenericCallback()	16	static
 ../Middlewares/ST/touchgfx/framework/include/touchgfx/Callback.hpp:373:5:touchgfx::Callback<dest_type, T1, void, void>::Callback(dest_type*, void (dest_type::*)(T1)) [with dest_type = touchgfx::CoverTransition<touchgfx::NORTH>; T1 = touchgfx::Drawable&]	24	static
 ../Middlewares/ST/touchgfx/framework/include/touchgfx/Callback.hpp:138:13:touchgfx::GenericCallback<T1, void, void>::~GenericCallback() [with T1 = touchgfx::Drawable&]	16	static
 ../Middlewares/ST/touchgfx/framework/include/touchgfx/Callback.hpp:138:13:touchgfx::GenericCallback<T1, void, void>::~GenericCallback() [with T1 = touchgfx::Drawable&]	16	static
-../Middlewares/ST/touchgfx/framework/include/touchgfx/transitions/WipeTransition.hpp:38:7:touchgfx::WipeTransition<touchgfx::EAST>::~WipeTransition()	16	static
-../Middlewares/ST/touchgfx/framework/include/touchgfx/transitions/WipeTransition.hpp:38:7:virtual touchgfx::WipeTransition<touchgfx::EAST>::~WipeTransition()	16	static
-../Middlewares/ST/touchgfx/framework/include/touchgfx/transitions/WipeTransition.hpp:38:7:touchgfx::WipeTransition<touchgfx::NORTH>::~WipeTransition()	16	static
-../Middlewares/ST/touchgfx/framework/include/touchgfx/transitions/WipeTransition.hpp:38:7:virtual touchgfx::WipeTransition<touchgfx::NORTH>::~WipeTransition()	16	static
 ../Middlewares/ST/touchgfx/framework/include/touchgfx/transitions/CoverTransition.hpp:37:7:touchgfx::CoverTransition<touchgfx::NORTH>::~CoverTransition()	16	static
 ../Middlewares/ST/touchgfx/framework/include/touchgfx/transitions/CoverTransition.hpp:37:7:virtual touchgfx::CoverTransition<touchgfx::NORTH>::~CoverTransition()	16	static
+../Middlewares/ST/touchgfx/framework/include/touchgfx/transitions/WipeTransition.hpp:38:7:touchgfx::WipeTransition<touchgfx::WEST>::~WipeTransition()	16	static
+../Middlewares/ST/touchgfx/framework/include/touchgfx/transitions/WipeTransition.hpp:38:7:virtual touchgfx::WipeTransition<touchgfx::WEST>::~WipeTransition()	16	static
+../Middlewares/ST/touchgfx/framework/include/touchgfx/transitions/WipeTransition.hpp:38:7:touchgfx::WipeTransition<touchgfx::NORTH>::~WipeTransition()	16	static
+../Middlewares/ST/touchgfx/framework/include/touchgfx/transitions/WipeTransition.hpp:38:7:virtual touchgfx::WipeTransition<touchgfx::NORTH>::~WipeTransition()	16	static
+../Middlewares/ST/touchgfx/framework/include/touchgfx/transitions/BlockTransition.hpp:32:7:touchgfx::BlockTransition::~BlockTransition()	16	static
+../Middlewares/ST/touchgfx/framework/include/touchgfx/transitions/BlockTransition.hpp:32:7:virtual touchgfx::BlockTransition::~BlockTransition()	16	static
 ../Middlewares/ST/touchgfx/framework/include/touchgfx/transitions/NoTransition.hpp:31:7:touchgfx::NoTransition::~NoTransition()	16	static
 ../Middlewares/ST/touchgfx/framework/include/touchgfx/transitions/NoTransition.hpp:31:7:virtual touchgfx::NoTransition::~NoTransition()	16	static
 ../Middlewares/ST/touchgfx/framework/include/touchgfx/Callback.hpp:424:8:touchgfx::Callback<FrontendApplicationBase>::~Callback()	16	static
 ../Middlewares/ST/touchgfx/framework/include/touchgfx/Callback.hpp:424:8:virtual touchgfx::Callback<FrontendApplicationBase>::~Callback()	16	static
-../Middlewares/ST/touchgfx/framework/include/touchgfx/transitions/WipeTransition.hpp:93:18:void touchgfx::WipeTransition<templateDirection>::handleTickEvent() [with touchgfx::Direction templateDirection = touchgfx::EAST]	88	static
-../Middlewares/ST/touchgfx/framework/include/touchgfx/transitions/WipeTransition.hpp:205:18:void touchgfx::WipeTransition<templateDirection>::tearDown() [with touchgfx::Direction templateDirection = touchgfx::EAST]	16	static
-../Middlewares/ST/touchgfx/framework/include/touchgfx/transitions/WipeTransition.hpp:210:18:void touchgfx::WipeTransition<templateDirection>::init() [with touchgfx::Direction templateDirection = touchgfx::EAST]	16	static
-../Middlewares/ST/touchgfx/framework/include/touchgfx/transitions/WipeTransition.hpp:221:18:void touchgfx::WipeTransition<templateDirection>::invalidate() [with touchgfx::Direction templateDirection = touchgfx::EAST]	16	static
-../Middlewares/ST/touchgfx/framework/include/touchgfx/transitions/WipeTransition.hpp:52:22:void touchgfx::WipeTransition<templateDirection>::FullSolidRect::draw(const touchgfx::Rect&) const [with touchgfx::Direction templateDirection = touchgfx::EAST]	16	static
-../Middlewares/ST/touchgfx/framework/include/touchgfx/transitions/WipeTransition.hpp:47:22:touchgfx::Rect touchgfx::WipeTransition<templateDirection>::FullSolidRect::getSolidRect() const [with touchgfx::Direction templateDirection = touchgfx::EAST]	24	static
-../Middlewares/ST/touchgfx/framework/include/touchgfx/transitions/WipeTransition.hpp:93:18:void touchgfx::WipeTransition<templateDirection>::handleTickEvent() [with touchgfx::Direction templateDirection = touchgfx::NORTH]	88	static
-../Middlewares/ST/touchgfx/framework/include/touchgfx/transitions/WipeTransition.hpp:205:18:void touchgfx::WipeTransition<templateDirection>::tearDown() [with touchgfx::Direction templateDirection = touchgfx::NORTH]	16	static
-../Middlewares/ST/touchgfx/framework/include/touchgfx/transitions/WipeTransition.hpp:210:18:void touchgfx::WipeTransition<templateDirection>::init() [with touchgfx::Direction templateDirection = touchgfx::NORTH]	16	static
-../Middlewares/ST/touchgfx/framework/include/touchgfx/transitions/WipeTransition.hpp:221:18:void touchgfx::WipeTransition<templateDirection>::invalidate() [with touchgfx::Direction templateDirection = touchgfx::NORTH]	16	static
-../Middlewares/ST/touchgfx/framework/include/touchgfx/transitions/WipeTransition.hpp:52:22:void touchgfx::WipeTransition<templateDirection>::FullSolidRect::draw(const touchgfx::Rect&) const [with touchgfx::Direction templateDirection = touchgfx::NORTH]	16	static
-../Middlewares/ST/touchgfx/framework/include/touchgfx/transitions/WipeTransition.hpp:47:22:touchgfx::Rect touchgfx::WipeTransition<templateDirection>::FullSolidRect::getSolidRect() const [with touchgfx::Direction templateDirection = touchgfx::NORTH]	24	static
 ../Middlewares/ST/touchgfx/framework/include/touchgfx/transitions/CoverTransition.hpp:83:18:void touchgfx::CoverTransition<templateDirection>::handleTickEvent() [with touchgfx::Direction templateDirection = touchgfx::NORTH]	56	static
 ../Middlewares/ST/touchgfx/framework/include/touchgfx/transitions/CoverTransition.hpp:169:18:void touchgfx::CoverTransition<templateDirection>::tearDown() [with touchgfx::Direction templateDirection = touchgfx::NORTH]	16	static
 ../Middlewares/ST/touchgfx/framework/include/touchgfx/transitions/CoverTransition.hpp:174:18:void touchgfx::CoverTransition<templateDirection>::init() [with touchgfx::Direction templateDirection = touchgfx::NORTH]	40	static
@@ -148,5 +160,17 @@ c:\st\stm32cubeide_1.9.0\stm32cubeide\plugins\com.st.stm32cube.ide.mcu.externalt
 ../Middlewares/ST/touchgfx/framework/include/touchgfx/transitions/CoverTransition.hpp:239:22:touchgfx::Rect touchgfx::CoverTransition<templateDirection>::FullSolidRect::getSolidRect() const [with touchgfx::Direction templateDirection = touchgfx::NORTH]	32	static
 ../Middlewares/ST/touchgfx/framework/include/touchgfx/Callback.hpp:386:18:void touchgfx::Callback<dest_type, T1, void, void>::execute(T1) [with dest_type = touchgfx::CoverTransition<touchgfx::NORTH>; T1 = touchgfx::Drawable&]	16	static
 ../Middlewares/ST/touchgfx/framework/include/touchgfx/Callback.hpp:396:18:bool touchgfx::Callback<dest_type, T1, void, void>::isValid() const [with dest_type = touchgfx::CoverTransition<touchgfx::NORTH>; T1 = touchgfx::Drawable&]	16	static
+../Middlewares/ST/touchgfx/framework/include/touchgfx/transitions/WipeTransition.hpp:93:18:void touchgfx::WipeTransition<templateDirection>::handleTickEvent() [with touchgfx::Direction templateDirection = touchgfx::WEST]	88	static
+../Middlewares/ST/touchgfx/framework/include/touchgfx/transitions/WipeTransition.hpp:205:18:void touchgfx::WipeTransition<templateDirection>::tearDown() [with touchgfx::Direction templateDirection = touchgfx::WEST]	16	static
+../Middlewares/ST/touchgfx/framework/include/touchgfx/transitions/WipeTransition.hpp:210:18:void touchgfx::WipeTransition<templateDirection>::init() [with touchgfx::Direction templateDirection = touchgfx::WEST]	16	static
+../Middlewares/ST/touchgfx/framework/include/touchgfx/transitions/WipeTransition.hpp:221:18:void touchgfx::WipeTransition<templateDirection>::invalidate() [with touchgfx::Direction templateDirection = touchgfx::WEST]	16	static
+../Middlewares/ST/touchgfx/framework/include/touchgfx/transitions/WipeTransition.hpp:52:22:void touchgfx::WipeTransition<templateDirection>::FullSolidRect::draw(const touchgfx::Rect&) const [with touchgfx::Direction templateDirection = touchgfx::WEST]	16	static
+../Middlewares/ST/touchgfx/framework/include/touchgfx/transitions/WipeTransition.hpp:47:22:touchgfx::Rect touchgfx::WipeTransition<templateDirection>::FullSolidRect::getSolidRect() const [with touchgfx::Direction templateDirection = touchgfx::WEST]	24	static
+../Middlewares/ST/touchgfx/framework/include/touchgfx/transitions/WipeTransition.hpp:93:18:void touchgfx::WipeTransition<templateDirection>::handleTickEvent() [with touchgfx::Direction templateDirection = touchgfx::NORTH]	88	static
+../Middlewares/ST/touchgfx/framework/include/touchgfx/transitions/WipeTransition.hpp:205:18:void touchgfx::WipeTransition<templateDirection>::tearDown() [with touchgfx::Direction templateDirection = touchgfx::NORTH]	16	static
+../Middlewares/ST/touchgfx/framework/include/touchgfx/transitions/WipeTransition.hpp:210:18:void touchgfx::WipeTransition<templateDirection>::init() [with touchgfx::Direction templateDirection = touchgfx::NORTH]	16	static
+../Middlewares/ST/touchgfx/framework/include/touchgfx/transitions/WipeTransition.hpp:221:18:void touchgfx::WipeTransition<templateDirection>::invalidate() [with touchgfx::Direction templateDirection = touchgfx::NORTH]	16	static
+../Middlewares/ST/touchgfx/framework/include/touchgfx/transitions/WipeTransition.hpp:52:22:void touchgfx::WipeTransition<templateDirection>::FullSolidRect::draw(const touchgfx::Rect&) const [with touchgfx::Direction templateDirection = touchgfx::NORTH]	16	static
+../Middlewares/ST/touchgfx/framework/include/touchgfx/transitions/WipeTransition.hpp:47:22:touchgfx::Rect touchgfx::WipeTransition<templateDirection>::FullSolidRect::getSolidRect() const [with touchgfx::Direction templateDirection = touchgfx::NORTH]	24	static
 ../Middlewares/ST/touchgfx/framework/include/touchgfx/Callback.hpp:449:18:void touchgfx::Callback<dest_type, void, void, void>::execute() [with dest_type = FrontendApplicationBase]	16	static
 ../Middlewares/ST/touchgfx/framework/include/touchgfx/Callback.hpp:459:18:bool touchgfx::Callback<dest_type, void, void, void>::isValid() const [with dest_type = FrontendApplicationBase]	16	static

@@ -1,0 +1,10 @@
+../TouchGFX/gui/include/gui/model/ModelListener.hpp:18:18:virtual void ModelListener::SHT31Update(float, float)	0	static
+../TouchGFX/gui/include/gui/model/ModelListener.hpp:19:18:virtual void ModelListener::BH1750Update(float)	0	static
+../TouchGFX/gui/include/gui/model/ModelListener.hpp:20:18:virtual void ModelListener::NH3Update(float)	0	static
+../TouchGFX/gui/include/gui/model/ModelListener.hpp:21:18:virtual void ModelListener::CO2Update(uint32_t)	0	static
+../TouchGFX/gui/include/gui/model/ModelListener.hpp:22:18:virtual void ModelListener::devicestate(Device)	8	static
+../TouchGFX/gui/include/gui/set_screen/SetPresenter.hpp:28:13:SetPresenter::~SetPresenter()	0	static
+../TouchGFX/gui/src/set_screen/SetPresenter.cpp:10:6:virtual void SetPresenter::activate()	0	static
+../TouchGFX/gui/include/gui/set_screen/SetPresenter.hpp:28:13:virtual SetPresenter::~SetPresenter()	8	static
+../TouchGFX/gui/include/gui/set_screen/SetPresenter.hpp:28:13:virtual void* SetPresenter::_ZThn4_N12SetPresenterD1Ev()	0	static
+../TouchGFX/gui/src/set_screen/SetPresenter.cpp:4:1:SetPresenter::SetPresenter(SetView&)	8	static

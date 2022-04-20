@@ -1,0 +1,7 @@
+../Core/Src/devices.c:6:6:windowon	24	static
+../Core/Src/devices.c:20:6:windowoff	24	static
+../Core/Src/devices.c:34:6:curtainup	16	static
+../Core/Src/devices.c:43:6:curtaindown	16	static
+../Core/Src/devices.c:51:6:heateron	4	static
+../Core/Src/devices.c:54:6:heateroff	4	static
+../Core/Src/devices.c:58:6:fanctrl	16	static

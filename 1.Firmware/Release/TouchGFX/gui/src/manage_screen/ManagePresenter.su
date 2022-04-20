@@ -1,5 +1,8 @@
-../TouchGFX/gui/include/gui/model/ModelListener.hpp:17:18:virtual void ModelListener::SHT31Update(float, float)	0	static
-../TouchGFX/gui/include/gui/model/ModelListener.hpp:18:18:virtual void ModelListener::BH1750Update(float)	0	static
+../TouchGFX/gui/include/gui/model/ModelListener.hpp:18:18:virtual void ModelListener::SHT31Update(float, float)	0	static
+../TouchGFX/gui/include/gui/model/ModelListener.hpp:19:18:virtual void ModelListener::BH1750Update(float)	0	static
+../TouchGFX/gui/include/gui/model/ModelListener.hpp:20:18:virtual void ModelListener::NH3Update(float)	0	static
+../TouchGFX/gui/include/gui/model/ModelListener.hpp:21:18:virtual void ModelListener::CO2Update(uint32_t)	0	static
+../TouchGFX/gui/include/gui/model/ModelListener.hpp:22:18:virtual void ModelListener::devicestate(Device)	8	static
 ../TouchGFX/gui/include/gui/manage_screen/ManagePresenter.hpp:28:13:ManagePresenter::~ManagePresenter()	0	static
 ../TouchGFX/gui/src/manage_screen/ManagePresenter.cpp:10:6:virtual void ManagePresenter::activate()	0	static
 ../TouchGFX/gui/include/gui/manage_screen/ManagePresenter.hpp:28:13:virtual ManagePresenter::~ManagePresenter()	8	static

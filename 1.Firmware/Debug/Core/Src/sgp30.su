@@ -1,0 +1,9 @@
+../Core/Src/sgp30.c:68:13:sgp30_delay_ms	16	static
+../Core/Src/sgp30.c:74:12:sgp30_iic_init	8	static
+../Core/Src/sgp30.c:257:12:sgp30_iic_write	32	static
+../Core/Src/sgp30.c:264:12:sgp30_iic_read	32	static
+../Core/Src/sgp30.c:288:5:sgp30_get_serial_id	56	static
+../Core/Src/sgp30.c:323:16:sgp30_checksum	24	static
+../Core/Src/sgp30.c:342:5:sgp30_soft_reset	16	static
+../Core/Src/sgp30.c:348:5:sgp30_init	16	static
+../Core/Src/sgp30.c:373:5:sgp30_read	24	static

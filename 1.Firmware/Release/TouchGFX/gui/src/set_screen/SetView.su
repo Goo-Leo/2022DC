@@ -1,0 +1,8 @@
+../Middlewares/ST/touchgfx/framework/include/touchgfx/Screen.hpp:104:18:virtual void touchgfx::Screen::afterTransition()	0	static
+../Middlewares/ST/touchgfx/framework/include/touchgfx/Screen.hpp:144:18:virtual void touchgfx::Screen::handleTickEvent()	0	static
+../Middlewares/ST/touchgfx/framework/include/touchgfx/Screen.hpp:154:18:virtual void touchgfx::Screen::handleKeyEvent(uint8_t)	0	static
+../TouchGFX/gui/include/gui/set_screen/SetView.hpp:11:13:SetView::~SetView()	0	static
+../TouchGFX/gui/src/set_screen/SetView.cpp:13:6:virtual void SetView::tearDownScreen()	0	static
+../TouchGFX/gui/src/set_screen/SetView.cpp:8:6:virtual void SetView::setupScreen()	0	static
+../TouchGFX/gui/include/gui/set_screen/SetView.hpp:11:13:virtual SetView::~SetView()	8	static
+../TouchGFX/gui/src/set_screen/SetView.cpp:3:1:SetView::SetView()	8	static

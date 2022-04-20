@@ -18,19 +18,19 @@
 ../Middlewares/ST/touchgfx/framework/include/touchgfx/widgets/Widget.hpp:47:18:virtual void touchgfx::Widget::getLastChild(int16_t, int16_t, touchgfx::Drawable**)	0	static
 ../Middlewares/ST/touchgfx/framework/include/touchgfx/TypedText.hpp:65:13:touchgfx::TypedText::~TypedText()	0	static
 ../Middlewares/ST/touchgfx/framework/include/mvp/View.hpp:36:7:touchgfx::View<DetailsPresenter>::~View()	0	static
-../TouchGFX/generated/gui_generated/include/gui_generated/details_screen/DetailsViewBase.hpp:21:13:DetailsViewBase::~DetailsViewBase()	0	static
-../TouchGFX/generated/gui_generated/src/details_screen/DetailsViewBase.cpp:102:6:virtual void DetailsViewBase::setupScreen()	0	static
+../TouchGFX/generated/gui_generated/include/gui_generated/details_screen/DetailsViewBase.hpp:20:13:DetailsViewBase::~DetailsViewBase()	0	static
+../TouchGFX/generated/gui_generated/src/details_screen/DetailsViewBase.cpp:116:6:virtual void DetailsViewBase::setupScreen()	0	static
 ../Middlewares/ST/touchgfx/framework/include/touchgfx/Callback.hpp:357:8:touchgfx::Callback<DetailsViewBase, const touchgfx::AbstractButton&>::~Callback()	0	static
 ../Middlewares/ST/touchgfx/framework/include/touchgfx/Callback.hpp:386:18:void touchgfx::Callback<dest_type, T1, void, void>::execute(T1) [with dest_type = DetailsViewBase; T1 = const touchgfx::AbstractButton&]	8	static
 ../Middlewares/ST/touchgfx/framework/include/touchgfx/Callback.hpp:396:18:bool touchgfx::Callback<dest_type, T1, void, void>::isValid() const [with dest_type = DetailsViewBase; T1 = const touchgfx::AbstractButton&]	0	static
 ../Middlewares/ST/touchgfx/framework/include/touchgfx/TypedText.hpp:65:13:virtual touchgfx::TypedText::~TypedText()	8	static
 ../Middlewares/ST/touchgfx/framework/include/touchgfx/Callback.hpp:357:8:virtual touchgfx::Callback<DetailsViewBase, const touchgfx::AbstractButton&>::~Callback()	8	static
 ../Middlewares/ST/touchgfx/framework/include/mvp/View.hpp:36:7:virtual touchgfx::View<DetailsPresenter>::~View()	8	static
-../TouchGFX/generated/gui_generated/include/gui_generated/details_screen/DetailsViewBase.hpp:21:13:virtual DetailsViewBase::~DetailsViewBase()	8	static
-../TouchGFX/generated/gui_generated/src/details_screen/DetailsViewBase.cpp:107:6:void DetailsViewBase::buttonCallbackHandler(const touchgfx::AbstractButton&)	8	static
+../TouchGFX/generated/gui_generated/include/gui_generated/details_screen/DetailsViewBase.hpp:20:13:virtual DetailsViewBase::~DetailsViewBase()	8	static
+../TouchGFX/generated/gui_generated/src/details_screen/DetailsViewBase.cpp:121:6:void DetailsViewBase::buttonCallbackHandler(const touchgfx::AbstractButton&)	8	static
 ../Middlewares/ST/touchgfx/framework/include/touchgfx/Drawable.hpp:326:10:void touchgfx::Drawable::setXY(int16_t, int16_t)	16	static
 ../Middlewares/ST/touchgfx/framework/include/touchgfx/Drawable.hpp:216:10:void touchgfx::Drawable::setPosition(int16_t, int16_t, int16_t, int16_t)	16	static
 ../Middlewares/ST/touchgfx/framework/include/touchgfx/widgets/Box.hpp:33:5:touchgfx::Box::Box()	0	static
 ../Middlewares/ST/touchgfx/framework/include/touchgfx/widgets/ButtonWithLabel.hpp:132:10:void touchgfx::ButtonWithLabel::updateTextPosition()	24	static
 ../Middlewares/ST/touchgfx/framework/include/touchgfx/widgets/TextArea.hpp:42:5:touchgfx::TextArea::TextArea()	0	static
-../TouchGFX/generated/gui_generated/src/details_screen/DetailsViewBase.cpp:12:1:DetailsViewBase::DetailsViewBase()	112	static
+../TouchGFX/generated/gui_generated/src/details_screen/DetailsViewBase.cpp:11:1:DetailsViewBase::DetailsViewBase()	112	static

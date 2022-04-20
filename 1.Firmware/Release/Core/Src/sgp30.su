@@ -1,0 +1,6 @@
+../Core/Src/sgp30.c:257:12:sgp30_iic_write	16	static
+../Core/Src/sgp30.c:323:16:sgp30_checksum.constprop	0	static
+../Core/Src/sgp30.c:288:5:sgp30_get_serial_id	56	static
+../Core/Src/sgp30.c:342:5:sgp30_soft_reset	16	static
+../Core/Src/sgp30.c:348:5:sgp30_init	16	static
+../Core/Src/sgp30.c:373:5:sgp30_read	32	static
