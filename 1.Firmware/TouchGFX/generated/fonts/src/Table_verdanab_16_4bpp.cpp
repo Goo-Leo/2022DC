@@ -33,15 +33,14 @@ KEEP extern const touchgfx::GlyphNode glyphs_verdanab_16_4bpp[] FONT_TABLE_LOCAT
     {  1469, 0x0069,   4,  12,  12,   1,   5,   0,   0, 0x00 },
     {  1493, 0x006B,  10,  12,  12,   1,  11,   0,   0, 0x00 },
     {  1553, 0x006C,   4,  12,  12,   1,   5,   0,   0, 0x00 },
-    {  1577, 0x006D,  15,   9,   9,   1,  17,   0,   0, 0x00 },
-    {  1649, 0x006E,  10,   9,   9,   1,  11,   0,   0, 0x00 },
-    {  1694, 0x006F,  11,   9,   9,   0,  11,   0,   0, 0x00 },
-    {  1748, 0x0070,  10,  12,   9,   1,  11,   0,   0, 0x00 },
-    {  1808, 0x0072,   7,   9,   9,   1,   8,   0,   0, 0x00 },
-    {  1844, 0x0073,   9,   9,   9,   0,  10,   0,   0, 0x00 },
-    {  1889, 0x0074,   7,  12,  12,   0,   7,   0,   0, 0x00 },
-    {  1937, 0x0077,  16,   9,   9,   0,  16,   0,   0, 0x00 },
-    {  2009, 0x0078,  11,   9,   9,   0,  11,   0,   0, 0x00 }
+    {  1577, 0x006E,  10,   9,   9,   1,  11,   0,   0, 0x00 },
+    {  1622, 0x006F,  11,   9,   9,   0,  11,   0,   0, 0x00 },
+    {  1676, 0x0070,  10,  12,   9,   1,  11,   0,   0, 0x00 },
+    {  1736, 0x0072,   7,   9,   9,   1,   8,   0,   0, 0x00 },
+    {  1772, 0x0073,   9,   9,   9,   0,  10,   0,   0, 0x00 },
+    {  1817, 0x0074,   7,  12,  12,   0,   7,   0,   0, 0x00 },
+    {  1865, 0x0077,  16,   9,   9,   0,  16,   0,   0, 0x00 },
+    {  1937, 0x0078,  11,   9,   9,   0,  11,   0,   0, 0x00 }
 };
 
 // verdanab_16_4bpp
@@ -59,6 +58,6 @@ touchgfx::GeneratedFont& getFont_verdanab_16_4bpp();
 
 touchgfx::GeneratedFont& getFont_verdanab_16_4bpp()
 {
-    static touchgfx::GeneratedFont verdanab_16_4bpp(glyphs_verdanab_16_4bpp, 38, 16, 3, 4, 1, 0, 0, unicodes_verdanab_16_4bpp, kerning_verdanab_16_4bpp, 63, 0, 0, 0);
+    static touchgfx::GeneratedFont verdanab_16_4bpp(glyphs_verdanab_16_4bpp, 37, 16, 3, 4, 1, 0, 0, unicodes_verdanab_16_4bpp, kerning_verdanab_16_4bpp, 63, 0, 0, 0);
     return verdanab_16_4bpp;
 }

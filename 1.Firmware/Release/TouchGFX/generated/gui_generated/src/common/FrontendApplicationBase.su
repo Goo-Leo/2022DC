@@ -74,23 +74,21 @@
 ../Middlewares/ST/touchgfx/framework/include/touchgfx/transitions/WipeTransition.hpp:93:18:void touchgfx::WipeTransition<templateDirection>::handleTickEvent() [with touchgfx::Direction templateDirection = touchgfx::NORTH]	56	static
 ../Middlewares/ST/touchgfx/framework/include/touchgfx/transitions/BlockTransition.hpp:40:5:touchgfx::BlockTransition::BlockTransition()	0	static
 ../Middlewares/ST/touchgfx/framework/include/touchgfx/widgets/Widget.hpp:36:7:touchgfx::Widget::Widget()	0	static
-../TouchGFX/generated/gui_generated/src/common/FrontendApplicationBase.cpp:25:1:FrontendApplicationBase::FrontendApplicationBase(Model&, FrontendHeap&)	24	static
-../TouchGFX/generated/gui_generated/src/common/FrontendApplicationBase.cpp:42:6:void FrontendApplicationBase::gotoMainScreenNoTransition()	0	static
-../TouchGFX/generated/gui_generated/src/common/FrontendApplicationBase.cpp:53:6:void FrontendApplicationBase::gotoMainScreenCoverTransitionNorth()	0	static
-../TouchGFX/generated/gui_generated/src/common/FrontendApplicationBase.cpp:64:6:void FrontendApplicationBase::gotoMainScreenWipeTransitionNorth()	0	static
-../TouchGFX/generated/gui_generated/src/common/FrontendApplicationBase.cpp:75:6:void FrontendApplicationBase::gotoMainScreenWipeTransitionWest()	0	static
-../TouchGFX/generated/gui_generated/src/common/FrontendApplicationBase.cpp:88:6:void FrontendApplicationBase::gotoManageScreenBlockTransition()	0	static
-../TouchGFX/generated/gui_generated/src/common/FrontendApplicationBase.cpp:101:6:void FrontendApplicationBase::gotoDetailsScreenBlockTransition()	0	static
-../TouchGFX/generated/gui_generated/src/common/FrontendApplicationBase.cpp:114:6:void FrontendApplicationBase::gotoControlScreenBlockTransition()	0	static
-../TouchGFX/generated/gui_generated/src/common/FrontendApplicationBase.cpp:127:6:void FrontendApplicationBase::gotoSetScreenBlockTransition()	0	static
+../TouchGFX/generated/gui_generated/src/common/FrontendApplicationBase.cpp:23:1:FrontendApplicationBase::FrontendApplicationBase(Model&, FrontendHeap&)	24	static
+../TouchGFX/generated/gui_generated/src/common/FrontendApplicationBase.cpp:40:6:void FrontendApplicationBase::gotoMainScreenNoTransition()	0	static
+../TouchGFX/generated/gui_generated/src/common/FrontendApplicationBase.cpp:51:6:void FrontendApplicationBase::gotoMainScreenCoverTransitionNorth()	0	static
+../TouchGFX/generated/gui_generated/src/common/FrontendApplicationBase.cpp:62:6:void FrontendApplicationBase::gotoMainScreenWipeTransitionNorth()	0	static
+../TouchGFX/generated/gui_generated/src/common/FrontendApplicationBase.cpp:73:6:void FrontendApplicationBase::gotoMainScreenWipeTransitionWest()	0	static
+../TouchGFX/generated/gui_generated/src/common/FrontendApplicationBase.cpp:86:6:void FrontendApplicationBase::gotoManageScreenBlockTransition()	0	static
+../TouchGFX/generated/gui_generated/src/common/FrontendApplicationBase.cpp:99:6:void FrontendApplicationBase::gotoDetailsScreenBlockTransition()	0	static
+../TouchGFX/generated/gui_generated/src/common/FrontendApplicationBase.cpp:112:6:void FrontendApplicationBase::gotoControlScreenBlockTransition()	0	static
 ../Middlewares/ST/touchgfx/framework/include/common/AbstractPartition.hpp:135:8:T& touchgfx::AbstractPartition::at(uint16_t) [with T = MainView]	0	static
 ../Middlewares/ST/touchgfx/framework/include/common/AbstractPartition.hpp:135:8:T& touchgfx::AbstractPartition::at(uint16_t) [with T = MainPresenter]	0	static
-../TouchGFX/generated/gui_generated/src/common/FrontendApplicationBase.cpp:81:6:void FrontendApplicationBase::gotoMainScreenWipeTransitionWestImpl()	48	static
-../TouchGFX/generated/gui_generated/src/common/FrontendApplicationBase.cpp:70:6:void FrontendApplicationBase::gotoMainScreenWipeTransitionNorthImpl()	48	static
-../TouchGFX/generated/gui_generated/src/common/FrontendApplicationBase.cpp:59:6:void FrontendApplicationBase::gotoMainScreenCoverTransitionNorthImpl()	48	static
-../TouchGFX/generated/gui_generated/src/common/FrontendApplicationBase.cpp:48:6:void FrontendApplicationBase::gotoMainScreenNoTransitionImpl()	40	static
+../TouchGFX/generated/gui_generated/src/common/FrontendApplicationBase.cpp:79:6:void FrontendApplicationBase::gotoMainScreenWipeTransitionWestImpl()	48	static
+../TouchGFX/generated/gui_generated/src/common/FrontendApplicationBase.cpp:68:6:void FrontendApplicationBase::gotoMainScreenWipeTransitionNorthImpl()	48	static
+../TouchGFX/generated/gui_generated/src/common/FrontendApplicationBase.cpp:57:6:void FrontendApplicationBase::gotoMainScreenCoverTransitionNorthImpl()	48	static
+../TouchGFX/generated/gui_generated/src/common/FrontendApplicationBase.cpp:46:6:void FrontendApplicationBase::gotoMainScreenNoTransitionImpl()	40	static
 ../Middlewares/ST/touchgfx/framework/include/common/AbstractPartition.hpp:135:8:T& touchgfx::AbstractPartition::at(uint16_t) [with T = touchgfx::BlockTransition]	0	static
-../TouchGFX/generated/gui_generated/src/common/FrontendApplicationBase.cpp:133:6:void FrontendApplicationBase::gotoSetScreenBlockTransitionImpl()	32	static
-../TouchGFX/generated/gui_generated/src/common/FrontendApplicationBase.cpp:120:6:void FrontendApplicationBase::gotoControlScreenBlockTransitionImpl()	32	static
-../TouchGFX/generated/gui_generated/src/common/FrontendApplicationBase.cpp:107:6:void FrontendApplicationBase::gotoDetailsScreenBlockTransitionImpl()	32	static
-../TouchGFX/generated/gui_generated/src/common/FrontendApplicationBase.cpp:94:6:void FrontendApplicationBase::gotoManageScreenBlockTransitionImpl()	32	static
+../TouchGFX/generated/gui_generated/src/common/FrontendApplicationBase.cpp:118:6:void FrontendApplicationBase::gotoControlScreenBlockTransitionImpl()	32	static
+../TouchGFX/generated/gui_generated/src/common/FrontendApplicationBase.cpp:105:6:void FrontendApplicationBase::gotoDetailsScreenBlockTransitionImpl()	32	static
+../TouchGFX/generated/gui_generated/src/common/FrontendApplicationBase.cpp:92:6:void FrontendApplicationBase::gotoManageScreenBlockTransitionImpl()	32	static

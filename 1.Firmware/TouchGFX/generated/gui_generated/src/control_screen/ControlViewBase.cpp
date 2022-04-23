@@ -6,6 +6,7 @@
 #include <BitmapDatabase.hpp>
 #include <texts/TextKeysAndLanguages.hpp>
 #include "devices.h"
+#include "cmsis_os.h"
 
 #include <touchgfx/canvas_widget_renderer/CanvasWidgetRenderer.hpp>
 
@@ -110,7 +111,8 @@ void ControlViewBase::buttonCallbackHandler(const touchgfx::AbstractButton& src)
         //Fan1
         //When toggleButton1 clicked execute C++ code
         //Execute C++ code
-        if(toggleButton2.getState()){
+        
+        if(toggleButton1.getState()){
         	room.fan1=1;
         }else{
         	room.fan1=0;
@@ -132,6 +134,7 @@ void ControlViewBase::buttonCallbackHandler(const touchgfx::AbstractButton& src)
         //window
         //When toggleButton3 clicked execute C++ code
         //Execute C++ code
+        
         if(toggleButton3.getState()){
         	room.window=1;
         }else{
@@ -154,6 +157,7 @@ void ControlViewBase::buttonCallbackHandler(const touchgfx::AbstractButton& src)
         //heater
         //When toggleButton5 clicked execute C++ code
         //Execute C++ code
+        
         if(toggleButton5.getState()){
         	room.heater=1;
         }else{

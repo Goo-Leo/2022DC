@@ -27,6 +27,7 @@ public:
     virtual void NH3Update(float adc);
     virtual void SHT31Update(float value1,float value2);
     virtual void BH1750Update(float value);
+    virtual void CO2Update(uint16_t co2);
     virtual ~DetailsPresenter() {};
 
 private:

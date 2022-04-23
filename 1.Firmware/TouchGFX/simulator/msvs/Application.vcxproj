@@ -33,9 +33,6 @@
     <ClCompile Include="..\..\gui\src\control_screen\ControlPresenter.cpp"/>
     <ClCompile Include="..\..\gui\src\control_screen\ControlView.cpp"/>
     <ClCompile Include="..\..\generated\gui_generated\src\control_screen\ControlViewBase.cpp"/>
-    <ClCompile Include="..\..\gui\src\set_screen\SetPresenter.cpp"/>
-    <ClCompile Include="..\..\gui\src\set_screen\SetView.cpp"/>
-    <ClCompile Include="..\..\generated\gui_generated\src\set_screen\SetViewBase.cpp"/>
   </ItemGroup>
   <ItemGroup>
     <None Include="$(ApplicationRoot)\assets\texts\texts.xml"/>
@@ -198,9 +195,6 @@
     <ClInclude Include="..\..\gui\include\gui\control_screen\ControlPresenter.hpp"/>
     <ClInclude Include="..\..\gui\include\gui\control_screen\ControlView.hpp"/>
     <ClInclude Include="..\..\generated\gui_generated\include\gui_generated\control_screen\ControlViewBase.hpp"/>
-    <ClInclude Include="..\..\gui\include\gui\set_screen\SetPresenter.hpp"/>
-    <ClInclude Include="..\..\gui\include\gui\set_screen\SetView.hpp"/>
-    <ClInclude Include="..\..\generated\gui_generated\include\gui_generated\set_screen\SetViewBase.hpp"/>
   </ItemGroup>
   <ItemGroup>
     <ResourceCompile Include="$(ApplicationRoot)\generated\simulator\touchgfx.rc"/>

@@ -14,6 +14,7 @@
 #include <touchgfx/widgets/TextArea.hpp>
 #include <touchgfx/widgets/ButtonWithLabel.hpp>
 #include "devices.h"
+#include "cmsis_os.h"
 
 class ControlViewBase : public touchgfx::View<ControlPresenter>
 {

@@ -93,32 +93,24 @@ MainViewBase::MainViewBase() :
     box2_1.setColor(touchgfx::Color::getColorFromRGB(25, 93, 181));
     swipeContainer1Page2.add(box2_1);
 
-    buttonWithLabel1_1.setXY(30, 58);
-    buttonWithLabel1_1.setBitmaps(touchgfx::Bitmap(BITMAP_BLUE_BUTTONS_ROUND_EDGE_SMALL_ID), touchgfx::Bitmap(BITMAP_BLUE_BUTTONS_ROUND_EDGE_SMALL_PRESSED_ID));
+    buttonWithLabel1_1.setXY(60, 28);
+    buttonWithLabel1_1.setBitmaps(touchgfx::Bitmap(BITMAP_BLUE_BUTTONS_ROUND_LARGE_ID), touchgfx::Bitmap(BITMAP_BLUE_BUTTONS_ROUND_LARGE_PRESSED_ID));
     buttonWithLabel1_1.setLabelText(touchgfx::TypedText(T___SINGLEUSE_9KO6));
     buttonWithLabel1_1.setLabelColor(touchgfx::Color::getColorFromRGB(255, 255, 255));
     buttonWithLabel1_1.setLabelColorPressed(touchgfx::Color::getColorFromRGB(255, 255, 255));
     buttonWithLabel1_1.setAction(buttonCallback);
     swipeContainer1Page2.add(buttonWithLabel1_1);
 
-    buttonWithLabel3_1.setXY(30, 159);
-    buttonWithLabel3_1.setBitmaps(touchgfx::Bitmap(BITMAP_BLUE_BUTTONS_ROUND_EDGE_SMALL_ID), touchgfx::Bitmap(BITMAP_BLUE_BUTTONS_ROUND_EDGE_SMALL_PRESSED_ID));
+    buttonWithLabel3_1.setXY(60, 97);
+    buttonWithLabel3_1.setBitmaps(touchgfx::Bitmap(BITMAP_BLUE_BUTTONS_ROUND_LARGE_ID), touchgfx::Bitmap(BITMAP_BLUE_BUTTONS_ROUND_LARGE_PRESSED_ID));
     buttonWithLabel3_1.setLabelText(touchgfx::TypedText(T___SINGLEUSE_72WW));
     buttonWithLabel3_1.setLabelColor(touchgfx::Color::getColorFromRGB(255, 255, 255));
     buttonWithLabel3_1.setLabelColorPressed(touchgfx::Color::getColorFromRGB(255, 255, 255));
     buttonWithLabel3_1.setAction(buttonCallback);
     swipeContainer1Page2.add(buttonWithLabel3_1);
 
-    buttonWithLabel4_1.setXY(277, 159);
-    buttonWithLabel4_1.setBitmaps(touchgfx::Bitmap(BITMAP_BLUE_BUTTONS_ROUND_EDGE_SMALL_ID), touchgfx::Bitmap(BITMAP_BLUE_BUTTONS_ROUND_EDGE_SMALL_PRESSED_ID));
-    buttonWithLabel4_1.setLabelText(touchgfx::TypedText(T___SINGLEUSE_JZBP));
-    buttonWithLabel4_1.setLabelColor(touchgfx::Color::getColorFromRGB(255, 255, 255));
-    buttonWithLabel4_1.setLabelColorPressed(touchgfx::Color::getColorFromRGB(255, 255, 255));
-    buttonWithLabel4_1.setAction(buttonCallback);
-    swipeContainer1Page2.add(buttonWithLabel4_1);
-
-    buttonWithLabel2_1.setXY(277, 58);
-    buttonWithLabel2_1.setBitmaps(touchgfx::Bitmap(BITMAP_BLUE_BUTTONS_ROUND_EDGE_SMALL_ID), touchgfx::Bitmap(BITMAP_BLUE_BUTTONS_ROUND_EDGE_SMALL_PRESSED_ID));
+    buttonWithLabel2_1.setXY(60, 170);
+    buttonWithLabel2_1.setBitmaps(touchgfx::Bitmap(BITMAP_BLUE_BUTTONS_ROUND_LARGE_ID), touchgfx::Bitmap(BITMAP_BLUE_BUTTONS_ROUND_LARGE_PRESSED_ID));
     buttonWithLabel2_1.setLabelText(touchgfx::TypedText(T___SINGLEUSE_9B0J));
     buttonWithLabel2_1.setLabelColor(touchgfx::Color::getColorFromRGB(255, 255, 255));
     buttonWithLabel2_1.setLabelColorPressed(touchgfx::Color::getColorFromRGB(255, 255, 255));
@@ -151,13 +143,6 @@ void MainViewBase::buttonCallbackHandler(const touchgfx::AbstractButton& src)
         //When buttonWithLabel3_1 clicked change screen to Details
         //Go to Details with block transition
         application().gotoDetailsScreenBlockTransition();
-    }
-    else if (&src == &buttonWithLabel4_1)
-    {
-        //Interaction4
-        //When buttonWithLabel4_1 clicked change screen to Set
-        //Go to Set with block transition
-        application().gotoSetScreenBlockTransition();
     }
     else if (&src == &buttonWithLabel2_1)
     {

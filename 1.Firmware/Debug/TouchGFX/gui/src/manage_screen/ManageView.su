@@ -69,15 +69,15 @@
 ../TouchGFX/generated/gui_generated/include/gui_generated/manage_screen/ManageViewBase.hpp:22:13:virtual ManageViewBase::~ManageViewBase()	16	static
 ../TouchGFX/gui/include/gui/manage_screen/ManageView.hpp:18:13:ManageView::~ManageView()	16	static
 ../TouchGFX/gui/include/gui/manage_screen/ManageView.hpp:18:13:virtual ManageView::~ManageView()	16	static
-../TouchGFX/gui/src/manage_screen/ManageView.cpp:8:1:ManageView::ManageView()	16	static
-../TouchGFX/gui/src/manage_screen/ManageView.cpp:13:6:virtual void ManageView::setupScreen()	16	static
-../TouchGFX/gui/src/manage_screen/ManageView.cpp:24:6:virtual void ManageView::tearDownScreen()	16	static
-../TouchGFX/gui/src/manage_screen/ManageView.cpp:29:6:virtual void ManageView::increaseValue()	16	static
-../TouchGFX/gui/src/manage_screen/ManageView.cpp:35:6:virtual void ManageView::increaseValue1()	16	static
-../TouchGFX/gui/src/manage_screen/ManageView.cpp:41:6:virtual void ManageView::increaseValue2()	16	static
-../TouchGFX/gui/src/manage_screen/ManageView.cpp:47:6:virtual void ManageView::decreaseValue()	16	static
-../TouchGFX/gui/src/manage_screen/ManageView.cpp:54:6:virtual void ManageView::decreaseValue1()	16	static
-../TouchGFX/gui/src/manage_screen/ManageView.cpp:61:6:virtual void ManageView::decreaseValue2()	16	static
+../TouchGFX/gui/src/manage_screen/ManageView.cpp:14:1:ManageView::ManageView()	16	static
+../TouchGFX/gui/src/manage_screen/ManageView.cpp:19:6:virtual void ManageView::setupScreen()	16	static
+../TouchGFX/gui/src/manage_screen/ManageView.cpp:30:6:virtual void ManageView::tearDownScreen()	16	static
+../TouchGFX/gui/src/manage_screen/ManageView.cpp:35:6:virtual void ManageView::increaseValue()	16	static
+../TouchGFX/gui/src/manage_screen/ManageView.cpp:42:6:virtual void ManageView::increaseValue1()	16	static
+../TouchGFX/gui/src/manage_screen/ManageView.cpp:49:6:virtual void ManageView::increaseValue2()	16	static
+../TouchGFX/gui/src/manage_screen/ManageView.cpp:56:6:virtual void ManageView::decreaseValue()	16	static
+../TouchGFX/gui/src/manage_screen/ManageView.cpp:64:6:virtual void ManageView::decreaseValue1()	16	static
+../TouchGFX/gui/src/manage_screen/ManageView.cpp:72:6:virtual void ManageView::decreaseValue2()	16	static
 ../Middlewares/ST/touchgfx/framework/include/touchgfx/containers/buttons/ToggleButtonTrigger.hpp:36:7:touchgfx::ToggleButtonTrigger::~ToggleButtonTrigger()	16	static
 ../Middlewares/ST/touchgfx/framework/include/touchgfx/containers/buttons/ToggleButtonTrigger.hpp:36:7:virtual touchgfx::ToggleButtonTrigger::~ToggleButtonTrigger()	16	static
 ../Middlewares/ST/touchgfx/framework/include/touchgfx/containers/buttons/RepeatButtonTrigger.hpp:34:7:touchgfx::RepeatButtonTrigger::~RepeatButtonTrigger()	16	static

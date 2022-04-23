@@ -1,5 +1,6 @@
 #include "devices.h"
 
+extern __IO float temperature;
 Device room ={0,0,0,0,0};
 
 
@@ -9,7 +10,7 @@ void windowoff(Device room){
 		__HAL_TIM_SET_COMPARE(&htim12,TIM_CHANNEL_1,10000+i);
 		HAL_Delay(200);
 	}*/
-	__HAL_TIM_SET_COMPARE(&htim12,TIM_CHANNEL_1,15200);
+	__HAL_TIM_SET_COMPARE(&htim12,TIM_CHANNEL_1,10000);
 	}
 	else{
 		return;
@@ -23,7 +24,7 @@ void windowon(Device room){
 	  	__HAL_TIM_SET_COMPARE(&htim12,TIM_CHANNEL_1,15200-a);
 	  	HAL_Delay(50);
 		}*/
-	__HAL_TIM_SET_COMPARE(&htim12,TIM_CHANNEL_1,10000);
+	__HAL_TIM_SET_COMPARE(&htim12,TIM_CHANNEL_1,15200);
 	}
 	else{
 			return;
@@ -36,7 +37,7 @@ void curtainup(void){
 		__HAL_TIM_SET_COMPARE(&htim12,TIM_CHANNEL_2,2400+i);
 		HAL_Delay(50);
 	}*/
-	__HAL_TIM_SET_COMPARE(&htim12,TIM_CHANNEL_2,15000);
+	__HAL_TIM_SET_COMPARE(&htim12,TIM_CHANNEL_2,3000);
 }
 
 void curtaindown(void){
@@ -44,7 +45,7 @@ void curtaindown(void){
 		__HAL_TIM_SET_COMPARE(&htim12,TIM_CHANNEL_2,15200-i);
 		HAL_Delay(50);
 	}*/
-	__HAL_TIM_SET_COMPARE(&htim12,TIM_CHANNEL_2,2400);
+	__HAL_TIM_SET_COMPARE(&htim12,TIM_CHANNEL_2,15000);
 }
 
 void heateron(void){
@@ -55,12 +56,12 @@ void heateroff(void){
 }
 
 void fanctrl(Device room){
-	if(room.fan1==1)
+	if((room.fan1==1)||(temperature>27))
 		HAL_GPIO_WritePin(GPIOB, GPIO_PIN_12, 0);
 	else{
 		HAL_GPIO_WritePin(GPIOB, GPIO_PIN_12, 1);
 	}
-	if(room.fan2==1) {
+	if((room.fan2==1)||(temperature>27)) {
 		HAL_GPIO_WritePin(GPIOB, GPIO_PIN_13, 0);
 	}else{
 		HAL_GPIO_WritePin(GPIOB, GPIO_PIN_13, 1);

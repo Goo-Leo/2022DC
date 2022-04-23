@@ -24,8 +24,6 @@
 #include <gui/details_screen/DetailsPresenter.hpp>
 #include <gui/control_screen/ControlView.hpp>
 #include <gui/control_screen/ControlPresenter.hpp>
-#include <gui/set_screen/SetView.hpp>
-#include <gui/set_screen/SetPresenter.hpp>
 
 
 /**
@@ -52,8 +50,7 @@ public:
             touchgfx::meta::TypeList< ManageView,
             touchgfx::meta::TypeList< DetailsView,
             touchgfx::meta::TypeList< ControlView,
-            touchgfx::meta::TypeList< SetView,
-            touchgfx::meta::Nil > > > >
+            touchgfx::meta::Nil > > >
             > GeneratedViewTypes;
 
     /**
@@ -69,8 +66,7 @@ public:
             touchgfx::meta::TypeList< ManagePresenter,
             touchgfx::meta::TypeList< DetailsPresenter,
             touchgfx::meta::TypeList< ControlPresenter,
-            touchgfx::meta::TypeList< SetPresenter,
-            touchgfx::meta::Nil > > > >
+            touchgfx::meta::Nil > > >
             > GeneratedPresenterTypes;
 
     /**

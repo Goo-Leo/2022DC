@@ -18,15 +18,15 @@
 ../Middlewares/ST/touchgfx/framework/include/touchgfx/widgets/Widget.hpp:47:18:virtual void touchgfx::Widget::getLastChild(int16_t, int16_t, touchgfx::Drawable**)	0	static
 ../Middlewares/ST/touchgfx/framework/include/touchgfx/TypedText.hpp:65:13:touchgfx::TypedText::~TypedText()	0	static
 ../Middlewares/ST/touchgfx/framework/include/mvp/View.hpp:36:7:touchgfx::View<ControlPresenter>::~View()	0	static
-../TouchGFX/generated/gui_generated/include/gui_generated/control_screen/ControlViewBase.hpp:22:13:ControlViewBase::~ControlViewBase()	0	static
-../TouchGFX/generated/gui_generated/src/control_screen/ControlViewBase.cpp:101:6:virtual void ControlViewBase::setupScreen()	0	static
+../TouchGFX/generated/gui_generated/include/gui_generated/control_screen/ControlViewBase.hpp:23:13:ControlViewBase::~ControlViewBase()	0	static
+../TouchGFX/generated/gui_generated/src/control_screen/ControlViewBase.cpp:102:6:virtual void ControlViewBase::setupScreen()	0	static
 ../Middlewares/ST/touchgfx/framework/include/touchgfx/Callback.hpp:357:8:touchgfx::Callback<ControlViewBase, const touchgfx::AbstractButton&>::~Callback()	0	static
 ../Middlewares/ST/touchgfx/framework/include/touchgfx/Callback.hpp:386:18:void touchgfx::Callback<dest_type, T1, void, void>::execute(T1) [with dest_type = ControlViewBase; T1 = const touchgfx::AbstractButton&]	8	static
 ../Middlewares/ST/touchgfx/framework/include/touchgfx/Callback.hpp:396:18:bool touchgfx::Callback<dest_type, T1, void, void>::isValid() const [with dest_type = ControlViewBase; T1 = const touchgfx::AbstractButton&]	0	static
 ../Middlewares/ST/touchgfx/framework/include/touchgfx/TypedText.hpp:65:13:virtual touchgfx::TypedText::~TypedText()	8	static
 ../Middlewares/ST/touchgfx/framework/include/touchgfx/Callback.hpp:357:8:virtual touchgfx::Callback<ControlViewBase, const touchgfx::AbstractButton&>::~Callback()	8	static
 ../Middlewares/ST/touchgfx/framework/include/mvp/View.hpp:36:7:virtual touchgfx::View<ControlPresenter>::~View()	8	static
-../TouchGFX/generated/gui_generated/include/gui_generated/control_screen/ControlViewBase.hpp:22:13:virtual ControlViewBase::~ControlViewBase()	8	static
+../TouchGFX/generated/gui_generated/include/gui_generated/control_screen/ControlViewBase.hpp:23:13:virtual ControlViewBase::~ControlViewBase()	8	static
 ../Middlewares/ST/touchgfx/framework/include/touchgfx/Bitmap.hpp:133:14:touchgfx::BitmapId touchgfx::Bitmap::getId() const	8	static
 ../Middlewares/ST/touchgfx/framework/include/touchgfx/Drawable.hpp:326:10:void touchgfx::Drawable::setXY(int16_t, int16_t)	16	static
 ../Middlewares/ST/touchgfx/framework/include/touchgfx/Drawable.hpp:216:10:void touchgfx::Drawable::setPosition(int16_t, int16_t, int16_t, int16_t)	16	static
@@ -34,8 +34,8 @@
 ../Middlewares/ST/touchgfx/framework/include/touchgfx/widgets/Box.hpp:33:5:touchgfx::Box::Box()	8	static
 ../Middlewares/ST/touchgfx/framework/include/touchgfx/widgets/canvas/AbstractPainterRGB565.hpp:41:5:touchgfx::AbstractPainterRGB565::AbstractPainterRGB565()	16	static
 ../Middlewares/ST/touchgfx/framework/include/touchgfx/widgets/ToggleButton.hpp:58:10:bool touchgfx::ToggleButton::getState() const	16	static
-../TouchGFX/generated/gui_generated/src/control_screen/ControlViewBase.cpp:106:6:void ControlViewBase::buttonCallbackHandler(const touchgfx::AbstractButton&)	8	static
+../TouchGFX/generated/gui_generated/src/control_screen/ControlViewBase.cpp:107:6:void ControlViewBase::buttonCallbackHandler(const touchgfx::AbstractButton&)	8	static
 ../Middlewares/ST/touchgfx/framework/include/touchgfx/widgets/TextArea.hpp:42:5:touchgfx::TextArea::TextArea()	8	static
 ../Middlewares/ST/touchgfx/framework/include/touchgfx/widgets/ButtonWithLabel.hpp:132:10:void touchgfx::ButtonWithLabel::updateTextPosition()	24	static
 ../Middlewares/ST/touchgfx/framework/include/touchgfx/widgets/ToggleButton.hpp:32:7:touchgfx::ToggleButton::ToggleButton()	8	static
-../TouchGFX/generated/gui_generated/src/control_screen/ControlViewBase.cpp:13:1:ControlViewBase::ControlViewBase()	104	static
+../TouchGFX/generated/gui_generated/src/control_screen/ControlViewBase.cpp:14:1:ControlViewBase::ControlViewBase()	104	static

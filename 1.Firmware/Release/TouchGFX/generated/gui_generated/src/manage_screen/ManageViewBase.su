@@ -93,4 +93,4 @@
 ../Middlewares/ST/touchgfx/framework/include/touchgfx/containers/buttons/IconButtonStyle.hpp:47:5:touchgfx::IconButtonStyle<T>::IconButtonStyle() [with T = touchgfx::BoxWithBorderButtonStyle<touchgfx::RepeatButtonTrigger>]	32	static
 ../Middlewares/ST/touchgfx/framework/include/touchgfx/containers/buttons/BoxWithBorderButtonStyle.hpp:44:5:touchgfx::BoxWithBorderButtonStyle<T>::BoxWithBorderButtonStyle() [with T = touchgfx::ClickButtonTrigger]	16	static
 ../Middlewares/ST/touchgfx/framework/include/touchgfx/containers/buttons/BoxWithBorderButtonStyle.hpp:94:10:void touchgfx::BoxWithBorderButtonStyle<T>::setBoxWithBorderColors(touchgfx::colortype, touchgfx::colortype, touchgfx::colortype, touchgfx::colortype) [with T = touchgfx::RepeatButtonTrigger]	4	static
-../TouchGFX/generated/gui_generated/src/manage_screen/ManageViewBase.cpp:9:1:ManageViewBase::ManageViewBase()	120	static
+../TouchGFX/generated/gui_generated/src/manage_screen/ManageViewBase.cpp:9:1:ManageViewBase::ManageViewBase()	128	static

@@ -29,6 +29,8 @@ public:
 
     virtual void SHT31Update(float value1,float value2);
 
+    virtual void CO2Update(uint16_t co2);
+
     /*virtual void Updateevent(value);*/
 private:
     MainPresenter();

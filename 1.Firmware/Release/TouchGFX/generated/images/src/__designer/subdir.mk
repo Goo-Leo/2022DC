@@ -7,6 +7,8 @@
 CPP_SRCS += \
 ../TouchGFX/generated/images/src/__designer/image_Blue_Buttons_Round_Edge_small.cpp \
 ../TouchGFX/generated/images/src/__designer/image_Blue_Buttons_Round_Edge_small_pressed.cpp \
+../TouchGFX/generated/images/src/__designer/image_Blue_Buttons_Round_large.cpp \
+../TouchGFX/generated/images/src/__designer/image_Blue_Buttons_Round_large_pressed.cpp \
 ../TouchGFX/generated/images/src/__designer/image_Blue_Icons_Down_arrow_32.cpp \
 ../TouchGFX/generated/images/src/__designer/image_Blue_Icons_Up_arrow_32.cpp \
 ../TouchGFX/generated/images/src/__designer/image_Blue_Togglebars_Toggle_round_small_button_OFF.cpp \
@@ -15,6 +17,8 @@ CPP_SRCS += \
 OBJS += \
 ./TouchGFX/generated/images/src/__designer/image_Blue_Buttons_Round_Edge_small.o \
 ./TouchGFX/generated/images/src/__designer/image_Blue_Buttons_Round_Edge_small_pressed.o \
+./TouchGFX/generated/images/src/__designer/image_Blue_Buttons_Round_large.o \
+./TouchGFX/generated/images/src/__designer/image_Blue_Buttons_Round_large_pressed.o \
 ./TouchGFX/generated/images/src/__designer/image_Blue_Icons_Down_arrow_32.o \
 ./TouchGFX/generated/images/src/__designer/image_Blue_Icons_Up_arrow_32.o \
 ./TouchGFX/generated/images/src/__designer/image_Blue_Togglebars_Toggle_round_small_button_OFF.o \
@@ -23,6 +27,8 @@ OBJS += \
 CPP_DEPS += \
 ./TouchGFX/generated/images/src/__designer/image_Blue_Buttons_Round_Edge_small.d \
 ./TouchGFX/generated/images/src/__designer/image_Blue_Buttons_Round_Edge_small_pressed.d \
+./TouchGFX/generated/images/src/__designer/image_Blue_Buttons_Round_large.d \
+./TouchGFX/generated/images/src/__designer/image_Blue_Buttons_Round_large_pressed.d \
 ./TouchGFX/generated/images/src/__designer/image_Blue_Icons_Down_arrow_32.d \
 ./TouchGFX/generated/images/src/__designer/image_Blue_Icons_Up_arrow_32.d \
 ./TouchGFX/generated/images/src/__designer/image_Blue_Togglebars_Toggle_round_small_button_OFF.d \
@@ -36,7 +42,7 @@ TouchGFX/generated/images/src/__designer/%.o TouchGFX/generated/images/src/__des
 clean: clean-TouchGFX-2f-generated-2f-images-2f-src-2f-__designer
 
 clean-TouchGFX-2f-generated-2f-images-2f-src-2f-__designer:
-	-$(RM) ./TouchGFX/generated/images/src/__designer/image_Blue_Buttons_Round_Edge_small.d ./TouchGFX/generated/images/src/__designer/image_Blue_Buttons_Round_Edge_small.o ./TouchGFX/generated/images/src/__designer/image_Blue_Buttons_Round_Edge_small.su ./TouchGFX/generated/images/src/__designer/image_Blue_Buttons_Round_Edge_small_pressed.d ./TouchGFX/generated/images/src/__designer/image_Blue_Buttons_Round_Edge_small_pressed.o ./TouchGFX/generated/images/src/__designer/image_Blue_Buttons_Round_Edge_small_pressed.su ./TouchGFX/generated/images/src/__designer/image_Blue_Icons_Down_arrow_32.d ./TouchGFX/generated/images/src/__designer/image_Blue_Icons_Down_arrow_32.o ./TouchGFX/generated/images/src/__designer/image_Blue_Icons_Down_arrow_32.su ./TouchGFX/generated/images/src/__designer/image_Blue_Icons_Up_arrow_32.d ./TouchGFX/generated/images/src/__designer/image_Blue_Icons_Up_arrow_32.o ./TouchGFX/generated/images/src/__designer/image_Blue_Icons_Up_arrow_32.su ./TouchGFX/generated/images/src/__designer/image_Blue_Togglebars_Toggle_round_small_button_OFF.d ./TouchGFX/generated/images/src/__designer/image_Blue_Togglebars_Toggle_round_small_button_OFF.o ./TouchGFX/generated/images/src/__designer/image_Blue_Togglebars_Toggle_round_small_button_OFF.su ./TouchGFX/generated/images/src/__designer/image_Blue_Togglebars_Toggle_round_small_button_ON.d ./TouchGFX/generated/images/src/__designer/image_Blue_Togglebars_Toggle_round_small_button_ON.o ./TouchGFX/generated/images/src/__designer/image_Blue_Togglebars_Toggle_round_small_button_ON.su
+	-$(RM) ./TouchGFX/generated/images/src/__designer/image_Blue_Buttons_Round_Edge_small.d ./TouchGFX/generated/images/src/__designer/image_Blue_Buttons_Round_Edge_small.o ./TouchGFX/generated/images/src/__designer/image_Blue_Buttons_Round_Edge_small.su ./TouchGFX/generated/images/src/__designer/image_Blue_Buttons_Round_Edge_small_pressed.d ./TouchGFX/generated/images/src/__designer/image_Blue_Buttons_Round_Edge_small_pressed.o ./TouchGFX/generated/images/src/__designer/image_Blue_Buttons_Round_Edge_small_pressed.su ./TouchGFX/generated/images/src/__designer/image_Blue_Buttons_Round_large.d ./TouchGFX/generated/images/src/__designer/image_Blue_Buttons_Round_large.o ./TouchGFX/generated/images/src/__designer/image_Blue_Buttons_Round_large.su ./TouchGFX/generated/images/src/__designer/image_Blue_Buttons_Round_large_pressed.d ./TouchGFX/generated/images/src/__designer/image_Blue_Buttons_Round_large_pressed.o ./TouchGFX/generated/images/src/__designer/image_Blue_Buttons_Round_large_pressed.su ./TouchGFX/generated/images/src/__designer/image_Blue_Icons_Down_arrow_32.d ./TouchGFX/generated/images/src/__designer/image_Blue_Icons_Down_arrow_32.o ./TouchGFX/generated/images/src/__designer/image_Blue_Icons_Down_arrow_32.su ./TouchGFX/generated/images/src/__designer/image_Blue_Icons_Up_arrow_32.d ./TouchGFX/generated/images/src/__designer/image_Blue_Icons_Up_arrow_32.o ./TouchGFX/generated/images/src/__designer/image_Blue_Icons_Up_arrow_32.su ./TouchGFX/generated/images/src/__designer/image_Blue_Togglebars_Toggle_round_small_button_OFF.d ./TouchGFX/generated/images/src/__designer/image_Blue_Togglebars_Toggle_round_small_button_OFF.o ./TouchGFX/generated/images/src/__designer/image_Blue_Togglebars_Toggle_round_small_button_OFF.su ./TouchGFX/generated/images/src/__designer/image_Blue_Togglebars_Toggle_round_small_button_ON.d ./TouchGFX/generated/images/src/__designer/image_Blue_Togglebars_Toggle_round_small_button_ON.o ./TouchGFX/generated/images/src/__designer/image_Blue_Togglebars_Toggle_round_small_button_ON.su
 
 .PHONY: clean-TouchGFX-2f-generated-2f-images-2f-src-2f-__designer
 

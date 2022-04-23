@@ -18,7 +18,7 @@ public:
     virtual void SHT31Update(float value1,float value2){};
     virtual void BH1750Update(float value){};
     virtual void NH3Update(float adc){};
-    virtual void CO2Update(uint32_t co2){};
+    virtual void CO2Update(uint16_t co2){};
     virtual void devicestate(Device room){};
 protected:
     Model* model;

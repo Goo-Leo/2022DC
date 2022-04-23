@@ -6,8 +6,9 @@
 extern __IO float humidity;
 extern __IO float temperature;
 extern __IO float lux;
-extern __IO uint32_t co2;
+extern __IO uint16_t co2;
 extern __IO float nh3;
+
 
 
 Model::Model() : modelListener(0)

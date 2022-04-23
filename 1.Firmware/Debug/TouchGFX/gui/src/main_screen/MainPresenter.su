@@ -9,7 +9,7 @@
 ../TouchGFX/gui/include/gui/model/ModelListener.hpp:18:18:virtual void ModelListener::SHT31Update(float, float)	24	static
 ../TouchGFX/gui/include/gui/model/ModelListener.hpp:19:18:virtual void ModelListener::BH1750Update(float)	16	static
 ../TouchGFX/gui/include/gui/model/ModelListener.hpp:20:18:virtual void ModelListener::NH3Update(float)	16	static
-../TouchGFX/gui/include/gui/model/ModelListener.hpp:21:18:virtual void ModelListener::CO2Update(uint32_t)	16	static
+../TouchGFX/gui/include/gui/model/ModelListener.hpp:21:18:virtual void ModelListener::CO2Update(uint16_t)	16	static
 ../TouchGFX/gui/include/gui/model/ModelListener.hpp:22:18:virtual void ModelListener::devicestate(Device)	24	static
 ../TouchGFX/gui/include/gui/main_screen/MainPresenter.hpp:28:13:MainPresenter::~MainPresenter()	16	static
 ../TouchGFX/gui/include/gui/main_screen/MainPresenter.hpp:28:13:virtual MainPresenter::~MainPresenter()	16	static
@@ -17,3 +17,4 @@
 ../TouchGFX/gui/src/main_screen/MainPresenter.cpp:10:6:virtual void MainPresenter::activate()	16	static
 ../TouchGFX/gui/src/main_screen/MainPresenter.cpp:15:6:virtual void MainPresenter::deactivate()	16	static
 ../TouchGFX/gui/src/main_screen/MainPresenter.cpp:20:6:virtual void MainPresenter::SHT31Update(float, float)	24	static
+../TouchGFX/gui/src/main_screen/MainPresenter.cpp:24:6:virtual void MainPresenter::CO2Update(uint16_t)	16	static

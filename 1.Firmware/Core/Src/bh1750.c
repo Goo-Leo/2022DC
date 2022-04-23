@@ -13,7 +13,6 @@
 
 #include "main.h"
 #include "i2c.h"
-
 #include "bh1750.h"
 
 I2C_HandleTypeDef 	*bh1750_i2c;	// Handler to I2C interface

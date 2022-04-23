@@ -33,9 +33,6 @@ public:
     // Control
     void gotoControlScreenBlockTransition();
 
-    // Set
-    void gotoSetScreenBlockTransition();
-
 protected:
     touchgfx::Callback<FrontendApplicationBase> transitionCallback;
     FrontendHeap& frontendHeap;
@@ -58,9 +55,6 @@ protected:
 
     // Control
     void gotoControlScreenBlockTransitionImpl();
-
-    // Set
-    void gotoSetScreenBlockTransitionImpl();
 };
 
 #endif // FRONTENDAPPLICATIONBASE_HPP

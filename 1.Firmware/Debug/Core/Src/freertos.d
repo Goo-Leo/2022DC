@@ -64,9 +64,9 @@ Core/Src/freertos.o: ../Core/Src/freertos.c \
  ../Middlewares/Third_Party/FatFs/src/diskio.h \
  ../Middlewares/Third_Party/FatFs/src/ff.h ../FATFS/Target/sd_diskio.h \
  ../Core/Inc/i2c.h ../Core/Inc/main.h ../Core/Inc/adc.h ../Core/Inc/tim.h \
- ../Core/Inc/usart.h ../Core/Inc/sht31.h ../Core/Inc/bh1750.h \
- ../Core/Inc/sgp30.h ../Core/Inc/devices.h ../Core/Inc/tim.h \
- ../Core/Inc/gpio.h
+ ../Core/Inc/usart.h ../Core/Inc/devices.h ../Core/Inc/tim.h \
+ ../Core/Inc/gpio.h ../Core/Inc/sht31.h ../Core/Inc/bh1750.h \
+ ../Core/Inc/sgp30.h
 ../Middlewares/Third_Party/FreeRTOS/Source/include/FreeRTOS.h:
 ../Core/Inc/FreeRTOSConfig.h:
 ../Middlewares/Third_Party/FreeRTOS/Source/include/projdefs.h:
@@ -140,9 +140,9 @@ Core/Src/freertos.o: ../Core/Src/freertos.c \
 ../Core/Inc/adc.h:
 ../Core/Inc/tim.h:
 ../Core/Inc/usart.h:
-../Core/Inc/sht31.h:
-../Core/Inc/bh1750.h:
-../Core/Inc/sgp30.h:
 ../Core/Inc/devices.h:
 ../Core/Inc/tim.h:
 ../Core/Inc/gpio.h:
+../Core/Inc/sht31.h:
+../Core/Inc/bh1750.h:
+../Core/Inc/sgp30.h:

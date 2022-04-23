@@ -14,11 +14,8 @@
 #include <touchgfx/widgets/canvas/PainterRGB565.hpp>
 #include <touchgfx/widgets/TextAreaWithWildcard.hpp>
 #include <touchgfx/widgets/ButtonWithLabel.hpp>
-#include <touchgfx/mixins/ClickListener.hpp>
 #include <touchgfx/EasingEquations.hpp>
-#include <touchgfx/mixins/FadeAnimator.hpp>
 #include <touchgfx/mixins/MoveAnimator.hpp>
-#include <touchgfx/canvas_widget_renderer/CanvasWidgetRenderer.hpp>
 
 class MainViewBase : public touchgfx::View<MainPresenter>
 {
@@ -52,7 +49,6 @@ protected:
     touchgfx::Box box2_1;
     touchgfx::ButtonWithLabel buttonWithLabel1_1;
     touchgfx::ButtonWithLabel buttonWithLabel3_1;
-    touchgfx::ClickListener< touchgfx::FadeAnimator< touchgfx::ButtonWithLabel > > buttonWithLabel4_1;
     touchgfx::ButtonWithLabel buttonWithLabel2_1;
 
     /*

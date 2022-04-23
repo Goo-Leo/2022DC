@@ -1,5 +1,5 @@
-../Core/Src/sht31.c:40:13:sht3x_send_command	24	static
-../Core/Src/sht31.c:24:16:calculate_crc.constprop	0	static
-../Core/Src/sht31.c:58:6:sht3x_init	40	static
-../Core/Src/sht31.c:78:6:sht3x_read_temperature_and_humidity	32	static
-../Core/Src/sht31.c:103:6:sht3x_set_header_enable	0	static
+../Core/Src/sht31.c:36:13:sht3x_send_command	24	static
+../Core/Src/sht31.c:20:16:calculate_crc.constprop	0	static
+../Core/Src/sht31.c:53:6:sht3x_init	40	static
+../Core/Src/sht31.c:73:6:sht3x_read_temperature_and_humidity	32	static
+../Core/Src/sht31.c:99:6:sht3x_set_header_enable	0	static

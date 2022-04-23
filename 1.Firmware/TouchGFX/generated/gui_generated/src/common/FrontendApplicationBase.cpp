@@ -17,8 +17,6 @@
 #include <gui/details_screen/DetailsPresenter.hpp>
 #include <gui/control_screen/ControlView.hpp>
 #include <gui/control_screen/ControlPresenter.hpp>
-#include <gui/set_screen/SetView.hpp>
-#include <gui/set_screen/SetPresenter.hpp>
 
 using namespace touchgfx;
 
@@ -120,17 +118,4 @@ void FrontendApplicationBase::gotoControlScreenBlockTransition()
 void FrontendApplicationBase::gotoControlScreenBlockTransitionImpl()
 {
     touchgfx::makeTransition<ControlView, ControlPresenter, touchgfx::BlockTransition, Model >(&currentScreen, &currentPresenter, frontendHeap, &currentTransition, &model);
-}
-
-// Set
-
-void FrontendApplicationBase::gotoSetScreenBlockTransition()
-{
-    transitionCallback = touchgfx::Callback<FrontendApplicationBase>(this, &FrontendApplication::gotoSetScreenBlockTransitionImpl);
-    pendingScreenTransitionCallback = &transitionCallback;
-}
-
-void FrontendApplicationBase::gotoSetScreenBlockTransitionImpl()
-{
-    touchgfx::makeTransition<SetView, SetPresenter, touchgfx::BlockTransition, Model >(&currentScreen, &currentPresenter, frontendHeap, &currentTransition, &model);
 }

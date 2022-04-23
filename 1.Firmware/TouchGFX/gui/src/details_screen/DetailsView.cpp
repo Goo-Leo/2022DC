@@ -27,8 +27,8 @@ void DetailsView::SHT31Update(float value1,float value2){
 	textArea6.invalidate();
 }
 
-void DetailsView::CO2Upadate(uint32_t co2){
-	Unicode::snprintfFloat(textArea8Buffer, co2,"%.1f",co2);
+void DetailsView::CO2Upadate(uint16_t co2){
+	Unicode::snprintf(textArea8Buffer, co2,"%d",co2);
 	textArea8.invalidate();
 }
 

@@ -37,6 +37,7 @@
 /* USER CODE BEGIN Includes */
 #include "devices.h"
 #include "stdlib.h"
+
 /* USER CODE END Includes */
 
 /* Private typedef -----------------------------------------------------------*/
@@ -57,7 +58,7 @@
 /* Private variables ---------------------------------------------------------*/
 
 /* USER CODE BEGIN PV */
-char httprxbuffer[500]={};
+char httprxbuffer[356]={};
 char org[4];
 uint16_t cmd;
 uint16_t cpr;
@@ -115,19 +116,20 @@ int main(void)
   MX_ADC1_Init();
   MX_TIM3_Init();
   MX_TIM12_Init();
+  MX_I2C2_Init();
   MX_TouchGFX_Init();
   /* USER CODE BEGIN 2 */
 
-  printf("AT+CWJAP=\"ufi-955586\",\"11111111\"\r\n");
-
-
+  HAL_UART_Receive_IT(&huart1,(uint8_t*)httprxbuffer,356);
   HAL_GPIO_WritePin(GPIOD, GPIO_PIN_4, 0);
   HAL_GPIO_WritePin(GPIOI, GPIO_PIN_3, 0);
   HAL_GPIO_WritePin(GPIOB, GPIO_PIN_12, 1);
   HAL_GPIO_WritePin(GPIOB, GPIO_PIN_13, 1);
   HAL_TIM_Base_Start(&htim3);
   HAL_TIM_PWM_Start(&htim12, TIM_CHANNEL_1);
-  HAL_TIM_PWM_Start(&htim12, TIM_CHANNEL_1);
+  HAL_TIM_PWM_Start(&htim12, TIM_CHANNEL_2);
+
+
   /* USER CODE END 2 */
 
   /* Call init function for freertos objects (in freertos.c) */
@@ -201,23 +203,25 @@ void SystemClock_Config(void)
 }
 
 /* USER CODE BEGIN 4 */
+
 void HAL_UART_RxCpltCallback(UART_HandleTypeDef *huart){
 	if(huart->Instance == USART1){
-		if (httprxbuffer[9]=='2') {
-			HAL_GPIO_TogglePin(GPIOD, GPIO_PIN_4);
-			org[0]=httprxbuffer[351];
-			org[1]=httprxbuffer[359];
-			org[2]=httprxbuffer[371];
-			org[4]=httprxbuffer[383];
+		HAL_GPIO_TogglePin(GPIOD, GPIO_PIN_4);
+/*		if (httprxbuffer[9]=='2') {*/
+
+			org[0]=httprxbuffer[277];
+			org[1]=httprxbuffer[285];
+			org[2]=httprxbuffer[297];
+			org[3]=httprxbuffer[308];
 			cmd=atoi(org);
-			if (cmd != 1000*room.heater + 100*(room.fan1||room.fan2)+10*room.curtain + room.window) {
+
+//				HAL_GPIO_WritePin(GPIOD, GPIO_PIN_4, 0);
 				room.heater = cmd/1000%10;
 				room.fan1 = room.fan2 = cmd/100%10;
 				room.curtain = cmd/10%10;
 				room.window = cmd%10;
-			}
-		}
-	HAL_UART_Receive_IT(&huart1,(uint8_t*)httprxbuffer,sizeof(httprxbuffer));
+/*		}*/
+		HAL_UART_Receive_IT(&huart1,(uint8_t*)httprxbuffer,356);
 	}
 }
 /* USER CODE END 4 */

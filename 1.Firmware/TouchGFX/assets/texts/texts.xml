@@ -10,9 +10,6 @@
     <Text Id="__SingleUse_72WW" TypographyId="Default" Alignment="Center" Direction="LTR">
       <Translation Language="GB">Details</Translation>
     </Text>
-    <Text Id="__SingleUse_JZBP" TypographyId="Default" Alignment="Center" Direction="LTR">
-      <Translation Language="GB">Set parameter</Translation>
-    </Text>
     <Text Id="__SingleUse_9B0J" TypographyId="Default" Alignment="Center" Direction="LTR">
       <Translation Language="GB">Contorl</Translation>
     </Text>
@@ -58,9 +55,6 @@
     <Text Id="__SingleUse_FKHH" TypographyId="Large" Alignment="Right" Direction="LTR">
       <Translation Language="GB">&lt;value&gt;ppm</Translation>
     </Text>
-    <Text Id="__SingleUse_H6IP" TypographyId="Large" Alignment="Left" Direction="LTR">
-      <Translation Language="GB">00</Translation>
-    </Text>
     <Text Id="__SingleUse_E8U2" TypographyId="Default" Alignment="Center" Direction="LTR">
       <Translation Language="GB">Export</Translation>
     </Text>
@@ -86,10 +80,10 @@
       <Translation Language="GB">NH3:</Translation>
     </Text>
     <Text Id="__SingleUse_L1JV" TypographyId="Large" Alignment="Right" Direction="LTR">
-      <Translation Language="GB">&lt;value&gt;ppm</Translation>
+      <Translation Language="GB">&lt;value&gt;ppb</Translation>
     </Text>
     <Text Id="__SingleUse_DD9S" TypographyId="Large" Alignment="Left" Direction="LTR">
-      <Translation Language="GB">0</Translation>
+      <Translation Language="GB">000</Translation>
     </Text>
     <Text Id="__SingleUse_5GPJ" TypographyId="Large" Alignment="Left" Direction="LTR">
       <Translation Language="GB">Fan1</Translation>
@@ -109,54 +103,6 @@
     <Text Id="__SingleUse_YKXE" TypographyId="Default" Alignment="Center" Direction="LTR">
       <Translation Language="GB">Back</Translation>
     </Text>
-    <Text Id="__SingleUse_HWD7" TypographyId="Large" Alignment="Left" Direction="LTR">
-      <Translation Language="GB">Illumination &lt;=</Translation>
-    </Text>
-    <Text Id="__SingleUse_EIHH" TypographyId="Large" Alignment="Right" Direction="LTR">
-      <Translation Language="GB">&lt;value&gt;Lux</Translation>
-    </Text>
-    <Text Id="__SingleUse_W6GS" TypographyId="Large" Alignment="Left" Direction="LTR">
-      <Translation Language="GB">1000.0</Translation>
-    </Text>
-    <Text Id="__SingleUse_WT26" TypographyId="Large" Alignment="Left" Direction="LTR">
-      <Translation Language="GB">Humidity      &lt;=</Translation>
-    </Text>
-    <Text Id="__SingleUse_R1XZ" TypographyId="Large" Alignment="Right" Direction="LTR">
-      <Translation Language="GB">&lt;value&gt;%RH</Translation>
-    </Text>
-    <Text Id="__SingleUse_TOQX" TypographyId="Large" Alignment="Left" Direction="LTR">
-      <Translation Language="GB">00.0</Translation>
-    </Text>
-    <Text Id="__SingleUse_86FF" TypographyId="Large" Alignment="Left" Direction="LTR">
-      <Translation Language="GB">Temperature &lt;=</Translation>
-    </Text>
-    <Text Id="__SingleUse_N5I8" TypographyId="Large" Alignment="Right" Direction="LTR">
-      <Translation Language="GB">&lt;value&gt;°C</Translation>
-    </Text>
-    <Text Id="__SingleUse_MZIT" TypographyId="Large" Alignment="Left" Direction="LTR">
-      <Translation Language="GB">00.0</Translation>
-    </Text>
-    <Text Id="__SingleUse_S6ZK" TypographyId="Large" Alignment="Left" Direction="LTR">
-      <Translation Language="GB">CO2              &lt;=</Translation>
-    </Text>
-    <Text Id="__SingleUse_AA2G" TypographyId="Large" Alignment="Right" Direction="LTR">
-      <Translation Language="GB">&lt;value&gt;ppm</Translation>
-    </Text>
-    <Text Id="__SingleUse_9CCQ" TypographyId="Large" Alignment="Left" Direction="LTR">
-      <Translation Language="GB">00</Translation>
-    </Text>
-    <Text Id="__SingleUse_G1JT" TypographyId="Large" Alignment="Left" Direction="LTR">
-      <Translation Language="GB">NH3              &lt;=</Translation>
-    </Text>
-    <Text Id="__SingleUse_TUT2" TypographyId="Large" Alignment="Right" Direction="LTR">
-      <Translation Language="GB">&lt;value&gt;ppm</Translation>
-    </Text>
-    <Text Id="__SingleUse_GP9H" TypographyId="Large" Alignment="Left" Direction="LTR">
-      <Translation Language="GB">00.0</Translation>
-    </Text>
-    <Text Id="__SingleUse_DAJ9" TypographyId="Default" Alignment="Center" Direction="LTR">
-      <Translation Language="GB">Back</Translation>
-    </Text>
     <Text Id="__SingleUse_74D9" TypographyId="Typography_00" Alignment="Left" Direction="LTR">
       <Translation Language="GB">00.0</Translation>
     </Text>
@@ -168,6 +114,9 @@
     </Text>
     <Text Id="__SingleUse_LCSD" TypographyId="Typography_00" Alignment="Left" Direction="LTR">
       <Translation Language="GB">00.0</Translation>
+    </Text>
+    <Text Id="__SingleUse_1NU1" TypographyId="Large" Alignment="Left" Direction="LTR">
+      <Translation Language="GB">000</Translation>
     </Text>
   </Texts>
   <Typographies>

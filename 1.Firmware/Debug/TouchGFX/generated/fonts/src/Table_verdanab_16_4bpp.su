@@ -4,5 +4,5 @@
 ../Middlewares/ST/touchgfx/framework/include/touchgfx/ConstFont.hpp:35:7:virtual touchgfx::ConstFont::~ConstFont()	16	static
 ../TouchGFX/generated/fonts/include/fonts/GeneratedFont.hpp:17:7:touchgfx::GeneratedFont::~GeneratedFont()	16	static
 ../TouchGFX/generated/fonts/include/fonts/GeneratedFont.hpp:17:7:virtual touchgfx::GeneratedFont::~GeneratedFont()	16	static
-../TouchGFX/generated/fonts/src/Table_verdanab_16_4bpp.cpp:62:165:void __tcf_0()	8	static
-../TouchGFX/generated/fonts/src/Table_verdanab_16_4bpp.cpp:60:26:touchgfx::GeneratedFont& getFont_verdanab_16_4bpp()	56	static
+../TouchGFX/generated/fonts/src/Table_verdanab_16_4bpp.cpp:61:165:void __tcf_0()	8	static
+../TouchGFX/generated/fonts/src/Table_verdanab_16_4bpp.cpp:59:26:touchgfx::GeneratedFont& getFont_verdanab_16_4bpp()	56	static

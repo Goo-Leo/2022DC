@@ -11,11 +11,12 @@
 ../TouchGFX/gui/src/main_screen/MainView.cpp:15:6:virtual void MainView::tearDownScreen()	0	static
 ../Middlewares/ST/touchgfx/framework/include/touchgfx/mixins/MoveAnimator.hpp:88:18:void touchgfx::MoveAnimator<T>::setMoveAnimationDelay(uint16_t) [with T = touchgfx::SwipeContainer]	0	static
 ../Middlewares/ST/touchgfx/framework/include/touchgfx/mixins/MoveAnimator.hpp:100:22:uint16_t touchgfx::MoveAnimator<T>::getMoveAnimationDelay() const [with T = touchgfx::SwipeContainer]	0	static
-../TouchGFX/gui/src/main_screen/MainView.cpp:10:6:virtual void MainView::setupScreen()	0	static
+../TouchGFX/gui/src/main_screen/MainView.cpp:9:6:virtual void MainView::setupScreen()	8	static
+../TouchGFX/gui/src/main_screen/MainView.cpp:27:6:virtual void MainView::CO2Update(uint16_t)	8	static
 ../Middlewares/ST/touchgfx/framework/include/touchgfx/mixins/MoveAnimator.hpp:37:7:touchgfx::MoveAnimator<touchgfx::SwipeContainer>::~MoveAnimator()	8	static
 ../Middlewares/ST/touchgfx/framework/include/touchgfx/mixins/MoveAnimator.hpp:37:7:virtual touchgfx::MoveAnimator<touchgfx::SwipeContainer>::~MoveAnimator()	8	static
 ../TouchGFX/gui/include/gui/main_screen/MainView.hpp:11:13:MainView::~MainView()	8	static
 ../TouchGFX/gui/include/gui/main_screen/MainView.hpp:11:13:virtual MainView::~MainView()	8	static
-../TouchGFX/gui/src/main_screen/MainView.cpp:20:6:virtual void MainView::SHT31Update(float, float)	24	static
-../TouchGFX/gui/src/main_screen/MainView.cpp:5:1:MainView::MainView()	8	static
+../TouchGFX/gui/src/main_screen/MainView.cpp:21:6:virtual void MainView::SHT31Update(float, float)	24	static
+../TouchGFX/gui/src/main_screen/MainView.cpp:4:1:MainView::MainView()	8	static
 ../Middlewares/ST/touchgfx/framework/include/touchgfx/mixins/MoveAnimator.hpp:169:18:void touchgfx::MoveAnimator<T>::handleTickEvent() [with T = touchgfx::SwipeContainer]	24	static

@@ -2,8 +2,8 @@
 ../Middlewares/ST/touchgfx/framework/include/touchgfx/Screen.hpp:144:18:virtual void touchgfx::Screen::handleTickEvent()	0	static
 ../Middlewares/ST/touchgfx/framework/include/touchgfx/Screen.hpp:154:18:virtual void touchgfx::Screen::handleKeyEvent(uint8_t)	0	static
 ../TouchGFX/gui/include/gui/control_screen/ControlView.hpp:11:13:ControlView::~ControlView()	0	static
-../TouchGFX/gui/src/control_screen/ControlView.cpp:14:6:virtual void ControlView::tearDownScreen()	0	static
-../TouchGFX/gui/src/control_screen/ControlView.cpp:9:6:virtual void ControlView::setupScreen()	0	static
-../TouchGFX/gui/src/control_screen/ControlView.cpp:19:6:virtual void ControlView::devicestate(Device)	16	static
+../TouchGFX/gui/src/control_screen/ControlView.cpp:39:6:virtual void ControlView::tearDownScreen()	0	static
+../TouchGFX/gui/src/control_screen/ControlView.cpp:44:6:virtual void ControlView::devicestate(Device)	16	static
+../TouchGFX/gui/src/control_screen/ControlView.cpp:9:6:virtual void ControlView::setupScreen()	16	static
 ../TouchGFX/gui/include/gui/control_screen/ControlView.hpp:11:13:virtual ControlView::~ControlView()	8	static
 ../TouchGFX/gui/src/control_screen/ControlView.cpp:4:1:ControlView::ControlView()	8	static

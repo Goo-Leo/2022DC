@@ -68,7 +68,6 @@ TouchGFX/generated/gui_generated/src/control_screen \
 TouchGFX/generated/gui_generated/src/details_screen \
 TouchGFX/generated/gui_generated/src/main_screen \
 TouchGFX/generated/gui_generated/src/manage_screen \
-TouchGFX/generated/gui_generated/src/set_screen \
 TouchGFX/generated/images/src \
 TouchGFX/generated/images/src/__designer \
 TouchGFX/generated/texts/src \
@@ -78,7 +77,6 @@ TouchGFX/gui/src/details_screen \
 TouchGFX/gui/src/main_screen \
 TouchGFX/gui/src/manage_screen \
 TouchGFX/gui/src/model \
-TouchGFX/gui/src/set_screen \
 TouchGFX/target \
 TouchGFX/target/generated \
 

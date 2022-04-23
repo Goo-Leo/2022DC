@@ -76,15 +76,15 @@ DetailsViewBase::DetailsViewBase() :
     textArea7.setLinespacing(0);
     textArea7.setTypedText(touchgfx::TypedText(T___SINGLEUSE_B3T5));
 
-    textArea8.setXY(342, 132);
+    textArea8.setXY(324, 132);
     textArea8.setColor(touchgfx::Color::getColorFromRGB(0, 0, 0));
     textArea8.setLinespacing(0);
-    Unicode::snprintf(textArea8Buffer, TEXTAREA8_SIZE, "%s", touchgfx::TypedText(T___SINGLEUSE_H6IP).getText());
+    Unicode::snprintf(textArea8Buffer, TEXTAREA8_SIZE, "%s", touchgfx::TypedText(T___SINGLEUSE_1NU1).getText());
     textArea8.setWildcard(textArea8Buffer);
     textArea8.resizeToCurrentText();
     textArea8.setTypedText(touchgfx::TypedText(T___SINGLEUSE_FKHH));
 
-    textArea10.setXY(359, 171);
+    textArea10.setXY(332, 171);
     textArea10.setColor(touchgfx::Color::getColorFromRGB(0, 0, 0));
     textArea10.setLinespacing(0);
     Unicode::snprintf(textArea10Buffer, TEXTAREA10_SIZE, "%s", touchgfx::TypedText(T___SINGLEUSE_DD9S).getText());

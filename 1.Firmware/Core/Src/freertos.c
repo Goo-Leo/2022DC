@@ -32,11 +32,11 @@
 #include "adc.h"
 #include "tim.h"
 #include "usart.h"
+#include "devices.h"
+#include "math.h"
 #include "sht31.h"
 #include "bh1750.h"
 #include "sgp30.h"
-#include "devices.h"
-#include "math.h"
 /* USER CODE END Includes */
 
 /* Private typedef -----------------------------------------------------------*/
@@ -56,24 +56,30 @@
 /* Private variables ---------------------------------------------------------*/
 /* USER CODE BEGIN Variables */
 uint32_t NH3[1];
-__IO float nh3;
-__IO float temperature, humidity, lux;
+__IO float temperature = 20.32 , humidity = 56.93, lux, nh3;
 __IO uint16_t co2,TVOC;
 
 uint8_t count = 50;
 uint8_t count1 = 50;
 uint8_t count2 = 50;
 
+uint8_t Addtion = 0;
+uint8_t Addtion1 = 0;
+uint8_t Addtion2 = 0;
+
+uint8_t Deletion = 0;
+uint8_t Deletion1 = 0;
+uint8_t Deletion2 = 0;
+
+
 char httpbody[600];
-
-sht3x_handle_t handle = {
-	              .i2c_handle = &hi2c1,
-	              .device_address = SHT3X_I2C_DEVICE_ADDRESS_ADDR_PIN_LOW
-	      };
-
 
 uint8_t homestate = 0;
 int wrflag = 0;
+sht3x_handle_t shthandle = {
+	  	              .i2c_handle = &hi2c1,
+	  	              .device_address = SHT3X_I2C_DEVICE_ADDRESS_ADDR_PIN_LOW
+	  	      };
 
 /* USER CODE END Variables */
 osThreadId defaultTaskHandle;
@@ -116,13 +122,11 @@ void vApplicationGetIdleTaskMemory( StaticTask_t **ppxIdleTaskTCBBuffer, StackTy
   */
 void MX_FREERTOS_Init(void) {
   /* USER CODE BEGIN Init */
-
 	HAL_ADC_Start_DMA(&hadc1, NH3, 1);
-	sht3x_init(&handle);
-	BH1750_Init(&hi2c1);
+	sht3x_init(&shthandle);
+	BH1750_Init(&hi2c2);
+	BH1750_SetMode(CONTINUOUS_LOW_RES_MODE);
 	sgp30_init();
-	BH1750_SetMode(CONTINUOUS_HIGH_RES_MODE_2);
-
   /* USER CODE END Init */
 
   /* USER CODE BEGIN RTOS_MUTEX */
@@ -197,11 +201,7 @@ void StartDefaultTask(void const * argument)
 		retSD = f_close(&SDFile);
 		wrflag = 0;
 	}
-	sprintf(httpbody,"POST /postData HTTP/1.1\r\nUser-Agent: PostmanRuntime/7.28.2\r\nAccept: */*\r\nHost: 121.40.34.200:7890\r\nAccept-Encoding: gzip, deflate, br\r\nConnection: keep-alive\r\nContent-Type: application/x-www-form-urlencoded\r\nContent-Length: 210\r\n\r\ntemperature=%.2f&humidity=%.2f&light=%3d&coo_gas=%d&amm_gas=%d&pig_total=100&pig_add=10&pig_death=5&cow_total=100&cow_add=10&cow_death=5&sheep_total=100&sheep_add=10&sheep_death=5&Heater=1&Fan=0&Curtain=1\r\n"
-			,temperature,humidity,lux,co2,NH3[0]);
-	HAL_UART_Transmit(&huart1, httpbody, sizeof(httpbody)-1, 1000);
 
-	vTaskDelay(2500);
     osDelay(1);
   }
   /* USER CODE END StartDefaultTask */
@@ -240,13 +240,18 @@ void Measuretask(void const * argument)
   /* Infinite loop */
   for(;;)
   {
-	  sht3x_read_temperature_and_humidity(&handle, &temperature, &humidity);
+	  sht3x_read_temperature_and_humidity(&shthandle, &temperature, &humidity);
 	  sgp30_read(&co2, &TVOC);
 	  BH1750_ReadLight(&lux);
 	  HAL_ADC_Start_DMA(&hadc1, (uint32_t*)NH3, 1);
 	  nh3 = NH3[0];
 	  nh3 = nh3* 3.3 / 4096;
 	  nh3 = 410*nh3*nh3*nh3*nh3*nh3 - 2718*nh3*nh3*nh3*nh3 + 7015*nh3*nh3*nh3 - 8748*nh3*nh3  + 5271*nh3 - 1128;
+	  vTaskDelay(2500);
+	  sprintf(httpbody,"POST /postData HTTP/1.1\r\nUser-Agent: PostmanRuntime/7.28.2\r\nAccept: */*\r\nHost: 121.40.34.200:7890\r\nAccept-Encoding: gzip, deflate, br\r\nConnection: keep-alive\r\nContent-Type: application/x-www-form-urlencoded\r\nContent-Length: 235\r\n\r\ntemperature=%.2f&humidity=%.2f&light=%03d&coo_gas=%03d&amm_gas=%03d&pig_total=%2d&pig_add=%02d&pig_death=%02d&cow_total=%02d&cow_add=%02d&cow_death=%02d&sheep_total=%02d&sheep_add=%02d&sheep_death=%02d&Heater=%d&Fan=%d&Curtain=%d&Window=%d",
+			  temperature,humidity,(uint16_t)lux,(uint16_t)co2,(uint16_t)nh3,count1,Addtion1,Deletion1,count2,Addtion2,Deletion2,count,Addtion,Deletion,room.heater,room.fan1,room.curtain,room.window);
+	  HAL_UART_Transmit(&huart1, httpbody, 466, 1000);
+
 	  osDelay(1);
   }
   /* USER CODE END Measuretask */

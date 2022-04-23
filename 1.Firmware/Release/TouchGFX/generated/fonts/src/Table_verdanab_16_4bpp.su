@@ -1,2 +1,2 @@
-../TouchGFX/generated/fonts/src/Table_verdanab_16_4bpp.cpp:62:165:void __tcf_0()	0	static
-../TouchGFX/generated/fonts/src/Table_verdanab_16_4bpp.cpp:60:26:touchgfx::GeneratedFont& getFont_verdanab_16_4bpp()	64	static
+../TouchGFX/generated/fonts/src/Table_verdanab_16_4bpp.cpp:61:165:void __tcf_0()	0	static
+../TouchGFX/generated/fonts/src/Table_verdanab_16_4bpp.cpp:59:26:touchgfx::GeneratedFont& getFont_verdanab_16_4bpp()	64	static

@@ -70,15 +70,15 @@
 ../Middlewares/ST/touchgfx/framework/include/touchgfx/widgets/ButtonWithLabel.hpp:132:10:void touchgfx::ButtonWithLabel::updateTextPosition()	56	static
 ../Middlewares/ST/touchgfx/framework/include/mvp/View.hpp:36:7:touchgfx::View<ControlPresenter>::~View()	16	static
 ../Middlewares/ST/touchgfx/framework/include/mvp/View.hpp:36:7:virtual touchgfx::View<ControlPresenter>::~View()	16	static
-../TouchGFX/generated/gui_generated/include/gui_generated/control_screen/ControlViewBase.hpp:22:13:ControlViewBase::~ControlViewBase()	16	static
-../TouchGFX/generated/gui_generated/include/gui_generated/control_screen/ControlViewBase.hpp:22:13:virtual ControlViewBase::~ControlViewBase()	16	static
-../TouchGFX/generated/gui_generated/include/gui_generated/control_screen/ControlViewBase.hpp:26:26:FrontendApplication& ControlViewBase::application()	16	static
+../TouchGFX/generated/gui_generated/include/gui_generated/control_screen/ControlViewBase.hpp:23:13:ControlViewBase::~ControlViewBase()	16	static
+../TouchGFX/generated/gui_generated/include/gui_generated/control_screen/ControlViewBase.hpp:23:13:virtual ControlViewBase::~ControlViewBase()	16	static
+../TouchGFX/generated/gui_generated/include/gui_generated/control_screen/ControlViewBase.hpp:27:26:FrontendApplication& ControlViewBase::application()	16	static
 ../Middlewares/ST/touchgfx/framework/include/touchgfx/widgets/Button.hpp:31:7:touchgfx::Button::~Button()	16	static
 ../Middlewares/ST/touchgfx/framework/include/touchgfx/widgets/Button.hpp:31:7:virtual touchgfx::Button::~Button()	16	static
 ../Middlewares/ST/touchgfx/framework/include/touchgfx/widgets/ToggleButton.hpp:32:7:touchgfx::ToggleButton::ToggleButton()	16	static
-../TouchGFX/generated/gui_generated/src/control_screen/ControlViewBase.cpp:13:1:ControlViewBase::ControlViewBase()	296	static
-../TouchGFX/generated/gui_generated/src/control_screen/ControlViewBase.cpp:101:6:virtual void ControlViewBase::setupScreen()	16	static
-../TouchGFX/generated/gui_generated/src/control_screen/ControlViewBase.cpp:106:6:void ControlViewBase::buttonCallbackHandler(const touchgfx::AbstractButton&)	16	static
+../TouchGFX/generated/gui_generated/src/control_screen/ControlViewBase.cpp:14:1:ControlViewBase::ControlViewBase()	296	static
+../TouchGFX/generated/gui_generated/src/control_screen/ControlViewBase.cpp:102:6:virtual void ControlViewBase::setupScreen()	16	static
+../TouchGFX/generated/gui_generated/src/control_screen/ControlViewBase.cpp:107:6:void ControlViewBase::buttonCallbackHandler(const touchgfx::AbstractButton&)	16	static
 ../Middlewares/ST/touchgfx/framework/include/mvp/View.hpp:39:5:touchgfx::View<T>::View() [with T = ControlPresenter]	16	static
 ../Middlewares/ST/touchgfx/framework/include/touchgfx/Callback.hpp:134:7:constexpr touchgfx::GenericCallback<const touchgfx::AbstractButton&>::GenericCallback()	16	static
 ../Middlewares/ST/touchgfx/framework/include/touchgfx/Callback.hpp:373:5:touchgfx::Callback<dest_type, T1, void, void>::Callback(dest_type*, void (dest_type::*)(T1)) [with dest_type = ControlViewBase; T1 = const touchgfx::AbstractButton&]	24	static

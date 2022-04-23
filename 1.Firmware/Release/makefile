@@ -11,7 +11,6 @@ RM := rm -rf
 -include sources.mk
 -include TouchGFX/target/generated/subdir.mk
 -include TouchGFX/target/subdir.mk
--include TouchGFX/gui/src/set_screen/subdir.mk
 -include TouchGFX/gui/src/model/subdir.mk
 -include TouchGFX/gui/src/manage_screen/subdir.mk
 -include TouchGFX/gui/src/main_screen/subdir.mk
@@ -21,7 +20,6 @@ RM := rm -rf
 -include TouchGFX/generated/texts/src/subdir.mk
 -include TouchGFX/generated/images/src/__designer/subdir.mk
 -include TouchGFX/generated/images/src/subdir.mk
--include TouchGFX/generated/gui_generated/src/set_screen/subdir.mk
 -include TouchGFX/generated/gui_generated/src/manage_screen/subdir.mk
 -include TouchGFX/generated/gui_generated/src/main_screen/subdir.mk
 -include TouchGFX/generated/gui_generated/src/details_screen/subdir.mk
@@ -123,7 +121,7 @@ main-build: Iot-dachuang.elf secondary-outputs
 
 # Tool invocations
 Iot-dachuang.elf Iot-dachuang.map: $(OBJS) $(USER_OBJS) C:\Users\10633\STM32CubeIDE\workspace_1.9.0\Iot-dachuang\STM32F429IGTX_FLASH.ld makefile objects.list $(OPTIONAL_TOOL_DEPS)
-	arm-none-eabi-g++ -o "Iot-dachuang.elf" @"objects.list" $(USER_OBJS) $(LIBS) -mcpu=cortex-m4 -T"C:\Users\10633\STM32CubeIDE\workspace_1.9.0\Iot-dachuang\STM32F429IGTX_FLASH.ld" --specs=nosys.specs -Wl,-Map="Iot-dachuang.map" -Wl,--gc-sections -static -L../Middlewares/ST/ARM/DSP/Lib -L"C:\Users\10633\STM32CubeIDE\workspace_1.9.0\Iot-dachuang\Middlewares\ST\touchgfx\lib\core\cortex_m4f\gcc" --specs=nano.specs -mfpu=fpv4-sp-d16 -mfloat-abi=hard -mthumb -Wl,--start-group -lc -lm -lstdc++ -lsupc++ -Wl,--end-group
+	arm-none-eabi-g++ -o "Iot-dachuang.elf" @"objects.list" $(USER_OBJS) $(LIBS) -mcpu=cortex-m4 -T"C:\Users\10633\STM32CubeIDE\workspace_1.9.0\Iot-dachuang\STM32F429IGTX_FLASH.ld" --specs=nosys.specs -Wl,-Map="Iot-dachuang.map" -Wl,--gc-sections -static -L../Middlewares/ST/ARM/DSP/Lib -L"C:\Users\10633\STM32CubeIDE\workspace_1.9.0\Iot-dachuang\Middlewares\ST\touchgfx\lib\core\cortex_m4f\gcc" --specs=nano.specs -mfpu=fpv4-sp-d16 -mfloat-abi=hard -mthumb -u _printf_float -u _scanf_float -Wl,--start-group -lc -lm -lstdc++ -lsupc++ -Wl,--end-group
 	@echo 'Finished building target: $@'
 	@echo ' '
 
