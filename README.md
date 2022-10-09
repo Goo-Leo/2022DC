@@ -22,9 +22,7 @@
 
 <img src="3.Pictures\C83699745C4614673675659CE3B1968E.jpg" alt="C83699745C4614673675659CE3B1968E" style="zoom: 50%;" />
 
-<img src="3.Pictures\5BAB5D07A4CE78E94C272E8FCE0A79B0.jpg" alt="5BAB5D07A4CE78E94C272E8FCE0A79B0" style="zoom:67%;" />
-
 ## 三、小结
 
-嗯……嗯……没啥好说的，给队友磕一个吧
+嗯……嗯……没啥好说的，给队友磕一个
 
